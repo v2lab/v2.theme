@@ -574,6 +574,33 @@ input.inputLabelActive {
 ul.main-menu ul {
   display: none;
 }
+/* line 5, ../sass/_menu.scss */
+ul.main-menu li {
+  display: inline-block;
+  height: 29px;
+}
+/* line 8, ../sass/_menu.scss */
+ul.main-menu li a {
+  line-height: 29px;
+}
+/* line 13, ../sass/_menu.scss */
+ul.main-menu > li:hover {
+  background: black;
+  color: white;
+}
+/* line 16, ../sass/_menu.scss */
+ul.main-menu > li:hover:before {
+  background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+  width: 10px;
+  height: 29px;
+}
+/* line 21, ../sass/_menu.scss */
+ul.main-menu > li:hover:after {
+  background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
+  display: inline-block;
+  width: 10px;
+  height: 29px;
+}
 
 /* line 5, ../sass/_grid.scss */
 .grid-overlay {
