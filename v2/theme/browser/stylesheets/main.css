@@ -536,7 +536,7 @@ p {
   position: fixed;
   top: 0;
   left: 50%;
-  margin-left: 507px;
+  margin-left: -507px !important;
 }
 
 /* line 1, ../sass/_forms.scss */
@@ -557,7 +557,11 @@ input.inputLabelActive {
   color: black;
 }
 
-/* line 4, ../sass/_default.scss */
+/* line 2, ../sass/_default.scss */
+#visual-portal-wrapper #portal-top {
+  margin-top: 67px;
+}
+/* line 5, ../sass/_default.scss */
 #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   clear: none;
   background-color: transparent;
@@ -569,17 +573,17 @@ input.inputLabelActive {
   z-index: 2;
 }
 
-/* line 24, ../sass/_default.scss */
+/* line 25, ../sass/_default.scss */
 .hiddenStructure {
   display: none;
 }
 
-/* line 28, ../sass/_default.scss */
+/* line 29, ../sass/_default.scss */
 .visualClear {
   display: none;
 }
 
-/* line 32, ../sass/_default.scss */
+/* line 33, ../sass/_default.scss */
 .LSBox {
   clear: none;
   float: none;
