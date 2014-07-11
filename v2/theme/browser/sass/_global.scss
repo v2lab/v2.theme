@@ -9,7 +9,7 @@ body {
 	};
 	line-height: $line-height-m;
 	color: $font-color;
-	background: $light-gray;
+	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center;
 }
 a {
 	color: $color-primary;
@@ -170,11 +170,14 @@ p {
 	padding-top: $column-margin*2 !important;
 }
 .background-gray {
-	background-color: $light-gray;
+	background-color: $light-gray !important;
 }
 .container-fixed {
 	position: fixed;
 	top: 0;
 	left: 50%;
 	margin-left: 0 - span(12)/2 !important;
+}
+.text-right {
+	text-align: right;
 }

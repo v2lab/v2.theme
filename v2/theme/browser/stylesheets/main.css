@@ -326,7 +326,7 @@ body {
   font-size: 15px;
   line-height: 1.2;
   color: #333333;
-  background: #e6e6e6;
+  background: #e6e6e6 url(../++resource++v2.theme.images/background-black.png) no-repeat center center;
 }
 
 /* line 14, ../sass/_global.scss */
@@ -528,7 +528,7 @@ p {
 
 /* line 172, ../sass/_global.scss */
 .background-gray, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6 !important;
 }
 
 /* line 175, ../sass/_global.scss */
@@ -537,6 +537,11 @@ p {
   top: 0;
   left: 50%;
   margin-left: -507px !important;
+}
+
+/* line 181, ../sass/_global.scss */
+.text-right {
+  text-align: right;
 }
 
 /* line 1, ../sass/_forms.scss */
