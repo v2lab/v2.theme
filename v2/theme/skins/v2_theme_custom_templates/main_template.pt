@@ -90,7 +90,7 @@
 		</div>
 	</div>
 
-	<div class="container margin-top">
+	<div class="container margin-top-content">
 		<div class="row">
 			<div class="column-1">
 				<img src="side.png" />
@@ -99,7 +99,7 @@
 				<div class="row">
 					<tal:notajax tal:condition="not:ajax_load">
 						<tal:comment replace="nothing"> Start of the left column </tal:comment>
-						<div id="portal-column-one" class="column-11"
+						<div class="column-11"
 							metal:define-slot="column_one_slot"
 							tal:condition="sl">
 							<div class="visualPadding">
@@ -113,7 +113,7 @@
 					</tal:notajax>
 
 					<tal:comment replace="nothing"> Start of main content block </tal:comment>
-					<div id="portal-column-content" class="column-8">
+					<div class="column-8">
 
 						<div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" />
 
@@ -194,7 +194,7 @@
 
 					<tal:notajax tal:condition="not:ajax_load">
 						<tal:comment replace="nothing"> Start of right column </tal:comment>
-						<div id="portal-column-two" class="column-3"
+						<div class="column-3"
 							metal:define-slot="column_two_slot"
 							tal:condition="sr">
 							<div class="visualPadding">
