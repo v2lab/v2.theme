@@ -31,7 +31,6 @@ ul.main-menu {
 			float: left;
 		}
 		&:hover {
-			background: black;
 			&:before {
 				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 			}
@@ -41,6 +40,7 @@ ul.main-menu {
 			a {
 				color: white;
 				text-decoration: none;
+				background: black;
 			}
 		}
 	}

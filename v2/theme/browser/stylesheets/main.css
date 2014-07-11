@@ -323,7 +323,7 @@ blockquote.right {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 15pt;
+  font-size: 15px;
   line-height: 1.2;
   color: #333333;
   background: #e6e6e6;
@@ -399,7 +399,7 @@ em, i {
 
 /* line 78, ../sass/_global.scss */
 p {
-  padding-bottom: 18pt;
+  padding-bottom: 18px;
 }
 
 /* line 82, ../sass/_global.scss */
@@ -416,7 +416,7 @@ p {
   -moz-box-shadow: inset 0 1px 0 #4d4d4d, 0 1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px 0 #4d4d4d, 0 1px 0 rgba(0, 0, 0, 0.15);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15pt;
+  font-size: 15px;
   font-weight: 700;
   height: 35px;
   line-height: 35px;
@@ -529,7 +529,7 @@ input {
   color: #333333;
   vertical-align: inherit;
   background: none;
-  font-size: 15pt;
+  font-size: 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -610,22 +610,19 @@ ul.main-menu > li:after {
 ul.main-menu > li > a {
   float: left;
 }
-/* line 33, ../sass/_menu.scss */
-ul.main-menu > li:hover {
-  background: black;
-}
-/* line 35, ../sass/_menu.scss */
+/* line 34, ../sass/_menu.scss */
 ul.main-menu > li:hover:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 38, ../sass/_menu.scss */
+/* line 37, ../sass/_menu.scss */
 ul.main-menu > li:hover:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 41, ../sass/_menu.scss */
+/* line 40, ../sass/_menu.scss */
 ul.main-menu > li:hover a {
   color: white;
   text-decoration: none;
+  background: black;
 }
 
 /* line 1, ../sass/_search.scss */
@@ -640,7 +637,7 @@ input#searchGadget {
   margin: 0;
   display: block;
   float: left;
-  width: 208px;
+  width: 205px;
   height: 29px;
   line-height: 29px;
   text-transform: uppercase;
@@ -649,7 +646,7 @@ input#searchGadget {
 input.searchButton {
   margin-bottom: 0 !important;
   color: black;
-  font-size: 15pt;
+  font-size: 15px;
   background: none;
   cursor: pointer;
   padding: 0;
