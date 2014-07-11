@@ -1,0 +1,92 @@
+//== Grid
+// Alle classes die responsive moeten werken staan hierin.
+// In repsonsive.scss worden voor verschillende schermmaten de variables ingesteld
+
+.grid-overlay {
+	@include opacity(.5);
+	background: url(../img/grid.png) repeat-y top center;
+	position: absolute;
+	z-index:-1;
+	width: 100%;
+	height: 100%;
+	min-height: 100% !important;
+	height: auto;
+}
+.container {
+	@include container;
+}
+.row {
+	@include row;
+}
+.column-1 {
+	@include column(1);
+}
+.column-2 {
+	@include column(2);
+}
+.column-3 {
+	@include column(3);
+}
+.column-4 {
+	@include column(4);
+}
+.column-5 {
+	@include column(5);
+}
+.column-6 {
+	@include column(6);
+}
+.column-7 {
+	@include column(7);
+}
+.column-8 {
+	@include column(8);
+}
+.column-9 {
+	@include column(9);
+}
+.column-10 {
+	@include column(10);
+}
+.column-11 {
+	@include column(11);
+}
+.column-12 {
+	@include column(12);
+}
+.column-ng-1 {
+	@include column-no-gutter(1);
+}
+.column-ng-2 {
+	@include column-no-gutter(2);
+}
+.column-ng-3 {
+	@include column-no-gutter(3);
+}
+.column-ng-4 {
+	@include column-no-gutter(4);
+}
+.column-ng-5 {
+	@include column-no-gutter(5);
+}
+.column-ng-6 {
+	@include column-no-gutter(6);
+}
+.column-ng-7 {
+	@include column-no-gutter(7);
+}
+.column-ng-8 {
+	@include column-no-gutter(8);
+}
+.column-ng-9 {
+	@include column-no-gutter(9);
+}
+.column-ng-10 {
+	@include column-no-gutter(10);
+}
+.column-ng-11 {
+	@include column-no-gutter(11);
+}
+.column-ng-12 {
+	@include column-no-gutter(12);
+}
