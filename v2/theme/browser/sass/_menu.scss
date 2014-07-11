@@ -7,6 +7,7 @@ ul.main-menu {
 		height: 29px;
 		a {
 			line-height: 29px;
+			text-transform: uppercase;
 		}
 	}
 	> li {
@@ -15,17 +16,20 @@ ul.main-menu {
 			display: inline-block;
 			width: 10px;
 			height: 29px;
+			content: " ";
 		}
 		&:after {
 			background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
 			display: inline-block;
 			width: 10px;
 			height: 29px;
+			content: " ";
 		}
 		&:hover {
 			background: black;
 			a {
 				color: white;
+				text-decoration: none;
 			}
 		}
 	}

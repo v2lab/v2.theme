@@ -582,28 +582,32 @@ ul.main-menu li {
 /* line 8, ../sass/_menu.scss */
 ul.main-menu li a {
   line-height: 29px;
+  text-transform: uppercase;
 }
-/* line 13, ../sass/_menu.scss */
+/* line 14, ../sass/_menu.scss */
 ul.main-menu > li:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
   display: inline-block;
   width: 10px;
   height: 29px;
+  content: " ";
 }
-/* line 19, ../sass/_menu.scss */
+/* line 21, ../sass/_menu.scss */
 ul.main-menu > li:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
   display: inline-block;
   width: 10px;
   height: 29px;
+  content: " ";
 }
-/* line 25, ../sass/_menu.scss */
+/* line 28, ../sass/_menu.scss */
 ul.main-menu > li:hover {
   background: black;
 }
-/* line 27, ../sass/_menu.scss */
+/* line 30, ../sass/_menu.scss */
 ul.main-menu > li:hover a {
   color: white;
+  text-decoration: none;
 }
 
 /* line 1, ../sass/_search.scss */
@@ -619,8 +623,9 @@ input#searchGadget {
   display: block;
   float: left;
   width: 208px;
+  text-transform: uppercase;
 }
-/* line 16, ../sass/_search.scss */
+/* line 17, ../sass/_search.scss */
 input.searchButton {
   margin-bottom: 0 !important;
   color: black;
@@ -634,6 +639,7 @@ input.searchButton {
   width: 26px;
   height: 26px;
   display: block;
+  text-indent: -9999;
   float: left;
 }
 
