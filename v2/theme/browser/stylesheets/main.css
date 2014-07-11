@@ -521,6 +521,11 @@ p {
   padding: 18px;
 }
 
+/* line 2, ../sass/_menu.scss */
+ul.main-menu ul {
+  display: none;
+}
+
 /* line 5, ../sass/_grid.scss */
 .grid-overlay {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);

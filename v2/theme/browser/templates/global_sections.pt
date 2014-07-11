@@ -4,7 +4,7 @@
 		&nbsp;
 	</div>
 	<div class="column-8 border-bottom">
-		<ul>
+		<ul class="main-menu">
 		<tal:block repeat="tab view/portal_tabs">
 			<span tal:define="item python:portal[tab['id']]" tal:omit-tag="">
 			<span tal:define="isAnon portal/portal_membership/isAnonymousUser"
