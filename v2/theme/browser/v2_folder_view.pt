@@ -62,7 +62,8 @@
                                  item_type_class python: 'contenttype-' + normalizeString(item_type);
                                  item_has_leadimage item/hasContentLeadImage;
                                  item_object item/getObject;
-                                 item_is_video python:view.isVideo(item_object);"
+                                 item_is_video python:view.isVideo(item_object);
+								 item_category python:view.getCategory(item_object);"
                      tal:attributes="class string:tileItem visualIEFloatFix vevent ${item_type_class}">
 
                   <h2 class="tileHeadline"
@@ -84,7 +85,7 @@
                       External Link
                     </a>
                   </h2>
-
+				  <span tal:content="item_category">Item Category</span>
                   <tal:video tal:condition="item_is_video">
                     <div class="tileVideo" tal:define="audio_only python:view.isAudio(item_object)">
                       <a class="autoFlowPlayer minimal" href=""
@@ -324,4 +325,3 @@
 
   </body>
 </html>
-
