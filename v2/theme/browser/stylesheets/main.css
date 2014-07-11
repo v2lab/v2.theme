@@ -584,22 +584,54 @@ ul.main-menu li a {
   line-height: 29px;
 }
 /* line 13, ../sass/_menu.scss */
-ul.main-menu > li:hover {
-  background: black;
-  color: white;
-}
-/* line 16, ../sass/_menu.scss */
-ul.main-menu > li:hover:before {
+ul.main-menu > li:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+  display: inline-block;
   width: 10px;
   height: 29px;
 }
-/* line 21, ../sass/_menu.scss */
-ul.main-menu > li:hover:after {
+/* line 19, ../sass/_menu.scss */
+ul.main-menu > li:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
   display: inline-block;
   width: 10px;
   height: 29px;
+}
+/* line 25, ../sass/_menu.scss */
+ul.main-menu > li:hover {
+  background: black;
+  color: white;
+}
+
+/* line 1, ../sass/_search.scss */
+.searchSection {
+  display: none;
+}
+
+/* line 5, ../sass/_search.scss */
+input#searchGadget {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  float: left;
+  width: 208px;
+}
+/* line 16, ../sass/_search.scss */
+input.searchButton {
+  margin-bottom: 0 !important;
+  color: black;
+  font-size: 15pt;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  text-transform: none;
+  border: none;
+  background: url(../++resource++v2.theme.images/v2-search-icon.png) no-repeat center center;
+  width: 26px;
+  height: 26px;
+  display: block;
+  float: left;
 }
 
 /* line 5, ../sass/_grid.scss */

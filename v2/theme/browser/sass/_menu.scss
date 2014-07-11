@@ -10,20 +10,21 @@ ul.main-menu {
 		}
 	}
 	> li {
+		&:before {
+			background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+			display: inline-block;
+			width: 10px;
+			height: 29px;
+		}
+		&:after {
+			background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
+			display: inline-block;
+			width: 10px;
+			height: 29px;
+		}
 		&:hover {
 			background: black;
 			color: white;
-			&:before {
-				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
-				width: 10px;
-				height: 29px;
-			}
-			&:after {
-				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
-				display: inline-block;
-				width: 10px;
-				height: 29px;
-			}
 		}
 	}
 }
