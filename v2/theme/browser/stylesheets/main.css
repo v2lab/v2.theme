@@ -508,7 +508,7 @@ p {
 }
 
 /* line 161, ../sass/_global.scss */
-.border-bottom {
+.border-bottom, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   border-bottom: 2px solid black;
 }
 
@@ -540,7 +540,7 @@ ul.main-menu ul {
 }
 
 /* line 15, ../sass/_grid.scss */
-.container, #visual-portal-wrapper #portal-top #portal-header {
+.container {
   overflow: hidden;
   *zoom: 1;
   width: 990px;
@@ -571,7 +571,7 @@ ul.main-menu ul {
 }
 
 /* line 27, ../sass/_grid.scss */
-.column-3 {
+.column-3, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   display: inline;
   float: left;
   margin-left: 18px;

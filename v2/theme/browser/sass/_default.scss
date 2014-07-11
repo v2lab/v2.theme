@@ -1,7 +1,10 @@
 #visual-portal-wrapper {
 	#portal-top {
 		#portal-header {
-			@extend .container;
+			#portal-searchbox {
+				@extend .column-3;
+				@extend .border-bottom;
+			}
 		}
 	}
 }
