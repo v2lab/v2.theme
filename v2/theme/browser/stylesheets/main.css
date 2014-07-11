@@ -600,6 +600,9 @@ ul.main-menu > li:after {
 /* line 25, ../sass/_menu.scss */
 ul.main-menu > li:hover {
   background: black;
+}
+/* line 27, ../sass/_menu.scss */
+ul.main-menu > li:hover a {
   color: white;
 }
 

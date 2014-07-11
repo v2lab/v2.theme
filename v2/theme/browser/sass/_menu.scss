@@ -24,7 +24,9 @@ ul.main-menu {
 		}
 		&:hover {
 			background: black;
-			color: white;
+			a {
+				color: white;
+			}
 		}
 	}
 }
