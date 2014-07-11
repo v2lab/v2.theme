@@ -570,27 +570,43 @@ input.inputLabelActive {
   display: inherit;
 }
 
-/* line 2, ../sass/_menu.scss */
-ul.main-menu ul {
-  display: none;
+/* line 1, ../sass/_menu.scss */
+ul.main-menu {
+  margin: 0 0 0 10px;
+  padding: 0;
+  list-style-type: none;
 }
 /* line 5, ../sass/_menu.scss */
+ul.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+/* line 11, ../sass/_menu.scss */
 ul.main-menu li {
+  list-style-type: none;
   display: inline-block;
   height: 29px;
 }
-/* line 8, ../sass/_menu.scss */
+/* line 15, ../sass/_menu.scss */
 ul.main-menu li a {
   display: block;
   line-height: 29px;
   text-transform: uppercase;
+  padding: 0 10px;
 }
-/* line 14, ../sass/_menu.scss */
+/* line 22, ../sass/_menu.scss */
 ul.main-menu > li {
   overflow: hidden;
   *zoom: 1;
+  margin-left: -10px;
 }
-/* line 16, ../sass/_menu.scss */
+/* line 25, ../sass/_menu.scss */
+ul.main-menu > li:first-child {
+  margin-left: 0;
+}
+/* line 28, ../sass/_menu.scss */
 ul.main-menu > li:before {
   display: block;
   float: left;
@@ -598,7 +614,7 @@ ul.main-menu > li:before {
   height: 29px;
   content: " ";
 }
-/* line 23, ../sass/_menu.scss */
+/* line 35, ../sass/_menu.scss */
 ul.main-menu > li:after {
   display: block;
   float: left;
@@ -606,19 +622,27 @@ ul.main-menu > li:after {
   height: 29px;
   content: " ";
 }
-/* line 30, ../sass/_menu.scss */
+/* line 42, ../sass/_menu.scss */
 ul.main-menu > li > a {
   float: left;
 }
-/* line 34, ../sass/_menu.scss */
+/* line 46, ../sass/_menu.scss */
 ul.main-menu > li:hover:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 37, ../sass/_menu.scss */
+/* line 49, ../sass/_menu.scss */
 ul.main-menu > li:hover:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 40, ../sass/_menu.scss */
+/* line 53, ../sass/_menu.scss */
+ul.main-menu > li:hover:first-child:before {
+  background: black;
+}
+/* line 58, ../sass/_menu.scss */
+ul.main-menu > li:hover:last-child:after {
+  background: black;
+}
+/* line 62, ../sass/_menu.scss */
 ul.main-menu > li:hover a {
   color: white;
   text-decoration: none;

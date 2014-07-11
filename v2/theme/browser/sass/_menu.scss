@@ -1,18 +1,30 @@
 ul.main-menu {
+	margin: 0 0 0 10px;
+	padding: 0;
+	list-style-type: none;
 	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 		display: none;
 	}
 	li {
+		list-style-type: none;
 		display: inline-block;
 		height: 29px;
 		a {
 			display: block;
 			line-height: 29px;
 			text-transform: uppercase;
+			padding: 0 10px;
 		}
 	}
 	> li {
 		@include clearfix;
+		margin-left: -10px;
+		&:first-child {
+			margin-left: 0;
+		}
 		&:before {
 			display: block;
 			float: left;
@@ -36,6 +48,16 @@ ul.main-menu {
 			}
 			&:after {
 				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
+			}
+			&:first-child {
+				&:before {
+					background: black;
+				}
+			}
+			&:last-child {
+				&:after {
+					background: black;
+				}
 			}
 			a {
 				color: white;
