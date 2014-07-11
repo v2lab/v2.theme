@@ -622,29 +622,27 @@ ul.main-menu > li:after {
   height: 29px;
   content: " ";
 }
-/* line 42, ../sass/_menu.scss */
+/* line 43, ../sass/_menu.scss */
+ul.main-menu > li:first-child:before {
+  width: 0;
+}
+/* line 48, ../sass/_menu.scss */
+ul.main-menu > li:last-child:after {
+  width: 0;
+}
+/* line 52, ../sass/_menu.scss */
 ul.main-menu > li > a {
   float: left;
 }
-/* line 46, ../sass/_menu.scss */
+/* line 56, ../sass/_menu.scss */
 ul.main-menu > li:hover:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 49, ../sass/_menu.scss */
+/* line 59, ../sass/_menu.scss */
 ul.main-menu > li:hover:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 53, ../sass/_menu.scss */
-ul.main-menu > li:hover:first-child:before {
-  background: black;
-  width: 0;
-}
-/* line 59, ../sass/_menu.scss */
-ul.main-menu > li:hover:last-child:after {
-  background: black;
-  width: 0;
-}
-/* line 64, ../sass/_menu.scss */
+/* line 62, ../sass/_menu.scss */
 ul.main-menu > li:hover a {
   color: white;
   text-decoration: none;

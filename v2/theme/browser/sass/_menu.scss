@@ -39,6 +39,16 @@ ul.main-menu {
 			height: 29px;
 			content: " ";
 		}
+		&:first-child {
+			&:before {
+				width: 0;
+			}
+		}
+		&:last-child {
+			&:after {
+				width: 0;
+			}
+		}
 		> a {
 			float: left;
 		}
@@ -48,18 +58,6 @@ ul.main-menu {
 			}
 			&:after {
 				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
-			}
-			&:first-child {
-				&:before {
-					background: black;
-					width: 0;
-				}
-			}
-			&:last-child {
-				&:after {
-					background: black;
-					width: 0;
-				}
 			}
 			a {
 				color: white;
