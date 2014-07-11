@@ -80,8 +80,8 @@
                         dir python: isRTL and 'rtl' or 'ltr'">
 <div id="visual-portal-wrapper">
 
-	<div class="container">
-		<div id="portal-top" class="row margin-top-double" i18n:domain="plone">
+	<div class="container container-fixed">
+		<div id="portal-top" class="row" i18n:domain="plone">
 			<div class="column-1">
 				<a name="top"></a>
 				&nbsp;

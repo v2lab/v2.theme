@@ -521,6 +521,24 @@ p {
   padding: 18px;
 }
 
+/* line 169, ../sass/_global.scss */
+.padding-top-double, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
+  padding-top: 36px !important;
+}
+
+/* line 172, ../sass/_global.scss */
+.background-gray, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
+  background-color: #e6e6e6;
+}
+
+/* line 175, ../sass/_global.scss */
+.container-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: 507px;
+}
+
 /* line 1, ../sass/_forms.scss */
 input {
   font-family: Arial, Helvetica, sans-serif;
@@ -551,17 +569,17 @@ input.inputLabelActive {
   z-index: 2;
 }
 
-/* line 22, ../sass/_default.scss */
+/* line 24, ../sass/_default.scss */
 .hiddenStructure {
   display: none;
 }
 
-/* line 26, ../sass/_default.scss */
+/* line 28, ../sass/_default.scss */
 .visualClear {
   display: none;
 }
 
-/* line 30, ../sass/_default.scss */
+/* line 32, ../sass/_default.scss */
 .LSBox {
   clear: none;
   float: none;
@@ -580,7 +598,7 @@ ul.main-menu {
 /* line 6, ../sass/_menu.scss */
 ul.main-menu ul {
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
   list-style-type: none;
   display: none;
   position: absolute;
@@ -667,28 +685,28 @@ ul.main-menu > li:hover > a {
 ul.main-menu > li:hover > ul {
   display: block;
 }
-/* line 83, ../sass/_menu.scss */
-ul.main-menu > li:nth-child(1) a:hover {
+/* line 84, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(1) a:hover, ul.main-menu > li:nth-child(1) a.selected {
   color: #59ff00;
 }
-/* line 86, ../sass/_menu.scss */
-ul.main-menu > li:nth-child(2) a:hover {
+/* line 89, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(2) a:hover, ul.main-menu > li:nth-child(2) a.selected {
   color: #ffff36;
 }
-/* line 89, ../sass/_menu.scss */
-ul.main-menu > li:nth-child(3) a:hover {
+/* line 94, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(3) a:hover, ul.main-menu > li:nth-child(3) a.selected {
   color: #ffaf8a;
 }
-/* line 92, ../sass/_menu.scss */
-ul.main-menu > li:nth-child(4) a:hover {
+/* line 99, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(4) a:hover, ul.main-menu > li:nth-child(4) a.selected {
   color: #82ffff;
 }
-/* line 95, ../sass/_menu.scss */
-ul.main-menu > li:nth-child(5) a:hover {
+/* line 104, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(5) a:hover, ul.main-menu > li:nth-child(5) a.selected {
   color: #ffaf8a;
 }
-/* line 98, ../sass/_menu.scss */
-ul.main-menu > li:nth-child(6) a:hover {
+/* line 109, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(6) a:hover, ul.main-menu > li:nth-child(6) a.selected {
   color: #29ff8d;
 }
 

@@ -1,4 +1,4 @@
-<div class="column-8 border-bottom" tal:define="portal context/@@plone_portal_state/portal;">
+<div class="column-8 border-bottom padding-top-double background-gray" tal:define="portal context/@@plone_portal_state/portal;">
 	<ul class="main-menu">
 		<tal:block repeat="tab view/portal_tabs">
 			<span tal:define="item python:portal[tab['id']]" tal:omit-tag="">

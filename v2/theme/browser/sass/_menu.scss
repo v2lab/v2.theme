@@ -5,7 +5,7 @@ ul.main-menu {
 	height: 29px;
 	ul {
 		margin: 0;
-		padding: 0;
+		padding: 5px 0;
 		list-style-type: none;
 		display: none;
 		position: absolute;
@@ -80,23 +80,35 @@ ul.main-menu {
 				display: block;
 			}
 		}
-		&:nth-child(1) a:hover {
-			color: $green-menu;
+		&:nth-child(1) {
+			a:hover, a.selected {
+				color: $green-menu;
+			}
 		}
-		&:nth-child(2) a:hover {
-			color: $yellow;
+		&:nth-child(2) {
+			a:hover, a.selected {
+				color: $yellow;
+			}
 		}
-		&:nth-child(3) a:hover {
-			color: $orange;
+		&:nth-child(3) {
+			a:hover, a.selected {
+				color: $orange;
+			}
 		}
-		&:nth-child(4) a:hover {
-			color: $blue;
+		&:nth-child(4) {
+			a:hover, a.selected {
+				color: $blue;
+			}
 		}
-		&:nth-child(5) a:hover {
-			color: $orange;
+		&:nth-child(5) {
+			a:hover, a.selected {
+				color: $orange;
+			}
 		}
-		&:nth-child(6) a:hover {
-			color: $green;
+		&:nth-child(6) {
+			a:hover, a.selected {
+				color: $green;
+			}
 		}
 	}
 }

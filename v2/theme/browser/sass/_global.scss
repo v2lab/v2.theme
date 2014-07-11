@@ -166,3 +166,15 @@ p {
 	background: white;
 	padding: $column-margin;
 }
+.padding-top-double {
+	padding-top: $column-margin*2 !important;
+}
+.background-gray {
+	background-color: $light-gray;
+}
+.container-fixed {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-left: span(12)/2;
+}
