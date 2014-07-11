@@ -85,7 +85,10 @@
                       External Link
                     </a>
                   </h2>
-				  <span tal:content="item_category">Item Category</span>
+				  <span
+					 tal:condition="item_category"
+					 tal:content="item_category"
+						>Item Category</span>
                   <tal:video tal:condition="item_is_video">
                     <div class="tileVideo" tal:define="audio_only python:view.isAudio(item_object)">
                       <a class="autoFlowPlayer minimal" href=""
