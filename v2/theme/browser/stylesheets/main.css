@@ -521,6 +521,16 @@ p {
   padding: 18px;
 }
 
+/* line 11, ../sass/_default.scss */
+.hiddenStructure {
+  display: none;
+}
+
+/* line 14, ../sass/_default.scss */
+.visualClear {
+  display: none;
+}
+
 /* line 2, ../sass/_menu.scss */
 ul.main-menu ul {
   display: none;
