@@ -14,22 +14,4 @@ input {
 		// reset forms.css
 		color: $black;
 	}
-	&#searchGadget {
-		// reset forms.css
-		border: none;
-	}
-	&.searchButton {
-		// reset forms.css
-		margin-bottom: 0 !important;
-		color: $black;
-		font-size: $font-size-m;
-		background: none;
-		cursor: pointer;
-		padding: 0;
-		text-transform: none;
-		border: none;
-
-		//
-		background: url(v2-search-icon.png);
-	}
 }
