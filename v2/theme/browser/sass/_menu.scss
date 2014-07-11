@@ -52,11 +52,13 @@ ul.main-menu {
 			&:first-child {
 				&:before {
 					background: black;
+					width: 0;
 				}
 			}
 			&:last-child {
 				&:after {
 					background: black;
+					width: 0;
 				}
 			}
 			a {

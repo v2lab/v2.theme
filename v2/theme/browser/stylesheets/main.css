@@ -92,7 +92,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 21, ../sass/_lemonade.scss */
 .frame.frame-container {
-  width: 1008px;
+  width: 1032px;
 }
 
 /* Attribute selector */
@@ -637,12 +637,14 @@ ul.main-menu > li:hover:after {
 /* line 53, ../sass/_menu.scss */
 ul.main-menu > li:hover:first-child:before {
   background: black;
+  width: 0;
 }
-/* line 58, ../sass/_menu.scss */
+/* line 59, ../sass/_menu.scss */
 ul.main-menu > li:hover:last-child:after {
   background: black;
+  width: 0;
 }
-/* line 62, ../sass/_menu.scss */
+/* line 64, ../sass/_menu.scss */
 ul.main-menu > li:hover a {
   color: white;
   text-decoration: none;
@@ -701,7 +703,7 @@ input.searchButton {
 .container {
   overflow: hidden;
   *zoom: 1;
-  width: 990px;
+  width: 1014px;
   margin: 0 auto;
 }
 
@@ -717,7 +719,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 66px;
+  width: 68px;
 }
 
 /* line 24, ../sass/_grid.scss */
@@ -725,7 +727,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 150px;
+  width: 154px;
 }
 
 /* line 27, ../sass/_grid.scss */
@@ -733,7 +735,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 234px;
+  width: 240px;
 }
 
 /* line 30, ../sass/_grid.scss */
@@ -741,7 +743,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 318px;
+  width: 326px;
 }
 
 /* line 33, ../sass/_grid.scss */
@@ -749,7 +751,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 402px;
+  width: 412px;
 }
 
 /* line 36, ../sass/_grid.scss */
@@ -757,7 +759,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 486px;
+  width: 498px;
 }
 
 /* line 39, ../sass/_grid.scss */
@@ -765,7 +767,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 570px;
+  width: 584px;
 }
 
 /* line 42, ../sass/_grid.scss */
@@ -773,7 +775,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 654px;
+  width: 670px;
 }
 
 /* line 45, ../sass/_grid.scss */
@@ -781,7 +783,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 738px;
+  width: 756px;
 }
 
 /* line 48, ../sass/_grid.scss */
@@ -789,7 +791,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 822px;
+  width: 842px;
 }
 
 /* line 51, ../sass/_grid.scss */
@@ -797,7 +799,7 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 906px;
+  width: 928px;
 }
 
 /* line 54, ../sass/_grid.scss */
@@ -805,89 +807,89 @@ input.searchButton {
   display: inline;
   float: left;
   margin-left: 18px;
-  width: 990px;
+  width: 1014px;
 }
 
 /* line 57, ../sass/_grid.scss */
 .column-ng-1 {
   display: inline;
   float: left;
-  width: 82.5px;
+  width: 84.5px;
 }
 
 /* line 60, ../sass/_grid.scss */
 .column-ng-2 {
   display: inline;
   float: left;
-  width: 165px;
+  width: 169px;
 }
 
 /* line 63, ../sass/_grid.scss */
 .column-ng-3 {
   display: inline;
   float: left;
-  width: 247.5px;
+  width: 253.5px;
 }
 
 /* line 66, ../sass/_grid.scss */
 .column-ng-4 {
   display: inline;
   float: left;
-  width: 330px;
+  width: 338px;
 }
 
 /* line 69, ../sass/_grid.scss */
 .column-ng-5 {
   display: inline;
   float: left;
-  width: 412.5px;
+  width: 422.5px;
 }
 
 /* line 72, ../sass/_grid.scss */
 .column-ng-6 {
   display: inline;
   float: left;
-  width: 495px;
+  width: 507px;
 }
 
 /* line 75, ../sass/_grid.scss */
 .column-ng-7 {
   display: inline;
   float: left;
-  width: 577.5px;
+  width: 591.5px;
 }
 
 /* line 78, ../sass/_grid.scss */
 .column-ng-8 {
   display: inline;
   float: left;
-  width: 660px;
+  width: 676px;
 }
 
 /* line 81, ../sass/_grid.scss */
 .column-ng-9 {
   display: inline;
   float: left;
-  width: 742.5px;
+  width: 760.5px;
 }
 
 /* line 84, ../sass/_grid.scss */
 .column-ng-10 {
   display: inline;
   float: left;
-  width: 825px;
+  width: 845px;
 }
 
 /* line 87, ../sass/_grid.scss */
 .column-ng-11 {
   display: inline;
   float: left;
-  width: 907.5px;
+  width: 929.5px;
 }
 
 /* line 90, ../sass/_grid.scss */
 .column-ng-12 {
   display: inline;
   float: left;
-  width: 990px;
+  width: 1014px;
 }
