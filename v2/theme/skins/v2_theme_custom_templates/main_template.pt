@@ -88,9 +88,12 @@
 
 	<div class="container" id="portal-columns">
 		<div class="row">
+			<div class="column-1">
+				<img src="img/side.png" />
+			</div>
 			<tal:notajax tal:condition="not:ajax_load">
 				<tal:comment replace="nothing"> Start of the left column </tal:comment>
-				<div id="portal-column-one" class="column-12"
+				<div id="portal-column-one" class="column-11"
 					metal:define-slot="column_one_slot"
 					tal:condition="sl">
 					<div class="visualPadding">
