@@ -521,14 +521,69 @@ p {
   padding: 18px;
 }
 
-/* line 11, ../sass/_default.scss */
+/* line 1, ../sass/_forms.scss */
+input {
+  font-family: Arial, Helvetica, sans-serif;
+  visibility: visible;
+  border: 1px solid black;
+  color: #333333;
+  vertical-align: inherit;
+  background: none;
+  font-size: 15pt;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 13, ../sass/_forms.scss */
+input.inputLabelActive {
+  color: black;
+}
+/* line 17, ../sass/_forms.scss */
+input#searchGadget {
+  border: none;
+}
+/* line 21, ../sass/_forms.scss */
+input.searchButton {
+  margin-bottom: 0 !important;
+  color: black;
+  font-size: 15pt;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  text-transform: none;
+  border: none;
+  background: url(v2-search-icon.png);
+}
+
+/* line 4, ../sass/_default.scss */
+#visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
+  clear: none;
+  background-color: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+  z-index: 2;
+}
+
+/* line 22, ../sass/_default.scss */
 .hiddenStructure {
   display: none;
 }
 
-/* line 14, ../sass/_default.scss */
+/* line 26, ../sass/_default.scss */
 .visualClear {
   display: none;
+}
+
+/* line 30, ../sass/_default.scss */
+.LSBox {
+  clear: none;
+  float: none;
+  text-align: left;
+  padding-right: 0;
+  display: inherit;
 }
 
 /* line 2, ../sass/_menu.scss */

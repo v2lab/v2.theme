@@ -2,6 +2,17 @@
 	#portal-top {
 		#portal-header {
 			#portal-searchbox {
+				// reset public.css
+				clear: none;
+				background-color: none;
+				margin: 0;
+				padding: 0;
+				text-align: left;
+				text-transform: none;
+				white-space: normal;
+				z-index: 2;
+
+				//
 				@extend .column-3;
 				@extend .border-bottom;
 			}
@@ -9,8 +20,18 @@
 	}
 }
 .hiddenStructure {
+	// reset public.css
 	display: none;
 }
 .visualClear {
+	// reset public.css
 	display: none;
+}
+.LSBox {
+	// reset public.css
+	clear: none;
+	float: none;
+	text-align: left;
+	padding-right: 0;
+	display: inherit;
 }

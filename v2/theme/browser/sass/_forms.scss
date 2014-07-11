@@ -1,0 +1,35 @@
+input {
+	// reset forms.css
+	font-family: $font-family-sans;
+	visibility: visible;
+	border: 1px solid $black;
+	color: $font-color;
+	vertical-align: inherit;
+	background: none;
+	font-size: $font-size-m;
+
+	//
+	@include box-sizing(border-box);
+	&.inputLabelActive {
+		// reset forms.css
+		color: $black;
+	}
+	&#searchGadget {
+		// reset forms.css
+		border: none;
+	}
+	&.searchButton {
+		// reset forms.css
+		margin-bottom: 0 !important;
+		color: $black;
+		font-size: $font-size-m;
+		background: none;
+		cursor: pointer;
+		padding: 0;
+		text-transform: none;
+		border: none;
+
+		//
+		background: url(v2-search-icon.png);
+	}
+}

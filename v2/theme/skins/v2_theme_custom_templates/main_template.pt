@@ -90,8 +90,6 @@
 		</div>
 	</div>
 
-	<div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
-
 	<div class="container margin-top">
 		<div class="row">
 			<div class="column-1">
@@ -214,15 +212,11 @@
 	</div>
 	<tal:comment replace="nothing"> end column wrapper </tal:comment>
 
-	<div class="visualClear" id="clear-space-before-footer"><!-- --></div>
-
 	<metal:block i18n:domain="plone" tal:condition="not:ajax_load">
 
 		<div tal:replace="structure provider:plone.portalfooter" />
 
 	</metal:block>
-
-	<div class="visualClear"><!-- --></div>
 </div>
 <div id="kss-spinner" tal:condition="not:ajax_load"><img tal:attributes="src string:${portal_url}/spinner.png" alt="" /></div>
 </body>
