@@ -575,38 +575,52 @@ ul.main-menu {
   margin: 0 0 0 10px;
   padding: 0;
   list-style-type: none;
+  height: 29px;
 }
-/* line 5, ../sass/_menu.scss */
+/* line 6, ../sass/_menu.scss */
 ul.main-menu ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: none;
+  position: absolute;
+  left: 0;
+  top: 29px;
+  background: black;
 }
-/* line 11, ../sass/_menu.scss */
+/* line 15, ../sass/_menu.scss */
+ul.main-menu ul li {
+  display: block;
+}
+/* line 17, ../sass/_menu.scss */
+ul.main-menu ul li a {
+  color: white;
+}
+/* line 22, ../sass/_menu.scss */
 ul.main-menu li {
   list-style-type: none;
   display: inline-block;
   height: 29px;
 }
-/* line 15, ../sass/_menu.scss */
+/* line 26, ../sass/_menu.scss */
 ul.main-menu li a {
   display: block;
   line-height: 29px;
   text-transform: uppercase;
   padding: 0 10px;
 }
-/* line 22, ../sass/_menu.scss */
+/* line 33, ../sass/_menu.scss */
 ul.main-menu > li {
+  position: relative;
   overflow: hidden;
   *zoom: 1;
   margin-left: -10px;
 }
-/* line 25, ../sass/_menu.scss */
+/* line 37, ../sass/_menu.scss */
 ul.main-menu > li:first-child {
   margin-left: 0;
 }
-/* line 28, ../sass/_menu.scss */
+/* line 40, ../sass/_menu.scss */
 ul.main-menu > li:before {
   display: block;
   float: left;
@@ -614,7 +628,7 @@ ul.main-menu > li:before {
   height: 29px;
   content: " ";
 }
-/* line 35, ../sass/_menu.scss */
+/* line 47, ../sass/_menu.scss */
 ul.main-menu > li:after {
   display: block;
   float: left;
@@ -622,31 +636,35 @@ ul.main-menu > li:after {
   height: 29px;
   content: " ";
 }
-/* line 43, ../sass/_menu.scss */
+/* line 55, ../sass/_menu.scss */
 ul.main-menu > li:first-child:before {
   width: 0;
 }
-/* line 48, ../sass/_menu.scss */
+/* line 60, ../sass/_menu.scss */
 ul.main-menu > li:last-child:after {
   width: 0;
 }
-/* line 52, ../sass/_menu.scss */
+/* line 64, ../sass/_menu.scss */
 ul.main-menu > li > a {
   float: left;
 }
-/* line 56, ../sass/_menu.scss */
+/* line 68, ../sass/_menu.scss */
 ul.main-menu > li:hover:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 59, ../sass/_menu.scss */
+/* line 71, ../sass/_menu.scss */
 ul.main-menu > li:hover:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 62, ../sass/_menu.scss */
-ul.main-menu > li:hover a {
+/* line 74, ../sass/_menu.scss */
+ul.main-menu > li:hover > a {
   color: white;
   text-decoration: none;
   background: black;
+}
+/* line 79, ../sass/_menu.scss */
+ul.main-menu > li:hover > ul {
+  display: block;
 }
 
 /* line 1, ../sass/_search.scss */
@@ -665,8 +683,9 @@ input#searchGadget {
   height: 29px;
   line-height: 29px;
   text-transform: uppercase;
+  padding: 0 10px;
 }
-/* line 19, ../sass/_search.scss */
+/* line 20, ../sass/_search.scss */
 input.searchButton {
   margin-bottom: 0 !important;
   color: black;
