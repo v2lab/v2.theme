@@ -6,27 +6,38 @@ ul.main-menu {
 		display: inline-block;
 		height: 29px;
 		a {
+			display: block;
 			line-height: 29px;
 			text-transform: uppercase;
 		}
 	}
 	> li {
+		@include clearfix;
 		&:before {
-			background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
-			display: inline-block;
+			display: block;
+			float: left;
 			width: 10px;
 			height: 29px;
 			content: " ";
 		}
 		&:after {
-			background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
-			display: inline-block;
+			display: block;
+			float: left;
 			width: 10px;
 			height: 29px;
 			content: " ";
 		}
+		> a {
+			float: left;
+		}
 		&:hover {
 			background: black;
+			&:before {
+				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+			}
+			&:after {
+				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
+			}
 			a {
 				color: white;
 				text-decoration: none;

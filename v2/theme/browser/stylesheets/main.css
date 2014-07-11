@@ -581,30 +581,48 @@ ul.main-menu li {
 }
 /* line 8, ../sass/_menu.scss */
 ul.main-menu li a {
+  display: block;
   line-height: 29px;
   text-transform: uppercase;
 }
 /* line 14, ../sass/_menu.scss */
+ul.main-menu > li {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 16, ../sass/_menu.scss */
 ul.main-menu > li:before {
-  background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
-  display: inline-block;
+  display: block;
+  float: left;
   width: 10px;
   height: 29px;
   content: " ";
 }
-/* line 21, ../sass/_menu.scss */
+/* line 23, ../sass/_menu.scss */
 ul.main-menu > li:after {
-  background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 10px 0;
-  display: inline-block;
+  display: block;
+  float: left;
   width: 10px;
   height: 29px;
   content: " ";
 }
-/* line 28, ../sass/_menu.scss */
+/* line 30, ../sass/_menu.scss */
+ul.main-menu > li > a {
+  float: left;
+}
+/* line 33, ../sass/_menu.scss */
 ul.main-menu > li:hover {
   background: black;
 }
-/* line 30, ../sass/_menu.scss */
+/* line 35, ../sass/_menu.scss */
+ul.main-menu > li:hover:before {
+  background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+}
+/* line 38, ../sass/_menu.scss */
+ul.main-menu > li:hover:after {
+  background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
+}
+/* line 41, ../sass/_menu.scss */
 ul.main-menu > li:hover a {
   color: white;
   text-decoration: none;
@@ -623,9 +641,11 @@ input#searchGadget {
   display: block;
   float: left;
   width: 208px;
+  height: 29px;
+  line-height: 29px;
   text-transform: uppercase;
 }
-/* line 17, ../sass/_search.scss */
+/* line 19, ../sass/_search.scss */
 input.searchButton {
   margin-bottom: 0 !important;
   color: black;
@@ -636,10 +656,10 @@ input.searchButton {
   text-transform: none;
   border: none;
   background: url(../++resource++v2.theme.images/v2-search-icon.png) no-repeat center center;
-  width: 26px;
-  height: 26px;
+  width: 29px;
+  height: 29px;
   display: block;
-  text-indent: -9999;
+  text-indent: -9999px;
   float: left;
 }
 
