@@ -538,27 +538,11 @@ input {
 input.inputLabelActive {
   color: black;
 }
-/* line 17, ../sass/_forms.scss */
-input#searchGadget {
-  border: none;
-}
-/* line 21, ../sass/_forms.scss */
-input.searchButton {
-  margin-bottom: 0 !important;
-  color: black;
-  font-size: 15pt;
-  background: none;
-  cursor: pointer;
-  padding: 0;
-  text-transform: none;
-  border: none;
-  background: url(v2-search-icon.png);
-}
 
 /* line 4, ../sass/_default.scss */
 #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   clear: none;
-  background-color: none;
+  background-color: transparent;
   margin: 0;
   padding: 0;
   text-align: left;
