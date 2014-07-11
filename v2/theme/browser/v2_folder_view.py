@@ -49,4 +49,9 @@ class V2FolderView(V2PeopleView):
         """Find the parent name in the url path.
 
         This displays in which category an item is placed."""
-        return content.virtual_url_path().split('/')[1].upper()
+
+        url = content.virtual_url_path().upper()
+        menu_items = ['EVENT', 'PUBLISHING', 'LAB']
+        for item in menu_items:
+            if item in url:
+                return item
