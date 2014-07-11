@@ -86,12 +86,11 @@
 
 	<div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
 
-	<table id="portal-columns">
-		<tbody>
-		<tr>
+	<div class="container" id="portal-columns">
+		<div class="row">
 			<tal:notajax tal:condition="not:ajax_load">
 				<tal:comment replace="nothing"> Start of the left column </tal:comment>
-				<td id="portal-column-one"
+				<div id="portal-column-one" class="column-12"
 					metal:define-slot="column_one_slot"
 					tal:condition="sl">
 					<div class="visualPadding">
@@ -100,12 +99,12 @@
 						</metal:portlets>
 						&nbsp;
 					</div>
-				</td>
+				</div>
 				<tal:comment replace="nothing"> End of the left column </tal:comment>
 			</tal:notajax>
 
 			<tal:comment replace="nothing"> Start of main content block </tal:comment>
-			<td id="portal-column-content">
+			<div id="portal-column-content" class="column-9">
 
 				<div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" />
 
@@ -181,12 +180,12 @@
 
 				<div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" />
 
-			</td>
+			</div>
 			<tal:comment replace="nothing"> End of main content block </tal:comment>
 
 			<tal:notajax tal:condition="not:ajax_load">
 				<tal:comment replace="nothing"> Start of right column </tal:comment>
-				<td id="portal-column-two"
+				<div id="portal-column-two" class="column-3"
 					metal:define-slot="column_two_slot"
 					tal:condition="sr">
 					<div class="visualPadding">
@@ -195,12 +194,11 @@
 						</metal:portlets>
 						&nbsp;
 					</div>
-				</td>
+				</div>
 				<tal:comment replace="nothing"> End of the right column </tal:comment>
 			</tal:notajax>
-		</tr>
-		</tbody>
-	</table>
+		</div>
+	</div>
 	<tal:comment replace="nothing"> end column wrapper </tal:comment>
 
 	<div class="visualClear" id="clear-space-before-footer"><!-- --></div>

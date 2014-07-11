@@ -4,8 +4,8 @@
 		&nbsp;
 	</div>
 	<div class="column-8 border-bottom">
+		<ul>
 		<tal:block repeat="tab view/portal_tabs">
-			<ul>
 				<span tal:define="item python:portal[tab['id']]" tal:omit-tag="">
 				<span tal:define="isAnon portal/portal_membership/isAnonymousUser"
 					  tal:condition="python:(item.meta_type == 'ATFolder' or item.meta_type == 'ATBTreeFolder' or item.meta_type == 'ATTopic' or item.meta_type == 'ATDocument') and (portal.portal_workflow.getInfoFor(item, 'review_state') == 'published' or not isAnon)" tal:omit-tag="">
@@ -22,8 +22,8 @@
 				</li>
 				</span>
 				</span>
-			</ul>
 		</tal:block>
+		</ul>
 	</div>
 	<div class="column-3 border-bottom">
 		Search
