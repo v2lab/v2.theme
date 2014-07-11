@@ -584,34 +584,35 @@ ul.main-menu ul {
   list-style-type: none;
   display: none;
   position: absolute;
-  left: 0;
-  top: 29px;
+  margin-top: 29px;
   background: black;
 }
-/* line 15, ../sass/_menu.scss */
+/* line 14, ../sass/_menu.scss */
 ul.main-menu ul li {
   display: block;
 }
-/* line 17, ../sass/_menu.scss */
+/* line 16, ../sass/_menu.scss */
 ul.main-menu ul li a {
   color: white;
 }
-/* line 22, ../sass/_menu.scss */
+/* line 21, ../sass/_menu.scss */
 ul.main-menu li {
   list-style-type: none;
   display: inline-block;
   height: 29px;
 }
-/* line 26, ../sass/_menu.scss */
+/* line 25, ../sass/_menu.scss */
 ul.main-menu li a {
   display: block;
   line-height: 29px;
-  text-transform: uppercase;
   padding: 0 10px;
 }
-/* line 33, ../sass/_menu.scss */
+/* line 29, ../sass/_menu.scss */
+ul.main-menu li a:hover {
+  text-decoration: none;
+}
+/* line 34, ../sass/_menu.scss */
 ul.main-menu > li {
-  position: relative;
   overflow: hidden;
   *zoom: 1;
   margin-left: -10px;
@@ -646,25 +647,49 @@ ul.main-menu > li:last-child:after {
 }
 /* line 64, ../sass/_menu.scss */
 ul.main-menu > li > a {
+  text-transform: uppercase;
   float: left;
 }
-/* line 68, ../sass/_menu.scss */
+/* line 69, ../sass/_menu.scss */
 ul.main-menu > li:hover:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 71, ../sass/_menu.scss */
+/* line 72, ../sass/_menu.scss */
 ul.main-menu > li:hover:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 74, ../sass/_menu.scss */
+/* line 75, ../sass/_menu.scss */
 ul.main-menu > li:hover > a {
   color: white;
-  text-decoration: none;
   background: black;
 }
 /* line 79, ../sass/_menu.scss */
 ul.main-menu > li:hover > ul {
   display: block;
+}
+/* line 83, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(1) a:hover {
+  color: #59ff00;
+}
+/* line 86, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(2) a:hover {
+  color: #ffff36;
+}
+/* line 89, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(3) a:hover {
+  color: #ffaf8a;
+}
+/* line 92, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(4) a:hover {
+  color: #82ffff;
+}
+/* line 95, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(5) a:hover {
+  color: #ffaf8a;
+}
+/* line 98, ../sass/_menu.scss */
+ul.main-menu > li:nth-child(6) a:hover {
+  color: #29ff8d;
 }
 
 /* line 1, ../sass/_search.scss */

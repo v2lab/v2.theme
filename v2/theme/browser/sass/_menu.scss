@@ -9,8 +9,7 @@ ul.main-menu {
 		list-style-type: none;
 		display: none;
 		position: absolute;
-		left: 0;
-		top: 29px;
+		margin-top: 29px;
 		background: black;
 		li {
 			display: block;
@@ -26,12 +25,13 @@ ul.main-menu {
 		a {
 			display: block;
 			line-height: 29px;
-			text-transform: uppercase;
 			padding: 0 10px;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 	> li {
-		position: relative;
 		@include clearfix;
 		margin-left: -10px;
 		&:first-child {
@@ -62,6 +62,7 @@ ul.main-menu {
 			}
 		}
 		> a {
+			text-transform: uppercase;
 			float: left;
 		}
 		&:hover {
@@ -73,12 +74,29 @@ ul.main-menu {
 			}
 			> a {
 				color: white;
-				text-decoration: none;
 				background: black;
 			}
 			> ul {
 				display: block;
 			}
+		}
+		&:nth-child(1) a:hover {
+			color: $green-menu;
+		}
+		&:nth-child(2) a:hover {
+			color: $yellow;
+		}
+		&:nth-child(3) a:hover {
+			color: $orange;
+		}
+		&:nth-child(4) a:hover {
+			color: $blue;
+		}
+		&:nth-child(5) a:hover {
+			color: $orange;
+		}
+		&:nth-child(6) a:hover {
+			color: $green;
 		}
 	}
 }
