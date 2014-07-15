@@ -61,7 +61,7 @@ bkground.gen_bkground = function()
 }
 
 
-window.addEventListener("load",bkground.gen_bkground,false);
+//window.addEventListener("load",bkground.gen_bkground,false);
 //$(document).ready(function(){
 //    bkground.gen_bkground();
 //});

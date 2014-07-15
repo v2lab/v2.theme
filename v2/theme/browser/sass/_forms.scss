@@ -1,0 +1,17 @@
+input {
+	// reset forms.css
+	font-family: $font-family-sans;
+	visibility: visible;
+	border: 1px solid $black;
+	color: $font-color;
+	vertical-align: inherit;
+	background: none;
+	font-size: $font-size-m;
+
+	//
+	@include box-sizing(border-box);
+	&.inputLabelActive {
+		// reset forms.css
+		color: $black;
+	}
+}

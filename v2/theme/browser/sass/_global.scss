@@ -1,0 +1,183 @@
+//== Typography
+//
+
+body {
+	font: {
+		family: $font-family-sans;
+		weight: $font-weight-light;
+		size: $font-size-m;
+	};
+	line-height: $line-height-m;
+	color: $font-color;
+	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center top fixed;
+}
+a {
+	color: $color-primary;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+		color: $dark-gray;
+	}
+}
+h1 {
+	color: $gray;
+	font: {
+		family: $font-family-sans;
+		weight: $font-weight-normal;
+		size: $font-size-l;
+	}
+	line-height: $line-height-xl-computed;
+}
+h2 {
+	color: $gray;
+	font: {
+		family: $font-family-sans;
+		weight: $font-weight-normal;
+		size: $font-size-l;
+	}
+	line-height: $line-height-xl-computed;
+}
+h3 {
+	font: {
+		family: $font-family-sans;
+		weight: $font-weight-bold;
+		size: $font-size-l;
+	}
+	line-height: $line-height-l;
+	a {
+		text-decoration: none;
+	}
+}
+h6 {
+	font: {
+		family: $font-family-sans;
+		weight: $font-weight-light;
+	}
+}
+p, li, span {
+	font: {
+		family: $font-family-sans;
+	}
+}
+hr {
+	border: 0;
+	border-top: 1px solid #66645e;
+}
+strong, b {
+	font: {
+		weight: $font-weight-bold;
+	};
+}
+
+em, i {
+	font: {
+		style: italic;
+	};
+}
+
+p {
+	padding-bottom: $line-height-m-computed;
+}
+
+.button {
+	display: inline-block;
+	padding: 0 15px;
+	cursor: pointer;
+	@include border-radius(3px);
+	@include box-shadow(inset 0 1px 0 lighten($dark-gray, 10%), 0 1px 0 rgba(0, 0, 0, 0.15));
+	font: {
+		family: $font-family-sans;
+		size: $font-size-m;
+		weight: $font-weight-bold;
+	}
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid darken($dark-gray, 10%);
+	background: $dark-gray;
+	color: white;
+	text: {
+		decoration: none;
+	}
+	&:hover {
+		background-color: darken($dark-gray, 5%);
+		text-decoration: none;
+	}
+}
+
+
+.social-icon {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: $color-primary;
+	&:hover {
+		background: $color-primary;
+	}
+}
+
+//== Helper classes
+//
+
+.float-right {
+	float: right !important;
+}
+.margin-top {
+	margin-top: $column-margin !important;
+}
+.margin-top-double {
+	margin-top: $column-margin*2 !important;
+}
+.margin-bottom {
+	margin-bottom: $column-margin !important;
+}
+.margin-top-half {
+	margin-top: $column-margin / 2 !important;
+}
+.margin-bottom-half {
+	margin-bottom: $column-margin / 2 !important;
+}
+.padding-top-half {
+	padding-top: $column-margin / 2 !important;
+}
+.padding-bottom-half {
+	padding-bottom: $column-margin / 2 !important;
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.img-border {
+	padding: 2px;
+	border: 1px solid $light-gray;
+}
+.font-size-s {
+	font-size: $font-size-s;
+	line-height: $line-height-s;
+}
+.light-gray {
+	color: $light-gray;
+}
+.border-bottom {
+	border-bottom: 2px solid black;
+}
+.white-box {
+	@include box-sizing(border-box);
+	background: white;
+	padding: $column-margin;
+}
+.padding-top-double {
+	padding-top: $column-margin*2 !important;
+}
+.background-gray {
+	background-color: $light-gray !important;
+}
+.container-fixed {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin-left: 0 - span(12)/2 !important;
+}
+.text-right {
+	text-align: right;
+}

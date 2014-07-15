@@ -151,6 +151,7 @@
                     <tal:event condition="python: item_type == 'Event'">
                          <span tal:condition="python: item_type == 'Event'"
                                i18n:translate="label_event_byline">
+							 <span class="label">event</span>
 				<div class="EventDateInfo" tal:condition="python: item.start >= view.currenttime()">
 					<div class="futureEventDateFrom">
 						<div class="eventDayInfo" tal:content="item/start/day">02</div>

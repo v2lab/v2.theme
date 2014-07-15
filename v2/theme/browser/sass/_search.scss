@@ -1,0 +1,39 @@
+.searchSection {
+	display: none;
+}
+input {
+	&#searchGadget {
+		// reset forms.css
+		border: none;
+		padding: 0;
+		margin: 0;
+
+		//
+		display: block;
+		float: left;
+		width: 205px;
+		height: 29px;
+		line-height: 29px;
+		text-transform: uppercase;
+		padding: 0 10px;
+	}
+	&.searchButton {
+		// reset forms.css
+		margin-bottom: 0 !important;
+		color: $black;
+		font-size: $font-size-m;
+		background: none;
+		cursor: pointer;
+		padding: 0;
+		text-transform: none;
+		border: none;
+
+		//
+		background: url(../++resource++v2.theme.images/v2-search-icon.png) no-repeat center center;
+		width: 29px;
+		height: 29px;
+		display: block;
+		text-indent: -9999px;
+		float: left;
+	}
+}

@@ -1,0 +1,114 @@
+ul.main-menu {
+	margin: 0 0 0 10px;
+	padding: 0;
+	list-style-type: none;
+	height: 29px;
+	ul {
+		margin: 0;
+		padding: 5px 0;
+		list-style-type: none;
+		display: none;
+		position: absolute;
+		margin-top: 29px;
+		background: black;
+		li {
+			display: block;
+			a {
+				color: white;
+			}
+		}
+	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+		height: 29px;
+		a {
+			display: block;
+			line-height: 29px;
+			padding: 0 10px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	> li {
+		@include clearfix;
+		margin-left: -10px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:before {
+			display: block;
+			float: left;
+			width: 10px;
+			height: 29px;
+			content: " ";
+		}
+		&:after {
+			display: block;
+			float: left;
+			width: 10px;
+			height: 29px;
+			content: " ";
+		}
+		&:first-child {
+			&:before {
+				width: 0;
+			}
+		}
+		&:last-child {
+			&:after {
+				width: 0;
+			}
+		}
+		> a {
+			text-transform: uppercase;
+			float: left;
+		}
+		&:hover {
+			&:before {
+				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+			}
+			&:after {
+				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
+			}
+			> a {
+				color: white;
+				background: black;
+			}
+			> ul {
+				display: block;
+			}
+		}
+		&:nth-child(1) {
+			a:hover, a.selected {
+				color: $green-menu;
+			}
+		}
+		&:nth-child(2) {
+			a:hover, a.selected {
+				color: $yellow;
+			}
+		}
+		&:nth-child(3) {
+			a:hover, a.selected {
+				color: $orange;
+			}
+		}
+		&:nth-child(4) {
+			a:hover, a.selected {
+				color: $blue;
+			}
+		}
+		&:nth-child(5) {
+			a:hover, a.selected {
+				color: $orange;
+			}
+		}
+		&:nth-child(6) {
+			a:hover, a.selected {
+				color: $green;
+			}
+		}
+	}
+}

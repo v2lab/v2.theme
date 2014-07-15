@@ -1,0 +1,134 @@
+//== Grids
+//
+// Algemene grid, wordt overschreven door responsive grid.
+// Cijfers van @media (min-width: 909px)
+//
+$column-width: 68px;
+$column-margin: 18px;
+$columns: 12;
+
+//== Colors
+//
+$white: #ffffff;
+$black: #000000;
+$gray: #666;
+$dark-gray: #333;
+$light-gray: rgb(230, 230, 230);
+
+$yellow: rgb(255, 255, 54);
+$green: rgb(41, 255, 141);
+$green-menu: rgb(89, 255, 0);
+$blue: rgb(130, 255, 255);
+$orange: rgb(255, 175, 138);
+$red: rgb(255, 0, 69);
+
+$color-primary: $black;
+$color-primary-lighter: $black;
+
+//== Fonts
+//
+// Gewichten:
+// font-weight: 300 is voor normale tekst
+// font-weight: 700 is voor bold tekst
+//
+
+$font-family-sans: Arial, Helvetica, sans-serif;
+$font-family-serif: Arial, Helvetica, sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-color: $dark-gray;
+
+$font-size-s: 11px;
+$line-height-s: 1.56;
+
+$font-size-m: 15px;
+$line-height-m: 1.2;
+
+$font-size-l: 15px;
+$line-height-l: 1.56;
+
+$font-size-xl: 24px;
+$line-height-xl: 1.56;
+
+$font-size-xxl: 60px;
+$line-height-xxl: 1.56;
+
+$line-height-s-computed: floor(($font-size-s * $line-height-s));
+$line-height-m-computed: floor(($font-size-m * $line-height-m));
+$line-height-l-computed: floor(($font-size-l * $line-height-l));
+$line-height-xl-computed: floor(($font-size-xl * $line-height-xl));
+
+//== Functions en mixins
+//
+@function span($n) {
+	@return $column-width * $n + $column-margin * ($n - 1);
+}
+
+@function span-ng($n) {
+	@return ($column-width * $n + $column-margin * ($n - 1)) + ($column-margin - ($column-margin/12*$n));
+}
+
+@function aboutblock($n) {
+	@return (span($columns) / $n) - ($column-margin / 2);
+};
+
+@mixin container {
+	@include clearfix;
+	width: span($columns);
+	margin: 0 auto;
+}
+
+@mixin row {
+	@include clearfix;
+	margin-left: -$column-margin !important;
+}
+
+@mixin row-no-gutter {
+	@include clearfix;
+}
+
+@mixin column($n) {
+	@include float-left;
+	margin-left: $column-margin;
+	width: span($n);
+}
+
+@mixin column-no-gutter($n) {
+	@include float-left;
+	width: span-ng($n);
+}
+
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select; // IE10+
+	user-select: $select;
+}
+
+@mixin placeholder() {
+	&:-moz-placeholder {
+		font: {
+			family: $font-family-sans-condensed;
+			weight: $font-weight-normal;
+		}
+	}
+	&::-moz-placeholder {
+		font: {
+			family: $font-family-sans-condensed;
+			weight: $font-weight-normal;
+		}
+	}
+	&:-ms-input-placeholder {
+		font: {
+			family: $font-family-sans-condensed;
+			weight: $font-weight-normal;
+		}
+	}
+	&::-webkit-input-placeholder {
+		font: {
+			family: $font-family-sans-condensed;
+			weight: $font-weight-normal;
+		}
+	}
+}

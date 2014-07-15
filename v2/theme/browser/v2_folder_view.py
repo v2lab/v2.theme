@@ -44,3 +44,14 @@ class V2FolderView(V2PeopleView):
 
     def isAudio(self, content):
         return IAudio.providedBy(content)
+
+    def getCategory(self, content):
+        """Find the parent name in the url path.
+
+        This displays in which category an item is placed."""
+
+        url = content.virtual_url_path().upper()
+        menu_items = ['EVENT', 'PUBLISHING', 'LAB']
+        for item in menu_items:
+            if item in url:
+                return item
