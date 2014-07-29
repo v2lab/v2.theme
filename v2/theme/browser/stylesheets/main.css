@@ -610,6 +610,13 @@ input.inputLabelActive {
   display: none;
 }
 
+/* line 46, ../sass/_default.scss */
+#content {
+  font-size: inherit;
+  padding: 0;
+  background: transparant;
+}
+
 /* line 1, ../sass/_menu.scss */
 ul.main-menu {
   margin: 0 0 0 10px;
