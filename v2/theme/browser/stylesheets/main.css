@@ -543,9 +543,10 @@ p {
   top: 0;
   left: 50%;
   margin-left: -507px !important;
+  z-index: 10;
 }
 
-/* line 181, ../sass/_global.scss */
+/* line 182, ../sass/_global.scss */
 .text-right {
   text-align: right;
 }
