@@ -605,6 +605,11 @@ input.inputLabelActive {
   margin-top: 82px !important;
 }
 
+/* line 43, ../sass/_default.scss */
+#portal-personaltools-wrapper {
+  display: none;
+}
+
 /* line 1, ../sass/_menu.scss */
 ul.main-menu {
   margin: 0 0 0 10px;
