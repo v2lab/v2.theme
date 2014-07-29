@@ -64,6 +64,9 @@ ul.main-menu {
 		> a {
 			text-transform: uppercase;
 			float: left;
+			&.selected {
+				background: black;
+			}
 		}
 		&:hover {
 			&:before {
@@ -78,6 +81,14 @@ ul.main-menu {
 			}
 			> ul {
 				display: block;
+			}
+		}
+		&.selected {
+			&:before {
+				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+			}
+			&:after {
+				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 			}
 		}
 		&:nth-child(1) {

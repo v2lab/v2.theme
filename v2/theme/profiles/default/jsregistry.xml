@@ -18,6 +18,11 @@
       for the latest list of all available keys and default values.
       -->
 
+    <javascript
+            id="++resource++v2.theme.javascripts/v2.js"
+            cacheable="False" compression="safe" cookable="False"
+            enabled="True" expression=""  inline="False"/>
+
  <javascript
     id="++resource++v2.theme.javascripts/bg_images.js"
     cacheable="False" compression="safe" cookable="False"
