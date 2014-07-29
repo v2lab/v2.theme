@@ -46,6 +46,8 @@ ul.main-menu {
 		}
 		&:after {
 			display: block;
+			visibility: visible;
+
 			float: left;
 			width: 10px;
 			height: 29px;

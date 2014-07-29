@@ -678,74 +678,75 @@ ul.main-menu > li:before {
 /* line 47, ../sass/_menu.scss */
 ul.main-menu > li:after {
   display: block;
+  visibility: visible;
   float: left;
   width: 10px;
   height: 29px;
   content: " ";
 }
-/* line 55, ../sass/_menu.scss */
+/* line 57, ../sass/_menu.scss */
 ul.main-menu > li:first-child:before {
   width: 0;
 }
-/* line 60, ../sass/_menu.scss */
+/* line 62, ../sass/_menu.scss */
 ul.main-menu > li:last-child:after {
   width: 0;
 }
-/* line 64, ../sass/_menu.scss */
+/* line 66, ../sass/_menu.scss */
 ul.main-menu > li > a {
   text-transform: uppercase;
   float: left;
 }
-/* line 67, ../sass/_menu.scss */
+/* line 69, ../sass/_menu.scss */
 ul.main-menu > li > a.selected {
   background: black;
 }
-/* line 72, ../sass/_menu.scss */
+/* line 74, ../sass/_menu.scss */
 ul.main-menu > li:hover:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 75, ../sass/_menu.scss */
+/* line 77, ../sass/_menu.scss */
 ul.main-menu > li:hover:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 78, ../sass/_menu.scss */
+/* line 80, ../sass/_menu.scss */
 ul.main-menu > li:hover > a {
   color: white;
   background: black;
 }
-/* line 82, ../sass/_menu.scss */
+/* line 84, ../sass/_menu.scss */
 ul.main-menu > li:hover > ul {
   display: block;
 }
-/* line 87, ../sass/_menu.scss */
+/* line 89, ../sass/_menu.scss */
 ul.main-menu > li.selected:before {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
 }
-/* line 90, ../sass/_menu.scss */
+/* line 92, ../sass/_menu.scss */
 ul.main-menu > li.selected:after {
   background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 }
-/* line 95, ../sass/_menu.scss */
+/* line 97, ../sass/_menu.scss */
 ul.main-menu > li:nth-child(1) a:hover, ul.main-menu > li:nth-child(1) a.selected {
   color: #59ff00;
 }
-/* line 100, ../sass/_menu.scss */
+/* line 102, ../sass/_menu.scss */
 ul.main-menu > li:nth-child(2) a:hover, ul.main-menu > li:nth-child(2) a.selected {
   color: #ffff36;
 }
-/* line 105, ../sass/_menu.scss */
+/* line 107, ../sass/_menu.scss */
 ul.main-menu > li:nth-child(3) a:hover, ul.main-menu > li:nth-child(3) a.selected {
   color: #ffaf8a;
 }
-/* line 110, ../sass/_menu.scss */
+/* line 112, ../sass/_menu.scss */
 ul.main-menu > li:nth-child(4) a:hover, ul.main-menu > li:nth-child(4) a.selected {
   color: #82ffff;
 }
-/* line 115, ../sass/_menu.scss */
+/* line 117, ../sass/_menu.scss */
 ul.main-menu > li:nth-child(5) a:hover, ul.main-menu > li:nth-child(5) a.selected {
   color: #ffaf8a;
 }
-/* line 120, ../sass/_menu.scss */
+/* line 122, ../sass/_menu.scss */
 ul.main-menu > li:nth-child(6) a:hover, ul.main-menu > li:nth-child(6) a.selected {
   color: #29ff8d;
 }
