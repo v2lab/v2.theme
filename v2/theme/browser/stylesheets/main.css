@@ -653,7 +653,7 @@ ul.main-menu li a:hover {
 }
 /* line 34, ../sass/_menu.scss */
 ul.main-menu > li {
-  margin-left: -10px;
+  margin-left: -15px;
 }
 /* line 73, ../sass/_variables.scss */
 ul.main-menu > li:after {
