@@ -33,7 +33,7 @@ ul.main-menu {
 	}
 	> li {
 		@include clearfix;
-		margin-left: -10px;
+		margin-left: -15px;
 		&:first-child {
 			margin-left: 0;
 		}
@@ -47,7 +47,7 @@ ul.main-menu {
 		&:after {
 			display: block;
 			visibility: visible;
-
+			clear: none;
 			float: left;
 			width: 10px;
 			height: 29px;

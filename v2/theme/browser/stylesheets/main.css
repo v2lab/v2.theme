@@ -679,6 +679,7 @@ ul.main-menu > li:before {
 ul.main-menu > li:after {
   display: block;
   visibility: visible;
+  clear: none;
   float: left;
   width: 10px;
   height: 29px;
