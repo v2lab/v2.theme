@@ -69,9 +69,15 @@ $line-height-xl-computed: floor(($font-size-xl * $line-height-xl));
 	@return ($column-width * $n + $column-margin * ($n - 1)) + ($column-margin - ($column-margin/12*$n));
 }
 
-@function aboutblock($n) {
-	@return (span($columns) / $n) - ($column-margin / 2);
-};
+@mixin clearfix {
+	&:after {
+		content: ".";
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+}
 
 @mixin container {
 	@include clearfix;

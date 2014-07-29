@@ -75,12 +75,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Set the width of the grid */
 /* line 12, ../sass/_lemonade.scss */
 .frame {
-  overflow: hidden;
-  *zoom: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
+}
+/* line 73, ../sass/_variables.scss */
+.frame:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 /* line 16, ../sass/_lemonade.scss */
 .frame [class*='bit-'] {
@@ -641,9 +647,15 @@ ul.main-menu li a:hover {
 }
 /* line 34, ../sass/_menu.scss */
 ul.main-menu > li {
-  overflow: hidden;
-  *zoom: 1;
   margin-left: -10px;
+}
+/* line 73, ../sass/_variables.scss */
+ul.main-menu > li:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 /* line 37, ../sass/_menu.scss */
 ul.main-menu > li:first-child {
@@ -771,17 +783,29 @@ input.searchButton {
 
 /* line 15, ../sass/_grid.scss */
 .container {
-  overflow: hidden;
-  *zoom: 1;
   width: 1014px;
   margin: 0 auto;
+}
+/* line 73, ../sass/_variables.scss */
+.container:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 /* line 18, ../sass/_grid.scss */
 .row {
-  overflow: hidden;
-  *zoom: 1;
   margin-left: -18px !important;
+}
+/* line 73, ../sass/_variables.scss */
+.row:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 /* line 21, ../sass/_grid.scss */
