@@ -131,7 +131,6 @@
 								</div>
 
 								<metal:slot define-slot="body">
-									<div id="content">
 										<metal:header define-slot="header" tal:content="nothing">
 											Visual Header
 										</metal:header>
@@ -170,7 +169,6 @@
 											</metal:main>
 
 										</metal:bodytext>
-									</div>
 								</metal:slot>
 
 								<metal:sub define-slot="sub" tal:content="nothing">

@@ -21,6 +21,9 @@
 	&.frame-container {
 		width: span(12) + $column-margin;
 	}
+	&.frame-white {
+		background: white;
+	}
 }
 
 /* Attribute selector */
