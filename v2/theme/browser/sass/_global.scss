@@ -9,7 +9,8 @@ body {
 	};
 	line-height: $line-height-m;
 	color: $font-color;
-	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center top fixed;
+	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
+	background-size: cover;
 }
 a {
 	color: $color-primary;
