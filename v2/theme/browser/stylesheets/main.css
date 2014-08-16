@@ -335,7 +335,7 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.2;
-  color: #333333;
+  color: black;
   background: #e6e6e6 url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
   background-size: cover;
 }
@@ -348,12 +348,12 @@ a {
 /* line 18, ../sass/_global.scss */
 a:hover {
   text-decoration: underline;
-  color: #333333;
+  color: black;
 }
 
 /* line 23, ../sass/_global.scss */
 h1 {
-  color: #666666;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -362,7 +362,7 @@ h1 {
 
 /* line 32, ../sass/_global.scss */
 h2 {
-  color: #666666;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -561,7 +561,7 @@ input {
   font-family: Arial, Helvetica, sans-serif;
   visibility: visible;
   border: 1px solid black;
-  color: #333333;
+  color: black;
   vertical-align: inherit;
   background: none;
   font-size: 15px;

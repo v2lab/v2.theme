@@ -13,15 +13,15 @@ body {
 	background-size: cover;
 }
 a {
-	color: $color-primary;
+	color: $font-color;
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
-		color: $dark-gray;
+		color: $font-color;
 	}
 }
 h1 {
-	color: $gray;
+	color: $font-color;
 	font: {
 		family: $font-family-sans;
 		weight: $font-weight-normal;
@@ -30,7 +30,7 @@ h1 {
 	line-height: $line-height-xl-computed;
 }
 h2 {
-	color: $gray;
+	color: $font-color;
 	font: {
 		family: $font-family-sans;
 		weight: $font-weight-normal;
