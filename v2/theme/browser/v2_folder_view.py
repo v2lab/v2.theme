@@ -26,10 +26,11 @@ class V2FolderView(V2PeopleView):
         if folder.portal_type == "Folder":
             path = folder.getPath()
             return catalog.searchResults(
-                path={'query': path,'depth': 1 }, sort_on='getObjPositionInParent', sort_limit=3)[:3]
+                path={'query': path, 'depth': 1},
+                sort_on='getObjPositionInParent', sort_limit=3)[:3]
         if folder.portal_type == "Topic":
             query = folder.getObject().buildQuery()
-            if query != None:
+            if query is not None:
                 return catalog.searchResults(query)[:3]
         return []
 

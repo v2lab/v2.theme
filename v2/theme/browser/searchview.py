@@ -22,16 +22,16 @@ class SearchView(BrowserView):
 		result.append(type)
 	for type in v2Types:
 		result.append(type)
-	
+
 	if 'Image' in result:
 		result.remove('Image')
 	if 'File' in result:
 		result.remove('File')
-	
+
 	clean = self.removeBlackListed(result)
-	
+
 	order = self.orderTypesList(clean)
-	return order 
+	return order
 
     def removeBlackListed(self, list):
 	blackList = ['Link','News Item', 'Document', 'Favorite', 'Folder', 'FormFolder', 'Large Plone Folder', 'Topic']
@@ -51,7 +51,7 @@ class SearchView(BrowserView):
 	for extra in list:
 		if extra not in result:
 			result.append(extra)
-	
+
 	return result
 
     def purgeType(self, type):
@@ -63,7 +63,7 @@ class SearchView(BrowserView):
 		purgedResult = ['File', 'Image']
 	else:
 		purgedResult = [type]
-	
+
 	return purgedResult
 
     def getTypeName(self, type):
@@ -87,13 +87,12 @@ class SearchView(BrowserView):
     def createSearchURL(self, request, type):
 	purgedType = self.purgeType(type)
 	portal_url = getToolByName(self, 'portal_url')
- 
-	stext = request.form.get('SearchableText', '')	
+
+	stext = request.form.get('SearchableText', '')
 
 	searchURL = portal_url() + '/search?SearchableText=' + stext
 
 	for item in purgedType:
 		searchURL += '&portal_type%3Alist=' + item
-	
+
 	return searchURL
-	
