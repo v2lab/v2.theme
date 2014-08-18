@@ -9,18 +9,19 @@ body {
 	};
 	line-height: $line-height-m;
 	color: $font-color;
-	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center top fixed;
+	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
+	background-size: cover;
 }
 a {
-	color: $color-primary;
+	color: $font-color;
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
-		color: $dark-gray;
+		color: $font-color;
 	}
 }
 h1 {
-	color: $gray;
+	color: $font-color;
 	font: {
 		family: $font-family-sans;
 		weight: $font-weight-normal;
@@ -29,7 +30,7 @@ h1 {
 	line-height: $line-height-xl-computed;
 }
 h2 {
-	color: $gray;
+	color: $font-color;
 	font: {
 		family: $font-family-sans;
 		weight: $font-weight-normal;
