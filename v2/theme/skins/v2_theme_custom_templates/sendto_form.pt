@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<metal:block fill-slot="top_slot" />
+
+  <body>
+
+    <metal:main fill-slot="main">
+
+      <h1 class="documentFirstHeading"
+          i18n:translate="heading_send_page_to">Send this page to someone</h1>
+
+      <div class="documentDescription"
+         i18n:translate="description_send_page_url_to">
+        This option has been removed due to spurious spambot spoofing.
+        <!--Fill in the email address of your friend, and we will send an email
+        that contains a link to this page.-->
+      </div>
+
+    </metal:main>
+
+  </body>
+</html>
