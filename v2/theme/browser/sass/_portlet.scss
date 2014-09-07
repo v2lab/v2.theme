@@ -1,0 +1,45 @@
+.portlet {
+      border: none;
+      background: none;
+}
+.portletHeader, .managedPortlet .portletHeader {
+      background: none;
+      border: none;
+      border-bottom: 2px solid black;
+      text-transform: uppercase;
+}
+.portletItem {
+      margin: 0;
+      padding: 1em;
+      border: none;
+      border-bottom: 2px solid black;
+}
+.even {
+      background: none;
+}
+.portletFooter {
+      background: none;
+      margin: 0;
+      padding: 0.25em 1em;
+      border: none;
+      text-align: right;
+}
+.portletItemDetails {
+      text-align: left;
+      display: block;
+      color: black;
+}
+
+.column-2.contentSidebar {
+      width: 154px;
+      .portletHeader, .managedPortlet .portletHeader {
+            padding: 0;
+      }
+      .portletItem {
+            padding: 0;
+            border: none;
+            img.relatedImage {
+                  width: 100%;
+            }
+      }
+}

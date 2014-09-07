@@ -29,6 +29,9 @@
 	// reset public.css
 	display: none;
 }
+.visualClearLeft {
+	clear: left;
+}
 .LSBox {
 	// reset public.css
 	clear: none;
@@ -47,4 +50,38 @@
 	font-size: inherit;
 	padding: 0;
 	background: transparent;
+}
+
+
+
+
+
+.frame.js-masonry {
+	padding: $column-margin;
+}
+.js-masonry .V2TopicItem {
+	width: 45%;
+}
+
+.category.event {
+	background-color: $yellow;
+}
+.category.lab {
+	background-color: $green;
+}
+.category.publishing {
+	background-color: $orange;
+}
+.futureEventDateFrom, .futureEventDateUntil {
+	float: left;
+	div {
+		float: left;
+	}
+}
+
+.documentDescription, .description {
+	font-weight: normal;
+}
+.newsImageContainer, .eventDetails {
+	float: none;
 }

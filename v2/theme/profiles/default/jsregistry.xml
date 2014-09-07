@@ -43,4 +43,14 @@
     cacheable="False" compression="safe" cookable="False"
     enabled="True" expression=""  inline="False"/>
 
+ <javascript
+    id="++resource++v2.theme.javascripts/jquery.cycle.js"
+    cacheable="False" compression="safe" cookable="False"
+    enabled="True" expression=""  inline="False"/>
+
+ <javascript
+    id="++resource++v2.theme.javascripts/masonry.pkgd.min.js"
+    cacheable="False" compression="safe" cookable="False"
+    enabled="True" expression=""  inline="False"/>
+
 </object>

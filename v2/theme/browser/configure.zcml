@@ -111,6 +111,26 @@
      description="View with lead images displayed and V2 tweeks"
      />
 
+
+  <browser:page
+     for="*"
+     name="v2_topic_view"
+     class=".v2_topic_view.V2TopicView"
+     template="v2_topic_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Topic View"
+     action="@@v2_topic_view"
+     layer=".interfaces.IThemeSpecific"
+     description="2 columns with masonry script"
+     />
+
   <browser:page
      for="*"
      name="v2_people_view"

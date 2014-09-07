@@ -17,7 +17,7 @@
   <element value="Topic"/>
  </property>
  <property name="allow_discussion">False</property>
- <property name="default_view">v2_folder_view</property>
+ <property name="default_view">v2_topic_view</property>
  <property name="view_methods">
   <element value="folder_listing"/>
   <element value="folder_summary_view"/>
@@ -25,6 +25,7 @@
   <element value="atct_album_view"/>
   <element value="atct_topic_view"/>
   <element value="v2_folder_view" />
+  <element value="v2_topic_view" />
   <element value="v2_people_view" />
   <element value="v2_album_view" />
  </property>

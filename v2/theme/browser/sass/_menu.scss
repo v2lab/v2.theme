@@ -13,15 +13,23 @@ ul.main-menu {
 		background: black;
 		li {
 			display: block;
+
+
 			a {
 				color: white;
 			}
 		}
 	}
 	li {
+		position: relative;
 		list-style-type: none;
 		display: inline-block;
-		height: 29px;
+		span {
+			position: absolute;
+			line-height: 29px;
+			left: 0;
+			top: 0;
+		}
 		a {
 			display: block;
 			line-height: 29px;
@@ -43,6 +51,8 @@ ul.main-menu {
 			width: 10px;
 			height: 29px;
 			content: " ";
+			background: url(../++resource++v2.theme.images/v2-menu-background-line.png) no-repeat 0 0;
+
 		}
 		&:after {
 			display: block;
