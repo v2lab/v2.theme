@@ -717,25 +717,25 @@ input.inputLabelActive {
 }
 
 /* line 75, ../sass/_default.scss */
-.futureEventDateFrom, .futureEventDateUntil {
+.futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil {
   float: left;
 }
 /* line 77, ../sass/_default.scss */
-.futureEventDateFrom div, .futureEventDateUntil div {
+.futureEventDateFrom div, .futureEventDateUntil div, .pastEventDateFrom div, .pastEventDateUntil div {
   float: left;
 }
 
-/* line 82, ../sass/_default.scss */
+/* line 83, ../sass/_default.scss */
 .documentDescription, .description {
   font-weight: normal;
 }
 
-/* line 85, ../sass/_default.scss */
+/* line 86, ../sass/_default.scss */
 .newsImageContainer, .eventDetails {
   float: none;
 }
 
-/* line 88, ../sass/_default.scss */
+/* line 89, ../sass/_default.scss */
 .V2TopicItem img {
   width: 100%;
   height: auto;

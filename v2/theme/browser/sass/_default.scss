@@ -72,12 +72,13 @@
 .category.PUBLISHING {
 	background-color: $orange;
 }
-.futureEventDateFrom, .futureEventDateUntil {
+.futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	float: left;
 	div {
 		float: left;
 	}
 }
+
 
 .documentDescription, .description {
 	font-weight: normal;

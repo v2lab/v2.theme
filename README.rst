@@ -8,7 +8,7 @@ This product has a dependency on collective.contentLeadImage and collective.flow
 Configuration
 =============
 
-To customize the theme by changing colors, fonts and images (like the logo for example) you only need to: 
+To customize the theme by changing colors, fonts and images (like the logo for example) you only need to:
 
 - log in as an administrator to your plone instance;
 
@@ -19,7 +19,7 @@ To customize the theme by changing colors, fonts and images (like the logo for e
 - There are three customizable skin layers: v2_theme_custom_images, v2_theme_custom_templates and v2_theme_styles;
 
 - To customize any of the files within these layers you can click on them and then press the customize button.
- 
+
 To change colors and fonts:
 
 - Inside v2_theme_styles click on the file 'base_properties (V2 Theme's color, font, logo and border defaults)'. This file controls most of the visual apearence of the site;
@@ -27,7 +27,7 @@ To change colors and fonts:
 - Click customize;
 
 - Configure this file at will. The most important properties would be 'globalStrongColor' that controls the main color of the theme  (defaults to strong green) and
-  'contentViewBackgroundColor' that controls the background color of the interface tabs and other small elements of the theme (defaults to light green); 
+  'contentViewBackgroundColor' that controls the background color of the interface tabs and other small elements of the theme (defaults to light green);
   note: IT IS NOT RECOMENDED TO CHANGE THE FILENAMES ON THIS FILE (images). Instead, customize the images on the v2_theme_custom_images layer with your own (see below how to do this).
 
 To customize images (Example of the logo):
@@ -48,3 +48,11 @@ To customize images (Example of the logo):
  - Tip: The background of the event date display in the blocks and event view are images and they are separated in future events and past events so you can give a different background to each of them
 
  - Tip: To change the FAVICON customize the image favicon.ico in v2_custom_images (attention, it has to be an .ico file, to create one from an image you can use an .ico generator like http://tools.dynamicdrive.com/favicon/ )
+
+Developer's Note:
+=============
+2014.09.12
+Due to a decoding bug Products.Archetypes.Field.py has been editted.
+Line 2582
+                  'alt' : decode(escape(alt, quote=True),instance),
+                  'title' : decode(escape(title, quote=True),instance),

@@ -131,9 +131,12 @@
                          tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
 
 
-                       <img tal:condition="item_has_leadimage"
-                          tal:define="scale item_object/@@images; img python:scale.scale('leadImage', width=306, height=306)"
-                          tal:replace="structure python: img.tag() if img else None" />
+                         <img src="" alt=""
+                             tal:condition="exists:item_object/image_medium"
+                             tal:replace="structure python:item_object.tag(scale='medium', css_class='')" />
+                        <img src="" alt=""
+                             tal:condition="item_has_leadimage"
+                             tal:replace="structure python:view.tag(item_object, css_class='')" />
 
                       </a>
 
