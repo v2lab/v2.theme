@@ -692,12 +692,12 @@ input.inputLabelActive {
 }
 
 /* line 59, ../sass/_default.scss */
-.frame.js-masonry {
+#V2TopicView {
   padding: 18px;
 }
 
 /* line 62, ../sass/_default.scss */
-.js-masonry .V2TopicItem {
+#V2TopicView .V2TopicItem {
   width: 45%;
 }
 
