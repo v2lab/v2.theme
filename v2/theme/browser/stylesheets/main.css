@@ -702,17 +702,17 @@ input.inputLabelActive {
 }
 
 /* line 66, ../sass/_default.scss */
-.category.event {
+.category.EVENT {
   background-color: #ffff36;
 }
 
 /* line 69, ../sass/_default.scss */
-.category.lab {
+.category.LAB {
   background-color: #29ff8d;
 }
 
 /* line 72, ../sass/_default.scss */
-.category.publishing {
+.category.PUBLISHING {
   background-color: #ffaf8a;
 }
 
@@ -733,6 +733,12 @@ input.inputLabelActive {
 /* line 85, ../sass/_default.scss */
 .newsImageContainer, .eventDetails {
   float: none;
+}
+
+/* line 88, ../sass/_default.scss */
+.V2TopicItem img {
+  width: 100%;
+  height: auto;
 }
 
 /* line 1, ../sass/_menu.scss */

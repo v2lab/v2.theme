@@ -63,13 +63,13 @@
 	width: 45%;
 }
 
-.category.event {
+.category.EVENT {
 	background-color: $yellow;
 }
-.category.lab {
+.category.LAB {
 	background-color: $green;
 }
-.category.publishing {
+.category.PUBLISHING {
 	background-color: $orange;
 }
 .futureEventDateFrom, .futureEventDateUntil {
@@ -84,4 +84,8 @@
 }
 .newsImageContainer, .eventDetails {
 	float: none;
+}
+.V2TopicItem img {
+	width: 100%;
+	height: auto;
 }

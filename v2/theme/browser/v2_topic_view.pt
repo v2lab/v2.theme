@@ -68,14 +68,13 @@
                                    item_has_leadimage item/hasContentLeadImage;
                                    item_object item/getObject;
                                    item_is_video python:view.isVideo(item_object);
-                                  item_category python:view.getCategory(item_object);
-                                  item_category_low python:item_category.lower();"
+                                  item_category python:view.getCategory(item_object);"
                        tal:attributes="class string:V2TopicItem vevent ${item_type_class}">
 
             <span
              tal:condition="item_category"
              tal:content="item_category"
-             tal:attributes="class string:category ${item_category_low};"
+             tal:attributes="class string:category ${item_category}"
               >Item Category</span>
 
                     <h2 class="" metal:define-macro="listitem">
