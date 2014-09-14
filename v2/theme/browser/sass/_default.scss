@@ -72,6 +72,14 @@
 .category.PUBLISHING {
 	background-color: $orange;
 }
+.category.ARCHIVE {
+	background-color: $blue;
+}
+.category.WEBSHOP {
+	background-color: $orange;
+}
+
+
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	float: left;
 	div {
@@ -87,6 +95,11 @@
 	float: none;
 }
 .V2TopicItem img {
+	width: 100%;
+	height: auto;
+}
+
+.tileItem img.tileImage {
 	width: 100%;
 	height: auto;
 }

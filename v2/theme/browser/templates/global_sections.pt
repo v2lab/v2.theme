@@ -4,7 +4,7 @@
 			<span tal:define="item python:portal[tab['id']]" tal:omit-tag="">
 			<span tal:define="isAnon portal/portal_membership/isAnonymousUser"
 				  tal:condition="python:(item.meta_type == 'ATFolder' or item.meta_type == 'ATBTreeFolder' or item.meta_type == 'ATTopic' or item.meta_type == 'ATDocument') and (portal.portal_workflow.getInfoFor(item, 'review_state') == 'published' or not isAnon)" tal:omit-tag="">
-			<li class="" tal:condition="not:item/exclude_from_nav">
+			<li class="" tal:condition="not:item/exclude_from_nav" tal:attributes="class python: item.title.lower()">
 				<a href="#" tal:condition="python:here.absolute_url().find(item.absolute_url()) == -1" tal:attributes="href item/absolute_url" tal:content="item/title" class="plain">menu item </a>
 				<a href="#" tal:condition="python:here.absolute_url().find(item.absolute_url()) > -1" tal:attributes="href item/absolute_url" tal:content="item/title" class="selected">menu item </a>
 				<ul class="submenu" tal:condition="python:len(item.objectValues('ATFolder')) + len(item.objectValues('ATBTreeFolder')) + len(item.objectValues('ATTopic')) + len(item.objectValues('ATDocument')) != 0">

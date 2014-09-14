@@ -103,32 +103,32 @@ ul.main-menu {
 				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
 			}
 		}
-		&:nth-child(1) {
+		&.about {
 			a:hover, a.selected {
 				color: $green-menu;
 			}
 		}
-		&:nth-child(2) {
+		&.events {
 			a:hover, a.selected {
 				color: $yellow;
 			}
 		}
-		&:nth-child(3) {
+		&.webshop {
 			a:hover, a.selected {
 				color: $orange;
 			}
 		}
-		&:nth-child(4) {
+		&.archive {
 			a:hover, a.selected {
 				color: $blue;
 			}
 		}
-		&:nth-child(5) {
+		&.publishing {
 			a:hover, a.selected {
 				color: $orange;
 			}
 		}
-		&:nth-child(6) {
+		&.lab {
 			a:hover, a.selected {
 				color: $green;
 			}

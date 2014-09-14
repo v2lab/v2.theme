@@ -139,7 +139,7 @@
 							</div>
 						</tal:block>
 
-						<div tal:attributes="class python:'column-6 clear-margin contentArea' if sl else 'olumn-8 clear-margin'">
+						<div tal:attributes="class python:'column-6 clear-margin contentArea' if sl else 'column-8 clear-margin'">
 
 						<metal:block define-slot="content">
 							<div metal:define-macro="content"
@@ -203,7 +203,9 @@
 							</div>
 						</metal:block>
 
+						<tal:comment replace="nothing">
 						<div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" />
+						</tal:comment>
 
 						</div>
 

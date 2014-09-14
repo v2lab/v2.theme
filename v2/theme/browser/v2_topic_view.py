@@ -52,7 +52,7 @@ class V2TopicView(V2PeopleView):
         This displays in which category an item is placed."""
 
         url = content.virtual_url_path().upper()
-        menu_items = ['EVENT', 'PUBLISHING', 'LAB']
+        menu_items = ['EVENT', 'PUBLISHING', 'LAB', 'WEBSHOP', 'ARCHIVE']
         for item in menu_items:
             if item in url:
                 return item
