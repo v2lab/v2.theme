@@ -26,6 +26,8 @@
   <element value="atct_topic_view"/>
   <element value="v2_folder_view" />
   <element value="v2_topic_view" />
+  <element value="v2_home_view" />
+  <element value="v2_webshop_view" />
   <element value="v2_people_view" />
   <element value="v2_album_view" />
  </property>

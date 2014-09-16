@@ -131,6 +131,66 @@
      description="2 columns with masonry script"
      />
 
+
+  <browser:page
+     for="*"
+     name="v2_home_view"
+     class=".v2_home_view.V2HomeView"
+     template="v2_home_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Home View"
+     action="@@v2_home_view"
+     layer=".interfaces.IThemeSpecific"
+     description="2 columns with masonry script"
+     />
+
+
+  <browser:page
+     for="*"
+     name="v2_webshop_view"
+     class=".v2_webshop_view.V2WebshopView"
+     template="v2_webshop_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Webshop View"
+     action="@@v2_webshop_view"
+     layer=".interfaces.IThemeSpecific"
+     description="3 columns with masonry script"
+     />
+
+
+  <browser:page
+     for="*"
+     name="v2_about_view"
+     class=".v2_about_view.V2AboutView"
+     template="v2_about_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 About View"
+     action="@@v2_about_view"
+     layer=".interfaces.IThemeSpecific"
+     description="3 columns with masonry script"
+     />
+
   <browser:page
      for="*"
      name="v2_people_view"

@@ -79,7 +79,12 @@
 	background-color: $orange;
 }
 
-
+.documentFirstHeading {
+	display: inline;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	float: left;
 	div {
@@ -88,12 +93,13 @@
 }
 
 
+.documentActions {
+	float: left;
+}
 .documentDescription, .description {
 	font-weight: normal;
 }
-.newsImageContainer, .eventDetails {
-	float: none;
-}
+
 .V2TopicItem img {
 	width: 100%;
 	height: auto;
@@ -102,4 +108,52 @@
 .tileItem img.tileImage {
 	width: 100%;
 	height: auto;
+}
+.tileItem, .item {
+	border-top: none;
+}
+
+.leadimageContainer img {
+	width: 100%;
+}
+
+.newsImageContainer, .eventDetails  {
+	float: none;
+	width: auto;
+}
+.newsImageContainer  {
+	margin-left: $column-margin;
+	.discreet {
+		display: none;
+	}
+}
+.newsImage {
+	width: 100%;
+	height: auto;
+	border: none;
+}
+
+.V2WebshopItem {
+	width: 208px;
+	margin-left: 15px;
+	float: left;
+	padding: 9px;
+}
+
+.V2AboutItem .listitem {
+	width: 309px;
+	margin-left: 15px;
+	margin-bottom: 8px;
+	float: left;
+	padding: 9px;
+	background-color: black;
+	&.even {
+		margin-left: 0;
+	}
+	a {
+		color: white !important;
+		font-size: 1.5em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
 }

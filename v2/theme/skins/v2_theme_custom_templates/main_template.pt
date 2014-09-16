@@ -131,15 +131,9 @@
 
           					<tal:comment replace="nothing"> There must be a better way of doing this.... </tal:comment>
 
-						<tal:block tal:define="this_title python:context_state.object_title(); results python:context.portal_catalog.searchResults({'Title': this_title })" tal:repeat="item results">
-							<div class="leadimageContainer" tal:define="item_has_leadimage item/hasContentLeadImage;item_object item/getObject;">
-							      <img tal:condition="item_has_leadimage"
-					                          tal:define="scale item_object/@@images; img python:scale.scale('leadImage', width=670, height=498)"
-					                          tal:replace="structure python: img.tag() if img else None" />
-							</div>
-						</tal:block>
 
-						<div tal:attributes="class python:'column-6 clear-margin contentArea' if sl else 'column-8 clear-margin'">
+
+					<div tal:attributes="class python:'column-6 clear-margin contentArea' if sl else 'column-8 clear-margin'">
 
 						<metal:block define-slot="content">
 							<div metal:define-macro="content"

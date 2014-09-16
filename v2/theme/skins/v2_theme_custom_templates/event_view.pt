@@ -15,9 +15,10 @@
             here_url context/@@plone_context_state/object_url;">
 
                   <div tal:replace="structure provider:plone.abovecontenttitle" />
+                                    <div tal:replace="structure provider:plone.abovecontentbody" class="column-8"/>
 
                   <div class="frame frame-white vevent column-6">
-                           <div class="">
+                           <div class="bit-1">
                                     <h1 class="documentFirstHeading summary">
                                           <metal:field use-macro="python:here.widget('title', mode='view')">
                                           Title
@@ -34,7 +35,6 @@
                                         </metal:field>
                                     </p>
                                     <div class="pageWrapper">
-                                    <div tal:replace="structure provider:plone.abovecontentbody" />
 
                                     <div class="eventDetails vcard">
                                              <span tal:define="

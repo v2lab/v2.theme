@@ -137,6 +137,9 @@ p {
 .margin-bottom-half {
 	margin-bottom: $column-margin / 2 !important;
 }
+.padding-top {
+	padding-top: $column-margin !important;
+}
 .padding-top-half {
 	padding-top: $column-margin / 2 !important;
 }
@@ -162,6 +165,9 @@ p {
 .border-bottom {
 	border-bottom: 2px solid black;
 }
+.border-top {
+	border-top: 2px solid black;
+}
 .white-box {
 	@include box-sizing(border-box);
 	background: white;
@@ -185,4 +191,7 @@ p {
 }
 .clear-margin {
 	margin: 0 !important;
+}
+.clear-margin-left {
+	margin-left: 0 !important;
 }
