@@ -15,6 +15,7 @@
                                     templateId template/getId">
 
                   <div class="frame frame-white margin-bottom">
+                      <div class="bit-1">
                         <div tal:replace="structure provider:plone.abovecontenttitle" />
                         <span class="category WEBSHOP">
                         <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -40,6 +41,7 @@
                                              'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
                               <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                         </div>
+                      </div>
                   </div>
 
                   <div id="V2WebshopView" class="frame">

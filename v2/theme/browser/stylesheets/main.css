@@ -841,6 +841,19 @@ input.inputLabelActive {
   text-transform: uppercase;
 }
 
+/* line 161, ../sass/_default.scss */
+.right-sidebar {
+  width: 240px;
+  position: fixed;
+}
+
+/* line 165, ../sass/_default.scss */
+.logo-holder {
+  position: fixed;
+  width: 68px;
+  text-align: right;
+}
+
 /* line 1, ../sass/_menu.scss */
 ul.main-menu {
   margin: 0 0 0 10px;
@@ -1073,6 +1086,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 68px;
+  position: relative;
 }
 
 /* line 24, ../sass/_grid.scss */
@@ -1080,6 +1094,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 154px;
+  position: relative;
 }
 
 /* line 27, ../sass/_grid.scss */
@@ -1087,6 +1102,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 240px;
+  position: relative;
 }
 
 /* line 30, ../sass/_grid.scss */
@@ -1094,6 +1110,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 326px;
+  position: relative;
 }
 
 /* line 33, ../sass/_grid.scss */
@@ -1101,6 +1118,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 412px;
+  position: relative;
 }
 
 /* line 36, ../sass/_grid.scss */
@@ -1108,6 +1126,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 498px;
+  position: relative;
 }
 
 /* line 39, ../sass/_grid.scss */
@@ -1115,6 +1134,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 584px;
+  position: relative;
 }
 
 /* line 42, ../sass/_grid.scss */
@@ -1122,6 +1142,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 670px;
+  position: relative;
 }
 
 /* line 45, ../sass/_grid.scss */
@@ -1129,6 +1150,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 756px;
+  position: relative;
 }
 
 /* line 48, ../sass/_grid.scss */
@@ -1136,6 +1158,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 842px;
+  position: relative;
 }
 
 /* line 51, ../sass/_grid.scss */
@@ -1143,6 +1166,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 928px;
+  position: relative;
 }
 
 /* line 54, ../sass/_grid.scss */
@@ -1150,6 +1174,7 @@ input.searchButton {
   float: left;
   margin-left: 18px;
   width: 1014px;
+  position: relative;
 }
 
 /* line 57, ../sass/_grid.scss */

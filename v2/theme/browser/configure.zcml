@@ -191,6 +191,28 @@
      description="3 columns with masonry script"
      />
 
+
+
+  <browser:page
+     for="*"
+     name="v2_upcomingevent_view"
+     class=".v2_upcomingevent_view.V2UpcomingeventView"
+     template="v2_upcomingevent_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Upcomingevent View"
+     action="@@v2_upcomingevent_view"
+     layer=".interfaces.IThemeSpecific"
+     description="2 columns with masonry script"
+     />
+
+
   <browser:page
      for="*"
      name="v2_people_view"

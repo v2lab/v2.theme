@@ -12,7 +12,15 @@
             <metal:main-macro define-macro="main"
                         tal:define="kssClassesView context/@@kss_field_decorator_view;
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                                    templateId template/getId">
+                                    date python: context.ZopeTime();
+                                    templateId template/getId;
+                                    results python: context.portal_catalog.searchResults(
+                                          review_state = 'published',
+                                          sort_on = 'start',
+                                          end={'query': date, 'range': 'min'},
+                                          portal_type = 'Event'
+                                          )
+                                    ">
 
                   <div class="frame frame-white margin-bottom">
                       <div class="bit-1">
@@ -56,7 +64,7 @@
                                                           batch folderContents;">
                                     <tal:listing condition="folderContents">
 
-                                          <tal:block tal:repeat="item folderContents">
+                                          <tal:block tal:repeat="item results">
                                                 <div class="tileItem visualIEFloatFix vevent"
                                                      tal:define="item_url item/getURL|item/absolute_url;
                                                                  normalizeString nocall:context/@@plone/normalizeString;
@@ -99,33 +107,6 @@
 
 
 
-                                                      <tal:video tal:condition="item_is_video">
-                                                        <div class="tileVideo" tal:define="audio_only python:view.isAudio(item_object)">
-                                                          <a class="autoFlowPlayer minimal" href=""
-                                                             tal:attributes="href item_url;
-                                                                             onclick python:item_has_leadimage and 'v2_video.configure(this, true)' or ''"
-                                                             tal:condition="python:not audio_only">
-                                                            <tal:image tal:condition="item_has_leadimage">
-                                                              <img src="" class="splash"  alt=""
-                                                                   tal:attributes="src string:${item_url}/leadImage" />
-                                                              <img tal:replace="structure here/play-button.png" src="" alt="play video" />
-                                                            </tal:image>
-                                                          </a>
-                                                          <a class="autoFlowPlayer audio" href="" tal:attributes="href item_url"
-                                                             tal:condition="audio_only">
-                                                          </a>
-                                                          <p class="tileBody" tal:condition="audio_only">
-                                                            <span tal:omit-tag="" tal:condition="not:item_description">
-                                                              &nbsp;
-                                                            </span>
-                                                            <span class="description"
-                                                                  tal:content="python:view.trimDescription(item_description, 250)"
-                                                                  tal:condition="item_description">
-                                                              description
-                                                            </span>
-                                                          </p>
-                                                        </div>
-                                                      </tal:video>
 
                                                       <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video">
                                                             <a href="#"
@@ -207,114 +188,7 @@
 
                                                       </tal:content>
 
-                                                      <tal:folder condition="python:item.portal_type == 'Topic' or item.portal_type == 'Folder'">
-                                                            <span tal:define="folderishContents python:view.getSubFolderContents(item)" tal:omit-tag="">
-                                                                  <div class="collectionInfo"
-                                                                     tal:condition="not:folderishContents">
-                                                                  This collection has no items
-                                                                  </div>
-                                                                  <div class="bit-1 vevent "
-                                                                     tal:repeat="folderItem folderishContents">
-                                                                        <tal:item tal:define="folderItemObject folderItem/getObject;
-                                                                                  folderItemURL folderItem/getURL;
-                                                                                  folderItemIsVideo python:view.isVideo(folderItemObject)">
-                                                                              <h2 class="">
-                                                                                    <a href="#"
-                                                                                       class="summary url" tal:attributes="href folderItemURL"
-                                                                                       tal:content="folderItem/Title" tal:condition="python:folderItem.portal_type not in ('File', 'Image',)">
-                                                                                      Item Title
-                                                                                    </a>
-                                                                                    <a href="#"
-                                                                                       class="summary url" tal:attributes="href string:${folderItemURL}/view"
-                                                                                       tal:content="folderItem/Title" tal:condition="python:folderItem.portal_type in ('File', 'Image',)">
-                                                                                      Item Title
-                                                                                    </a>
-                                                                              </h2>
 
-                                                                              <tal:video tal:condition="folderItemIsVideo">
-                                                                                    <div class="tileVideo" tal:define="audio_only python:view.isAudio(folderItemObject);
-                                                                                                                       hasLeadImage folderItem/hasContentLeadImage">
-                                                                                          <a class="autoFlowPlayer minimal" href=""
-                                                                                             tal:condition="not:audio_only"
-                                                                                             tal:attributes="href folderItemURL;
-                                                                                                             onclick python:hasLeadImage and 'v2_video.configure(this, true)' or ''">
-                                                                                                <img src="" class="splash"  alt=""
-                                                                                                     tal:condition="hasLeadImage"
-                                                                                                     tal:attributes="src string:${folderItemURL}/leadImage" />
-                                                                                                <img tal:replace="structure here/play-button-small.png" src="" alt="play video"
-                                                                                                     tal:condition="hasLeadImage" />
-                                                                                          </a>
-                                                                                          <a class="autoFlowPlayer audio" style="width: 228px; height: 24px;" href=""
-                                                                                             tal:attributes="href folderItemURL"
-                                                                                             tal:condition="audio_only">
-                                                                                          </a>
-                                                                                          <p class="tileBody" tal:condition="audio_only">
-                                                                                                <span tal:omit-tag="" tal:condition="not:folderItem/Description">
-                                                                                                  &nbsp;
-                                                                                                </span>
-                                                                                                <span class="description" tal:content="python:view.trimDescription(folderItem.Description, 100)">
-                                                                                                  description
-                                                                                                </span>
-                                                                                          </p>
-                                                                                    </div>
-                                                                              </tal:video>
-                                                                              <tal:others tal:condition="not:folderItemIsVideo">
-                                                                                    <a href="#" tal:attributes="href folderItemURL"
-                                                                                       tal:condition="python:folderItem.portal_type != 'Image'">
-                                                                                          <img src="" alt="" tal:condition="exists:folderItemObject/image_thumb"
-                                                                                               tal:replace="structure python:folderItemObject.tag(scale='thumb', css_class='tileImage')" />
-                                                                                          <img src="" alt=""
-                                                                                               tal:replace="structure python:view.tag(folderItemObject, css_class='tileImage')" /><br />
-                                                                                    </a>
-
-                                                                                    <a href="#" tal:attributes="href string:${folderItemURL}/view"
-                                                                                       tal:condition="python:folderItem.portal_type == 'Image'">
-
-                                                                                          <img src="" alt="" tal:condition="exists:folderItemObject/image_preview"
-                                                                                               tal:replace="structure python:folderItemObject.tag(scale='mini', css_class='imageBlock')" />
-                                                                                          <img src="" alt=""
-                                                                                               tal:replace="structure python:view.tag(folderItemObject, css_class='imageBlock')" /><br />
-                                                                                    </a>
-
-                                                                                    <div class=""
-                                                                                         tal:condition="python:folderItem.portal_type == 'Event'"
-                                                                                         tal:attributes="class python:'relatedDate ' + (folderItemObject.end() > view.currenttime() and 'futureDate' or 'pastDate')"
-                                                                                         tal:content="python:view.toLocalizedTime(folderItemObject.start())">
-                                                                                      Date
-                                                                                    </div>
-
-                                                                                    <p class="tileBody">
-                                                                                          <span tal:omit-tag="" tal:condition="not:folderItem/Description">
-                                                                                            &nbsp;
-                                                                                          </span>
-                                                                                          <span class="description" tal:content="python:view.trimDescription(folderItem.Description, 100)">
-                                                                                            description
-                                                                                          </span>
-                                                                                    </p>
-
-                                                                                    <div class="tileShopping"
-                                                                                         tal:define="shopping_information python:view.getShoppingInformation(folderItemObject)"
-                                                                                         tal:condition="shopping_information">
-                                                                                          <a href="#"
-                                                                                             tal:condition="shopping_information/webshop_url"
-                                                                                             tal:attributes="href shopping_information/webshop_url">
-                                                                                            Add to
-                                                                                          </a>
-                                                                                          <h3 tal:condition="shopping_information/price">
-                                                                                            &euro; <span tal:replace="shopping_information/price" />
-                                                                                          </h3>
-                                                                                    </div>
-
-                                                                              </tal:others>
-                                                                        </tal:item>
-                                                                  </div>
-                                                                  <div class="tileItem visualIEFloatFix see-more " tal:condition="folderContents">
-                                                                    <a href=""
-                                                                       tal:attributes="href item/getURL|item/absolute_url">See more ...</a>
-                                                                  </div>
-                                                            </span>
-                                                            <div class="visualClear"><!-- --></div>
-                                                      </tal:folder><!-- // folder repeater -->
 
                                                 </div><!-- // title item -->
 

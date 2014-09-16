@@ -7,7 +7,7 @@ from v2.theme.browser.v2_people_view import V2PeopleView
 
 
 class V2WebshopView(V2PeopleView):
-    """Complex Topic view.
+    """Complex Webshop view.
     """
 
     def toLocalizedTime(self, time, long_format=None, time_only = None):

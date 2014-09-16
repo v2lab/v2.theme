@@ -117,8 +117,11 @@
 
 	<div class="container margin-top-content">
 		<div class="row">
-			<div class="column-1 text-right">
-				<a href="/" title="V2_ Institute For The Unstable Media"><img src="side.png" /></a>
+			<div class="column-1">
+				<div class="logo-holder">
+					<a href="/" title="V2_ Institute For The Unstable Media"><img src="side.png" /></a>
+				</div>
+				&nbsp;
 			</div>
 			<div class="column-11">
 				<div class="row">
@@ -226,7 +229,7 @@
 					<div class="column-3"
 						metal:define-slot="column_two_slot"
 						tal:condition="sr">
-						<div class="visualPadding">
+						<div class="visualPadding right-sidebar">
 							<metal:portlets define-slot="portlets_two_slot">
 								<tal:block replace="structure provider:plone.rightcolumn" />
 							</metal:portlets>

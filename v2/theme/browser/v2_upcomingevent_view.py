@@ -6,8 +6,8 @@ from v2.theme.browser.v2_people_view import V2PeopleView
 
 
 
-class V2AboutView(V2PeopleView):
-    """Complex About view.
+class V2UpcomingeventView(V2PeopleView):
+    """Complex Topic view.
     """
 
     def toLocalizedTime(self, time, long_format=None, time_only = None):
