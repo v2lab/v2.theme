@@ -16,7 +16,7 @@
 	[class*='bit-'] {
 		@include box-sizing(border-box);
 		float: left;
-		padding: $column-margin/2;
+		padding: 20px;//$column-margin/2;
 	}
 	&.frame-container {
 		width: span(12) + $column-margin;

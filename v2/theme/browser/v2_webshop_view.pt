@@ -90,23 +90,21 @@
 
 
                                                                                     <tal:others tal:condition="not:folderItemIsVideo">
+                                                                                        <div class="thumb">
                                                                                           <a href="#" tal:attributes="href folderItemURL"
                                                                                              tal:condition="python:folderItem.portal_type != 'Image'">
-                                                                                                <img src="" alt="" tal:condition="exists:folderItemObject/image_thumb"
-                                                                                                     tal:replace="structure python:folderItemObject.tag(scale='thumb', css_class='tileImage')" />
-                                                                                                <img src="" alt=""
-                                                                                                     tal:replace="structure python:view.tag(folderItemObject, css_class='tileImage')" /><br />
+                                                                                                <div class="image"  alt=""
+                                                                                                  tal:attributes="style python: 'background-image: url(' + folderItemURL + '/leadImage_mini)'" ></div>
+                                                                                                <!-- <img src="" alt=""
+                                                                                                     tal:replace="structure python:view.tag(folderItemObject, css_class='')" /> -->
+
+                                                                                                <br />
                                                                                           </a>
 
-                                                                                          <a href="#" tal:attributes="href string:${folderItemURL}/view"
-                                                                                             tal:condition="python:folderItem.portal_type == 'Image'">
 
-                                                                                                <img src="" alt="" tal:condition="exists:folderItemObject/image_preview"
-                                                                                                     tal:replace="structure python:folderItemObject.tag(scale='mini', css_class='imageBlock')" />
-                                                                                                <img src="" alt=""
-                                                                                                     tal:replace="structure python:view.tag(folderItemObject, css_class='imageBlock')" /><br />
-                                                                                          </a>
-                                                                                          <h2 class="">
+                                                                                         </div>
+
+                                                                                          <h2 class="clear-margin">
                                                                                                 <a href="#"
                                                                                                    class="summary url" tal:attributes="href folderItemURL"
                                                                                                    tal:content="folderItem/Title" tal:condition="python:folderItem.portal_type not in ('File', 'Image',)">
@@ -119,8 +117,20 @@
                                                                                                 </a>
                                                                                           </h2>
 
+                                                                                         <div class="tileShopping"
+                                                                                               tal:define="shopping_information python:view.getShoppingInformation(folderItemObject)"
+                                                                                               tal:condition="shopping_information">
+                                                                                                <h3 tal:condition="shopping_information/price">
+                                                                                                  &euro;<span tal:replace="shopping_information/price" />
+                                                                                                </h3>
+                                                                                                <a href="#"
+                                                                                                   tal:condition="shopping_information/webshop_url"
+                                                                                                   tal:attributes="href shopping_information/webshop_url">
+                                                                                                  Add to
+                                                                                                </a>
+                                                                                          </div>
 
-                                                                                          <p class="tileBody">
+                                                                                          <p class="tileBody margin-top">
                                                                                                 <span tal:omit-tag="" tal:condition="not:folderItem/Description">
                                                                                                   &nbsp;
                                                                                                 </span>
@@ -129,18 +139,7 @@
                                                                                                 </span>
                                                                                           </p>
 
-                                                                                          <div class="tileShopping"
-                                                                                               tal:define="shopping_information python:view.getShoppingInformation(folderItemObject)"
-                                                                                               tal:condition="shopping_information">
-                                                                                                <a href="#"
-                                                                                                   tal:condition="shopping_information/webshop_url"
-                                                                                                   tal:attributes="href shopping_information/webshop_url">
-                                                                                                  Add to
-                                                                                                </a>
-                                                                                                <h3 tal:condition="shopping_information/price">
-                                                                                                  &euro; <span tal:replace="shopping_information/price" />
-                                                                                                </h3>
-                                                                                          </div>
+
 
                                                                                     </tal:others>
                                                                               </div>

@@ -94,7 +94,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  padding: 9px;
+  padding: 20px;
 }
 /* line 21, ../sass/_lemonade.scss */
 .frame.frame-container {
@@ -334,8 +334,12 @@ blockquote.right {
   border: none;
   background: none;
 }
+/* line 4, ../sass/_portlet.scss */
+.portlet:hover {
+  background-color: #E6E6E6;
+}
 
-/* line 5, ../sass/_portlet.scss */
+/* line 8, ../sass/_portlet.scss */
 .portletHeader, .managedPortlet .portletHeader {
   background: none;
   border: none;
@@ -343,7 +347,7 @@ blockquote.right {
   text-transform: uppercase;
 }
 
-/* line 11, ../sass/_portlet.scss */
+/* line 14, ../sass/_portlet.scss */
 .portletItem {
   margin: 0;
   padding: 1em;
@@ -351,12 +355,12 @@ blockquote.right {
   border-bottom: 2px solid black;
 }
 
-/* line 17, ../sass/_portlet.scss */
+/* line 20, ../sass/_portlet.scss */
 .even {
   background: none;
 }
 
-/* line 20, ../sass/_portlet.scss */
+/* line 23, ../sass/_portlet.scss */
 .portletFooter {
   background: none;
   margin: 0;
@@ -365,29 +369,56 @@ blockquote.right {
   text-align: right;
 }
 
-/* line 27, ../sass/_portlet.scss */
+/* line 30, ../sass/_portlet.scss */
 .portletItemDetails {
   text-align: left;
   display: block;
   color: black;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
-/* line 33, ../sass/_portlet.scss */
+/* line 38, ../sass/_portlet.scss */
 .column-2.contentSidebar {
   width: 154px;
 }
-/* line 35, ../sass/_portlet.scss */
+/* line 40, ../sass/_portlet.scss */
 .column-2.contentSidebar .portletHeader, .column-2.contentSidebar .managedPortlet .portletHeader {
   padding: 0;
 }
-/* line 38, ../sass/_portlet.scss */
+/* line 43, ../sass/_portlet.scss */
 .column-2.contentSidebar .portletItem {
   padding: 0;
   border: none;
 }
-/* line 41, ../sass/_portlet.scss */
+/* line 46, ../sass/_portlet.scss */
 .column-2.contentSidebar .portletItem img.relatedImage {
   width: 100%;
+}
+
+/* line 51, ../sass/_portlet.scss */
+.portletStaticText {
+  padding: 1em;
+}
+
+/* line 56, ../sass/_portlet.scss */
+.portletItem:hover, .related-block:hover {
+  background-color: #E6E6E6;
+}
+/* line 58, ../sass/_portlet.scss */
+.portletItem:hover a, .related-block:hover a {
+  text-decoration: none;
+}
+/* line 62, ../sass/_portlet.scss */
+.portletItem a, .portletItem a:visited, .related-block a, .related-block a:visited {
+  color: #000000;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* line 69, ../sass/_portlet.scss */
+.portletEvents .portletItem:hover a {
+  background-color: #ffff36;
 }
 
 /* line 4, ../sass/_global.scss */
@@ -418,63 +449,65 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 37px;
+  line-height: 24px;
 }
 
 /* line 32, ../sass/_global.scss */
 h2 {
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 37px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 10px 0 15px 0;
 }
 
-/* line 41, ../sass/_global.scss */
+/* line 43, ../sass/_global.scss */
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 15px;
   line-height: 1.56;
 }
-/* line 48, ../sass/_global.scss */
+/* line 50, ../sass/_global.scss */
 h3 a {
   text-decoration: none;
 }
 
-/* line 52, ../sass/_global.scss */
+/* line 54, ../sass/_global.scss */
 h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
 
-/* line 58, ../sass/_global.scss */
+/* line 60, ../sass/_global.scss */
 p, li, span {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 63, ../sass/_global.scss */
+/* line 65, ../sass/_global.scss */
 hr {
   border: 0;
   border-top: 1px solid #66645e;
 }
 
-/* line 67, ../sass/_global.scss */
+/* line 69, ../sass/_global.scss */
 strong, b {
   font-weight: 700;
 }
 
-/* line 73, ../sass/_global.scss */
+/* line 75, ../sass/_global.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 79, ../sass/_global.scss */
+/* line 81, ../sass/_global.scss */
 p {
   padding-bottom: 18px;
 }
 
-/* line 83, ../sass/_global.scss */
+/* line 85, ../sass/_global.scss */
 .button {
   display: inline-block;
   padding: 0 15px;
@@ -495,104 +528,104 @@ p {
   color: white;
   text-decoration: none;
 }
-/* line 102, ../sass/_global.scss */
+/* line 104, ../sass/_global.scss */
 .button:hover {
   background-color: #262626;
   text-decoration: none;
 }
 
-/* line 109, ../sass/_global.scss */
+/* line 111, ../sass/_global.scss */
 .social-icon {
   display: inline-block;
   width: 32px;
   height: 32px;
   background: #000000;
 }
-/* line 114, ../sass/_global.scss */
+/* line 116, ../sass/_global.scss */
 .social-icon:hover {
   background: #000000;
 }
 
-/* line 122, ../sass/_global.scss */
+/* line 124, ../sass/_global.scss */
 .float-right {
   float: right !important;
 }
 
-/* line 125, ../sass/_global.scss */
+/* line 127, ../sass/_global.scss */
 .margin-top {
   margin-top: 18px !important;
 }
 
-/* line 128, ../sass/_global.scss */
+/* line 130, ../sass/_global.scss */
 .margin-top-double {
   margin-top: 36px !important;
 }
 
-/* line 131, ../sass/_global.scss */
+/* line 133, ../sass/_global.scss */
 .margin-bottom {
   margin-bottom: 18px !important;
 }
 
-/* line 134, ../sass/_global.scss */
+/* line 136, ../sass/_global.scss */
 .margin-top-half {
   margin-top: 9px !important;
 }
 
-/* line 137, ../sass/_global.scss */
+/* line 139, ../sass/_global.scss */
 .margin-bottom-half {
   margin-bottom: 9px !important;
 }
 
-/* line 140, ../sass/_global.scss */
+/* line 142, ../sass/_global.scss */
 .padding-top {
   padding-top: 18px !important;
 }
 
-/* line 143, ../sass/_global.scss */
+/* line 145, ../sass/_global.scss */
 .padding-top-half {
   padding-top: 9px !important;
 }
 
-/* line 146, ../sass/_global.scss */
+/* line 148, ../sass/_global.scss */
 .padding-bottom-half {
   padding-bottom: 9px !important;
 }
 
-/* line 149, ../sass/_global.scss */
+/* line 151, ../sass/_global.scss */
 .img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* line 154, ../sass/_global.scss */
+/* line 156, ../sass/_global.scss */
 .img-border {
   padding: 2px;
   border: 1px solid #e6e6e6;
 }
 
-/* line 158, ../sass/_global.scss */
+/* line 160, ../sass/_global.scss */
 .font-size-s {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.56;
 }
 
-/* line 162, ../sass/_global.scss */
+/* line 164, ../sass/_global.scss */
 .light-gray {
   color: #e6e6e6;
 }
 
-/* line 165, ../sass/_global.scss */
+/* line 167, ../sass/_global.scss */
 .border-bottom, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   border-bottom: 2px solid black;
 }
 
-/* line 168, ../sass/_global.scss */
+/* line 170, ../sass/_global.scss */
 .border-top {
   border-top: 2px solid black;
 }
 
-/* line 171, ../sass/_global.scss */
+/* line 173, ../sass/_global.scss */
 .white-box {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -601,17 +634,17 @@ p {
   padding: 18px;
 }
 
-/* line 176, ../sass/_global.scss */
+/* line 178, ../sass/_global.scss */
 .padding-top-double, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   padding-top: 36px !important;
 }
 
-/* line 179, ../sass/_global.scss */
+/* line 181, ../sass/_global.scss */
 .background-gray, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   background-color: #e6e6e6 !important;
 }
 
-/* line 182, ../sass/_global.scss */
+/* line 184, ../sass/_global.scss */
 .container-fixed {
   position: fixed;
   top: 0;
@@ -620,17 +653,17 @@ p {
   z-index: 10;
 }
 
-/* line 189, ../sass/_global.scss */
+/* line 191, ../sass/_global.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 192, ../sass/_global.scss */
+/* line 194, ../sass/_global.scss */
 .clear-margin {
   margin: 0 !important;
 }
 
-/* line 195, ../sass/_global.scss */
+/* line 197, ../sass/_global.scss */
 .clear-margin-left {
   margin-left: 0 !important;
 }
@@ -717,123 +750,173 @@ input.inputLabelActive {
 }
 
 /* line 66, ../sass/_default.scss */
+.category {
+  font-size: 12px;
+}
+/* line 68, ../sass/_default.scss */
 .category.EVENT {
   background-color: #ffff36;
 }
-
 /* line 69, ../sass/_default.scss */
 .category.LAB {
   background-color: #29ff8d;
 }
-
-/* line 72, ../sass/_default.scss */
+/* line 70, ../sass/_default.scss */
 .category.PUBLISHING {
   background-color: #ffaf8a;
 }
-
-/* line 75, ../sass/_default.scss */
+/* line 71, ../sass/_default.scss */
 .category.ARCHIVE {
   background-color: #82ffff;
 }
-
-/* line 78, ../sass/_default.scss */
+/* line 72, ../sass/_default.scss */
 .category.WEBSHOP {
   background-color: #ffaf8a;
 }
 
-/* line 82, ../sass/_default.scss */
+/* line 76, ../sass/_default.scss */
 .documentFirstHeading {
   display: inline;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* line 88, ../sass/_default.scss */
+/* line 84, ../sass/_default.scss */
+.template-event_view .documentFirstHeading {
+  font-style: italic;
+}
+
+/* line 87, ../sass/_default.scss */
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil {
   float: left;
 }
-/* line 90, ../sass/_default.scss */
+/* line 89, ../sass/_default.scss */
 .futureEventDateFrom div, .futureEventDateUntil div, .pastEventDateFrom div, .pastEventDateUntil div {
   float: left;
 }
 
+/* line 93, ../sass/_default.scss */
+.eventDtailsDateTime {
+  margin-bottom: 10px;
+}
+
 /* line 96, ../sass/_default.scss */
+.eventDetails {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 12px;
+}
+
+/* line 105, ../sass/_default.scss */
+.event-addToCal .icon, .event-addToCal .info {
+  float: left;
+}
+
+/* line 112, ../sass/_default.scss */
 .documentActions {
   float: left;
 }
 
-/* line 99, ../sass/_default.scss */
+/* line 115, ../sass/_default.scss */
 .documentDescription, .description {
   font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
 }
 
-/* line 103, ../sass/_default.scss */
+/* line 121, ../sass/_default.scss */
 .V2TopicItem img {
   width: 100%;
   height: auto;
 }
 
-/* line 108, ../sass/_default.scss */
+/* line 126, ../sass/_default.scss */
 .tileItem img.tileImage {
   width: 100%;
   height: auto;
 }
 
-/* line 112, ../sass/_default.scss */
+/* line 130, ../sass/_default.scss */
 .tileItem, .item {
   border-top: none;
 }
 
-/* line 116, ../sass/_default.scss */
+/* line 134, ../sass/_default.scss */
 .leadimageContainer img {
   width: 100%;
 }
 
-/* line 120, ../sass/_default.scss */
+/* line 138, ../sass/_default.scss */
 .newsImageContainer, .eventDetails {
   float: none;
   width: auto;
 }
 
-/* line 124, ../sass/_default.scss */
+/* line 142, ../sass/_default.scss */
 .newsImageContainer {
   margin-left: 18px;
 }
-/* line 126, ../sass/_default.scss */
+/* line 144, ../sass/_default.scss */
 .newsImageContainer .discreet {
   display: none;
 }
 
-/* line 130, ../sass/_default.scss */
+/* line 148, ../sass/_default.scss */
 .newsImage {
   width: 100%;
   height: auto;
   border: none;
 }
 
-/* line 136, ../sass/_default.scss */
+/* line 154, ../sass/_default.scss */
 .V2WebshopItem {
   width: 208px;
   margin-left: 15px;
   float: left;
   padding: 9px;
+  height: 370px;
+}
+/* line 160, ../sass/_default.scss */
+.V2WebshopItem .thumb {
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 165, ../sass/_default.scss */
+.V2WebshopItem .thumb img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+/* line 170, ../sass/_default.scss */
+.V2WebshopItem .thumb .image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* line 179, ../sass/_default.scss */
+.V2WebshopItem .tileShopping h3 {
+  color: #666;
 }
 
-/* line 143, ../sass/_default.scss */
+/* line 185, ../sass/_default.scss */
 .V2AboutItem .listitem {
   width: 309px;
-  margin-left: 15px;
-  margin-bottom: 8px;
   float: left;
   padding: 9px;
   background-color: black;
+  font-size: 15px;
+  margin: 0 0 8px 15px;
 }
-/* line 150, ../sass/_default.scss */
+/* line 193, ../sass/_default.scss */
 .V2AboutItem .listitem.even {
   margin-left: 0;
 }
-/* line 153, ../sass/_default.scss */
+/* line 196, ../sass/_default.scss */
 .V2AboutItem .listitem a {
   color: white !important;
   font-size: 1.5em;
@@ -841,13 +924,13 @@ input.inputLabelActive {
   text-transform: uppercase;
 }
 
-/* line 161, ../sass/_default.scss */
+/* line 204, ../sass/_default.scss */
 .right-sidebar {
   width: 240px;
   position: fixed;
 }
 
-/* line 165, ../sass/_default.scss */
+/* line 208, ../sass/_default.scss */
 .logo-holder {
   position: fixed;
   width: 68px;

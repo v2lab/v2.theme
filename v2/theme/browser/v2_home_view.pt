@@ -299,7 +299,7 @@
                                                 imagesLoaded( container, function() {
                                                     msnry = new Masonry( container, {
                                                     itemSelector: '.V2TopicItem',
-                                                    "gutter": 15
+                                                    "gutter": 25
                                                   });
                                                 });
                                           });

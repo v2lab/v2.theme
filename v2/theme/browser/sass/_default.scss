@@ -63,33 +63,49 @@
 	width: 45%;
 }
 
-.category.EVENT {
-	background-color: $yellow;
+.category {
+	font-size: $font-size-s;
+	&.EVENT { background-color: $yellow; }
+	&.LAB { background-color: $green; }
+	&.PUBLISHING { background-color: $orange; }
+	&.ARCHIVE { background-color: $blue; }
+	&.WEBSHOP { background-color: $orange; }
 }
-.category.LAB {
-	background-color: $green;
-}
-.category.PUBLISHING {
-	background-color: $orange;
-}
-.category.ARCHIVE {
-	background-color: $blue;
-}
-.category.WEBSHOP {
-	background-color: $orange;
-}
+
 
 .documentFirstHeading {
 	display: inline;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+
+.template-event_view .documentFirstHeading {
+	font-style: italic;
 }
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	float: left;
 	div {
 		float: left;
 	}
+}
+.eventDtailsDateTime {
+	margin-bottom: 10px;
+}
+.eventDetails {
+	text-transform: uppercase;
+	margin: 0;
+	font-size: $font-size-s;
+}
+.event-addToCal, .event-contact {
+	//float: left;
+}
+.event-addToCal {
+	.icon, .info {
+		float: left;
+	}
+
 }
 
 
@@ -98,6 +114,8 @@
 }
 .documentDescription, .description {
 	font-weight: normal;
+	line-height: 1.2em;
+	margin: 0;
 }
 
 .V2TopicItem img {
@@ -138,15 +156,40 @@
 	margin-left: 15px;
 	float: left;
 	padding: 9px;
+	height: 370px;
+	.thumb {
+		height: 150px;
+		margin: 10px;
+		text-align: center;
+		margin-bottom: 30px;
+		img {
+			max-height: 100%;
+			width: auto;
+			max-width: 100%;
+		}
+		.image {
+			width: 100%;
+			height: 100%;
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
+	.tileShopping {
+		h3 {
+			color: $gray;
+		}
+	}
 }
 
 .V2AboutItem .listitem {
 	width: 309px;
-	margin-left: 15px;
-	margin-bottom: 8px;
 	float: left;
 	padding: 9px;
 	background-color: black;
+	font-size: $font-size-l;
+	margin: 0 0 8px 15px;
+
 	&.even {
 		margin-left: 0;
 	}

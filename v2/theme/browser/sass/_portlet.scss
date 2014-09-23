@@ -1,6 +1,9 @@
 .portlet {
       border: none;
       background: none;
+      &:hover {
+            background-color: #E6E6E6;
+      }
 }
 .portletHeader, .managedPortlet .portletHeader {
       background: none;
@@ -28,6 +31,8 @@
       text-align: left;
       display: block;
       color: black;
+      font-size: $font-size-s;
+      margin-bottom: 5px;
 }
 
 .column-2.contentSidebar {
@@ -42,4 +47,25 @@
                   width: 100%;
             }
       }
+}
+.portletStaticText {
+      padding: 1em;
+}
+
+.portletItem, .related-block {
+      &:hover {
+            background-color: #E6E6E6;
+            a {
+                  text-decoration: none;
+            }
+      }
+      a, a:visited {
+            color: $font-color;
+            font-size: $font-size-m;
+            text-transform: uppercase;
+      }
+}
+
+.portletEvents .portletItem:hover a {
+      background-color: $yellow;
 }
