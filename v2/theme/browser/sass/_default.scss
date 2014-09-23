@@ -74,15 +74,18 @@
 
 
 .documentFirstHeading {
-	display: inline;
-	font-size: 1.8em;
+	display: inline-block;
+	font-size: $font-size-xl;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin-bottom: 15px;
 }
 
 
 .template-event_view .documentFirstHeading {
 	font-style: italic;
+	margin-bottom: 0;
+
 }
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	float: left;
@@ -157,6 +160,7 @@
 	float: left;
 	padding: 9px;
 	height: 370px;
+	margin-bottom: 15px;
 	.thumb {
 		height: 150px;
 		margin: 10px;

@@ -4,7 +4,9 @@
       &:hover {
             background-color: #E6E6E6;
       }
+
 }
+
 .portletHeader, .managedPortlet .portletHeader {
       background: none;
       border: none;
@@ -68,4 +70,8 @@
 
 .portletEvents .portletItem:hover a {
       background-color: $yellow;
+}
+
+.portletCollection:hover {
+      background: none;
 }
