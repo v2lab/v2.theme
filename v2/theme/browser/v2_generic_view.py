@@ -61,12 +61,12 @@ class V2GenericView(BrowserView):
 
         This displays in which category an item is placed."""
 
-        # url_low = url.lower()
-        # menu_items = ['event','events', 'publishing', 'lab','about','organization','webshop','shop','archive']
-        # for item in menu_items:
-        #     if item in url_low:
-        #         return item
-        return None
+        url_low = url.lower()
+        menu_items = ['event','events', 'publishing', 'lab','about','organization','webshop','shop','archive']
+        for item in menu_items:
+            if item in url_low:
+                return item
+        return "v2"
 
     def toLocalizedTime(self, time, long_format=None, time_only = None):
         """Convert time to localized time
