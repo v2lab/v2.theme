@@ -115,7 +115,7 @@
   <browser:page
      for="*"
      name="v2_topic_view"
-     class=".v2_topic_view.V2TopicView"
+     class=".v2_generic_view.V2GenericView"
      template="v2_topic_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"
@@ -135,7 +135,7 @@
   <browser:page
      for="*"
      name="v2_home_view"
-     class=".v2_home_view.V2HomeView"
+     class=".v2_generic_view.V2GenericView"
      template="v2_home_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"
@@ -155,7 +155,7 @@
   <browser:page
      for="*"
      name="v2_webshop_view"
-     class=".v2_webshop_view.V2WebshopView"
+     class=".v2_generic_view.V2GenericView"
      template="v2_webshop_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"
@@ -175,7 +175,7 @@
   <browser:page
      for="*"
      name="v2_about_view"
-     class=".v2_about_view.V2AboutView"
+     class=".v2_generic_view.V2GenericView"
      template="v2_about_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"
@@ -196,7 +196,7 @@
   <browser:page
      for="*"
      name="v2_upcomingevent_view"
-     class=".v2_upcomingevent_view.V2UpcomingeventView"
+     class=".v2_generic_view.V2GenericView"
      template="v2_upcomingevent_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"
@@ -215,8 +215,84 @@
 
   <browser:page
      for="*"
+     name="v2_archive_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_archive_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Archive View"
+     action="@@v2_archive_view"
+     layer=".interfaces.IThemeSpecific"
+     description="3 columns with masonry script"
+     />
+
+  <browser:page
+     for="*"
+     name="v2_archivevideos_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_archivevideos_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Archivevideos View"
+     action="@@v2_archivevideos_view"
+     layer=".interfaces.IThemeSpecific"
+     description="3 columns with masonry script"
+     />
+
+  <browser:page
+     for="*"
+     name="v2_lab_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_lab_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Lab View"
+     action="@@v2_lab_view"
+     layer=".interfaces.IThemeSpecific"
+     description="3 columns with masonry script"
+     />
+
+  <browser:page
+     for="*"
+     name="v2_work_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_work_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Work View"
+     action="@@v2_work_view"
+     layer=".interfaces.IThemeSpecific"
+     description="View with lead images displayed and V2 tweeks for people"
+     />
+
+
+  <browser:page
+     for="*"
      name="v2_people_view"
-     class=".v2_people_view.V2PeopleView"
+     class=".v2_generic_view.V2GenericView"
      template="v2_people_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"
@@ -252,7 +328,7 @@
   <browser:page
      for="*"
      name="one_column_view"
-     class=".one_column_view.OneColumnView"
+     class=".v2_generic_view.V2GenericView"
      template="one_column_view.pt"
      layer=".interfaces.IThemeSpecific"
      permission="zope2.View"

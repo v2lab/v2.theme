@@ -13,10 +13,11 @@
 	@include clearfix;
 	@include box-sizing(border-box);
 	margin: 0 auto;
+	padding: $bit-padding/2;
 	[class*='bit-'] {
 		@include box-sizing(border-box);
 		float: left;
-		padding: 20px;//$column-margin/2;
+		padding: $bit-padding/2;
 	}
 	&.frame-container {
 		width: span(12) + $column-margin;
@@ -59,59 +60,59 @@
 .bit-33 { width: 33.33% }
 
 /* Landscape mobile & down */
-@media (max-width: 30em) {
-	.bit-1,
-	.bit-2,
-	.bit-3,
-	.bit-4,
-	.bit-5,
-	.bit-6,
-	.bit-7,
-	.bit-8,
-	.bit-9,
-	.bit-10,
-	.bit-11,
-	.bit-12,
-	.bit-75,
-	.bit-66{
-		width: 100%;
-	}
-}
+// @media (max-width: 30em) {
+// 	.bit-1,
+// 	.bit-2,
+// 	.bit-3,
+// 	.bit-4,
+// 	.bit-5,
+// 	.bit-6,
+// 	.bit-7,
+// 	.bit-8,
+// 	.bit-9,
+// 	.bit-10,
+// 	.bit-11,
+// 	.bit-12,
+// 	.bit-75,
+// 	.bit-66{
+// 		width: 100%;
+// 	}
+// }
 
 /* Portrait tablet to landscape */
-@media (min-width: 30em) and (max-width: 50em) {
-	.bit-4,
-	.bit-6,
-	.bit-8,
-	.bit-10,
-	.bit-12,
-	.bit-75,
-	.bit-66{
-		width: 50%
-	}
+// @media (min-width: 30em) and (max-width: 50em) {
+// 	.bit-4,
+// 	.bit-6,
+// 	.bit-8,
+// 	.bit-10,
+// 	.bit-12,
+// 	.bit-75,
+// 	.bit-66{
+// 		width: 50%
+// 	}
 
-	.bit-1,
-	.bit-2,
-	.bit-3,
-	.bit-5,
-	.bit-7,
-	.bit-9,
-	.bit-11 {
-		width: 100%
-	}
-}
+// 	.bit-1,
+// 	.bit-2,
+// 	.bit-3,
+// 	.bit-5,
+// 	.bit-7,
+// 	.bit-9,
+// 	.bit-11 {
+// 		width: 100%
+// 	}
+// }
 
 /* Landscape to small desktop */
-@media (min-width: 50em) and (max-width: 68.750em) {
-	.bit-2,
-	.bit-7 {
-		width: 100%
-	}
+// @media (min-width: 50em) and (max-width: 68.750em) {
+// 	.bit-2,
+// 	.bit-7 {
+// 		width: 100%
+// 	}
 
-	.bit-4,
-	.bit-8,
-	.bit-10,
-	.bit-12 {
-		width: 50%
-	}
-}
+// 	.bit-4,
+// 	.bit-8,
+// 	.bit-10,
+// 	.bit-12 {
+// 		width: 50%
+// 	}
+// }

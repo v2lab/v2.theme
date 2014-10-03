@@ -14,6 +14,8 @@
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                                     date python: context.ZopeTime();
                                     templateId template/getId;
+                                    url python: here.virtual_url_path();
+						categoryTitle python: 'category-'+view.getCategoryByURL(url);
                                     results python: context.portal_catalog.searchResults(
                                           review_state = 'published',
                                           sort_on = 'start',
@@ -22,205 +24,296 @@
                                           )
                                     ">
 
-                  <div class="frame frame-white margin-bottom">
-                      <div class="bit-1">
-                        <div tal:replace="structure provider:plone.abovecontenttitle" />
+                  <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
+                      	<div class="bit-1">
+	                        <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-                        <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
-                          Title or id
-                        </h1>
+	                        <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
+	                          Title or id
+	                        </h1>
 
-                        <div tal:replace="structure provider:plone.belowcontenttitle" />
+	                        <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-                        <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
-                          Description
-                        </p>
+	                        <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
+	                          Description
+	                        </p>
 
-                        <div tal:replace="structure provider:plone.abovecontentbody" />
+	                        <div tal:replace="structure provider:plone.abovecontentbody" />
 
-                        <div metal:define-macro="text-field-view"
-                             id="parent-fieldname-text" class="stx"
-                             tal:define="kss_class python:getKssClasses('text',
-                                         templateId=templateId, macro='text-field-view');
-                                         text here/getText|nothing"
-                             tal:condition="text"
-                             tal:attributes="class python:here.Format() in ('text/structured',
-                                             'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
-                              <div metal:define-slot="inside" tal:replace="structure text">The body</div>
-                        </div>
-                      </div>
-                  </div>
-
-                  <div id="V2TopicView" class="frame frame-white">
-
-                        <metal:listingmacro define-macro="listing">
-                              <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
-                                                          limit_display limit_display|request/limit_display|nothing;
-                                                          more_url more_url|request/more_url|string:folder_contents;
-                                                          folderContents python:here.portal_type=='Topic' and here.queryCatalog(contentFilter, batch=True) or here.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
-                                                          use_view_action site_properties/typesUseViewActionInListings|python:();
-                                                          over_limit python: limit_display and len(folderContents) > limit_display;
-                                                          folderContents python: (over_limit and folderContents[:limit_display]) or folderContents;
-                                                          batch folderContents;">
-                                    <tal:listing condition="folderContents">
-
-                                          <tal:block tal:repeat="item results">
-                                                <div class="tileItem visualIEFloatFix vevent"
-                                                     tal:define="item_url item/getURL|item/absolute_url;
-                                                                 normalizeString nocall:context/@@plone/normalizeString;
-                                                                 item_id item/getId|item/id;
-                                                                 item_title_or_id item/pretty_title_or_id;
-                                                                 item_description item/Description;
-                                                                 item_type item/portal_type;
-                                                                 item_type_title item/Type;
-                                                                 item_type_class python: 'contenttype-' + normalizeString(item_type);
-                                                                 item_has_leadimage item/hasContentLeadImage;
-                                                                 item_object item/getObject;
-                                                                 item_is_video python:view.isVideo(item_object);
-                                                                item_category python:view.getCategory(item_object);"
-                                                     tal:attributes="class string:V2TopicItem vevent ${item_type_class}">
-
-                                                      <span
-                                                       tal:condition="item_category"
-                                                       tal:content="item_category"
-                                                       tal:attributes="class string:category ${item_category}"
-                                                        >Item Category</span>
-
-                                                      <h2 class="" metal:define-macro="listitem">
-
-                                                            <a href="#"
-                                                               class="summary url"
-                                                               tal:condition="python:item_type != 'Link'"
-                                                               tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
-                                                               tal:content="item_title_or_id">
-                                                              Item Title
-                                                            </a>
-
-                                                            <a href="#"
-                                                               class="link-plain"
-                                                               tal:condition="python:item_type == 'Link'"
-                                                               tal:content="item_title_or_id"
-                                                               tal:attributes="href item/getRemoteUrl;">
-                                                              External Link
-                                                            </a>
-                                                     </h2>
+	                        <div metal:define-macro="text-field-view"
+	                             id="parent-fieldname-text" class="stx"
+	                             tal:define="kss_class python:getKssClasses('text',
+	                                         templateId=templateId, macro='text-field-view');
+	                                         text here/getText|nothing"
+	                             tal:condition="text"
+	                             tal:attributes="class python:here.Format() in ('text/structured',
+	                                             'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class +' page-description border-top border-bottom'">
+	                              <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+	                        </div>
 
 
 
 
-                                                      <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video">
-                                                            <a href="#"
-                                                               tal:condition="python:item_type != 'Link'"
-                                                               tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
+                              <tal:block define="use_view_action site_properties/typesUseViewActionInListings|python:();" condition="results">
+	                  		<h2>Upcoming events</h2>
+
+	                              <tal:block tal:repeat="item results">
+	                                    <div class="tileItem visualIEFloatFix vevent"
+	                                         tal:define="item_url item/getURL|item/absolute_url;
+	                                                     normalizeString nocall:context/@@plone/normalizeString;
+	                                                     item_id item/getId|item/id;
+	                                                     item_title_or_id item/pretty_title_or_id;
+	                                                     item_description item/Description;
+	                                                     item_type item/portal_type;
+	                                                     item_type_title item/Type;
+	                                                     item_type_class python: 'contenttype-' + normalizeString(item_type);
+	                                                     item_has_leadimage item/hasContentLeadImage;
+	                                                     item_object item/getObject;
+	                                                     item_is_video python:view.isVideo(item_object);
+	                                                    item_category python:view.getCategory(item_object);"
+	                                         tal:attributes="class string:tileItem vevent ${item_type_class}">
+
+	                                          <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video">
+	                                          	<div class="bit-2">
+	                                                  	<a href="#"
+	                                                          tal:condition="python:item_type != 'Link'"
+	                                                          tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
+
+											<img src="" alt=""
+		                                                               tal:condition="exists:item_object/image_medium"
+		                                                               tal:replace="structure python:item_object.tag(scale='medium', css_class='tileImage')" />
+		                                                    	<img src="" alt=""
+		                                                               tal:condition="item_has_leadimage"
+		                                                               tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
+
+	                                                  	</a>
 
 
-                                                               <img src="" alt=""
-                                                                   tal:condition="exists:item_object/image_medium"
-                                                                   tal:replace="structure python:item_object.tag(scale='medium', css_class='')" />
-                                                              <img src="" alt=""
-                                                                   tal:condition="item_has_leadimage"
-                                                                   tal:replace="structure python:view.tag(item_object, css_class='')" />
+	                                                  	<a href="#"
+	                                                          class="link-plain"
+	                                                          tal:condition="python:item_type == 'Link'"
+	                                                          tal:attributes="href item/getRemoteUrl">
+	                                                    		<img src="" alt=""
+	                                                               tal:condition="exists:item_object/image_preview"
+	                                                               tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
+	                                                    		<img src="" alt=""
+	                                                               tal:condition="item_has_leadimage"
+	                                                               tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
+	                                                  	</a>
+	                                               	</div>
+									<div class="bit-2">
+										<div class="documentByLine">
+											<tal:event condition="python: item_type == 'Event'">
+												<span tal:condition="python: item_type == 'Event'"
+															i18n:translate="label_event_byline">
+													<div class="EventDateInfo" tal:condition="python: item.end >= view.currenttime()">
+														<div class="futureEventDateFrom">
+															<div class="eventDayInfo" tal:content="item/start/day">02</div>
+															<div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
+														</div>
+														<span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="" >
+															<div class="futureEventDateUntil">
+																<div class="eventDayInfo" tal:content="item/end/day">02</div>
+																<div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
+															</div>
+															<div class="visualClearLeft"><!-- --></div>
+														</span>
+													</div>
+													<div class="EventDateInfo" tal:condition="python: item.end < view.currenttime()">
+														<div class="pastEventDateFrom">
+															<div class="eventDayInfo" tal:content="item/start/day">02</div>
+															<div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
+														</div>
+														<span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="">
+															<div class="pastEventDateUntil">
+																<div class="eventDayInfo" tal:content="item/end/day">02</div>
+																<div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
+															</div>
+															<div class="visualClearLeft"><!-- --></div>
+														</span>
+													</div>
+													<div class="visualClearLeft"><!-- --></div>
 
-                                                            </a>
+												</span>
+											</tal:event>
+										</div>
+		                                             	<h2 class="" >
 
+		                                                    <a href="#"
+		                                                       class="summary url"
+		                                                       tal:condition="python:item_type != 'Link'"
+		                                                       tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
+		                                                       tal:content="item_title_or_id">
+		                                                      Item Title
+		                                                    </a>
 
-                                                            <a href="#"
-                                                               class="link-plain"
-                                                               tal:condition="python:item_type == 'Link'"
-                                                               tal:attributes="href item/getRemoteUrl">
-                                                              <img src="" alt=""
-                                                                   tal:condition="exists:item_object/image_preview"
-                                                                   tal:replace="structure python:item_object.tag(scale='preview', css_class='')" />
-                                                              <img src="" alt=""
-                                                                   tal:condition="item_has_leadimage"
-                                                                   tal:replace="structure python:view.tag(item_object, css_class='')" />
-                                                            </a>
-                                                            <div class="documentByLine">
-                                                              <tal:event condition="python: item_type == 'Event'">
-                                                                <span tal:condition="python: item_type == 'Event'"
-                                                                      i18n:translate="label_event_byline">
-                                                                  <div class="EventDateInfo" tal:condition="python: item.end >= view.currenttime()">
-                                                                    <div class="futureEventDateFrom">
-                                                                      <div class="eventDayInfo" tal:content="item/start/day">02</div>
-                                                                      <div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
-                                                                    </div>
-                                                                    <span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="" >
-                                                                      <div class="futureEventDateUntil">
-                                                                        <div class="eventDayInfo" tal:content="item/end/day">02</div>
-                                                                        <div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
-                                                                      </div>
-                                                                      <div class="visualClearLeft"><!-- --></div>
-                                                                    </span>
-                                                                  </div>
-                                                                  <div class="EventDateInfo" tal:condition="python: item.end < view.currenttime()">
-                                                                    <div class="pastEventDateFrom">
-                                                                      <div class="eventDayInfo" tal:content="item/start/day">02</div>
-                                                                      <div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
-                                                                    </div>
-                                                                    <span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="">
-                                                                      <div class="pastEventDateUntil">
-                                                                        <div class="eventDayInfo" tal:content="item/end/day">02</div>
-                                                                        <div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
-                                                                      </div>
-                                                                      <div class="visualClearLeft"><!-- --></div>
-                                                                    </span>
-                                                                  </div>
-                                                                </span>
-                                                              </tal:event>
-                                                              <tal:newsitem condition="python: item_type == 'News Item'">
-                                                              </tal:newsitem>
-                                                            </div>
-
-                                                            <p class="tileBody">
-                                                              <span tal:omit-tag="" tal:condition="not:item_description">
-                                                                &nbsp;
-                                                              </span>
-                                                              <span class="description"
-                                                                    tal:condition="item_description"
-                                                                    tal:content="python:view.trimDescription(item_description, 250)">
-                                                                description
-                                                              </span>
-                                                            </p>
-
-                                                            <p class="tileFooter">
-                                                            </p>
-                                                            <div class="visualClear"><!-- --></div>
-
-                                                      </tal:content>
+		                                                    <a href="#"
+		                                                       class="link-plain"
+		                                                       tal:condition="python:item_type == 'Link'"
+		                                                       tal:content="item_title_or_id"
+		                                                       tal:attributes="href item/getRemoteUrl;">
+		                                                      External Link
+		                                                    </a>
+		                                             	</h2>
 
 
+		                                               	<p class="tileBody">
+		                                                    	<span tal:omit-tag="" tal:condition="not:item_description">
+		                                                      &nbsp;
+		                                                    	</span>
+		                                                    	<span class="description"
+		                                                          tal:condition="item_description"
+		                                                          tal:content="python:view.trimDescription(item_description, 250)">
+		                                                      description
+		                                                    	</span>
+		                                               	</p>
 
-                                                </div><!-- // title item -->
+		                                               	<div class="visualClear"><!-- --></div>
+	                                          	</div>
+	                                          </tal:content>
+	                                    </div>
 
-                                          </tal:block>
-                                          <script>
-                                            jQuery(document).ready(function(){
-                                                var container = document.querySelector('#V2TopicView');
-                                                var msnry;
-                                                imagesLoaded( container, function() {
-                                                    msnry = new Masonry( container, {
-                                                    itemSelector: '.V2TopicItem',
-                                                    "gutter": 15
-                                                  });
-                                                });
-                                          });
+	                              </tal:block>
 
-                                          </script>
-                                          <!-- Navigation -->
-                                          <div metal:use-macro="here/batch_macros/macros/navigation" />
+                              </tal:block>
 
-                                    </tal:listing>
-                                    <metal:empty metal:define-slot="no_items_in_listing">
-                                      <p class="discreet"
-                                         tal:condition="not: folderContents"
-                                         i18n:translate="description_no_items_in_folder">
-                                        There are currently no items in this folder.
-                                      </p>
-                                    </metal:empty>
 
-                              </tal:foldercontents>
-                        </metal:listingmacro>
 
+
+                            <tal:block define="results python: context.portal_catalog.searchResults(
+                                          review_state = 'published',
+                                          sort_on = 'start',
+                                          end={'query': date, 'range': 'max'},
+                                          portal_type = 'Event',
+                                          b_size= 5
+                                          );
+                                          use_view_action site_properties/typesUseViewActionInListings|python:();" condition="results">
+	                  		<h2>Past events</h2>
+
+	                              <tal:block tal:repeat="item results">
+	                                    <div class="tileItem visualIEFloatFix vevent past-event"
+	                                         tal:define="item_url item/getURL|item/absolute_url;
+	                                                     normalizeString nocall:context/@@plone/normalizeString;
+	                                                     item_id item/getId|item/id;
+	                                                     item_title_or_id item/pretty_title_or_id;
+	                                                     item_description item/Description;
+	                                                     item_type item/portal_type;
+	                                                     item_type_title item/Type;
+	                                                     item_type_class python: 'contenttype-' + normalizeString(item_type);
+	                                                     item_has_leadimage item/hasContentLeadImage;
+	                                                     item_object item/getObject;
+	                                                     item_is_video python:view.isVideo(item_object);
+	                                                    item_category python:view.getCategory(item_object);"
+	                                         tal:attributes="class string:past-event vevent ${item_type_class}">
+
+	                                          <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video">
+	                                          	<div class="bit-2">
+	                                                  	<a href="#"
+	                                                          tal:condition="python:item_type != 'Link'"
+	                                                          tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
+
+											<img src="" alt=""
+		                                                               tal:condition="exists:item_object/image_medium"
+		                                                               tal:replace="structure python:item_object.tag(scale='medium', css_class='')" />
+		                                                    	<img src="" alt=""
+		                                                               tal:condition="item_has_leadimage"
+		                                                               tal:replace="structure python:view.tag(item_object, css_class='')" />
+
+	                                                  	</a>
+
+
+	                                                  	<a href="#"
+	                                                          class="link-plain"
+	                                                          tal:condition="python:item_type == 'Link'"
+	                                                          tal:attributes="href item/getRemoteUrl">
+	                                                    		<img src="" alt=""
+	                                                               tal:condition="exists:item_object/image_preview"
+	                                                               tal:replace="structure python:item_object.tag(scale='preview', css_class='')" />
+	                                                    		<img src="" alt=""
+	                                                               tal:condition="item_has_leadimage"
+	                                                               tal:replace="structure python:view.tag(item_object, css_class='')" />
+	                                                  	</a>
+	                                               	</div>
+									<div class="bit-2">
+										<div class="documentByLine">
+											<tal:event condition="python: item_type == 'Event'">
+												<span tal:condition="python: item_type == 'Event'"
+															i18n:translate="label_event_byline">
+													<div class="EventDateInfo" tal:condition="python: item.end >= view.currenttime()">
+														<div class="futureEventDateFrom">
+															<div class="eventDayInfo" tal:content="item/start/day">02</div>
+															<div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
+														</div>
+														<span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="" >
+															<div class="futureEventDateUntil">
+																<div class="eventDayInfo" tal:content="item/end/day">02</div>
+																<div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
+															</div>
+															<div class="visualClearLeft"><!-- --></div>
+														</span>
+													</div>
+													<div class="EventDateInfo" tal:condition="python: item.end < view.currenttime()">
+														<div class="pastEventDateFrom">
+															<div class="eventDayInfo" tal:content="item/start/day">02</div>
+															<div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
+														</div>
+														<span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="">
+															<div class="pastEventDateUntil">
+																<div class="eventDayInfo" tal:content="item/end/day">02</div>
+																<div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
+															</div>
+															<div class="visualClearLeft"><!-- --></div>
+														</span>
+													</div>
+													<div class="visualClearLeft"><!-- --></div>
+												</span>
+											</tal:event>
+										</div>
+		                                             	<h2 class="" >
+
+		                                                    <a href="#"
+		                                                       class="summary url"
+		                                                       tal:condition="python:item_type != 'Link'"
+		                                                       tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
+		                                                       tal:content="item_title_or_id">
+		                                                      Item Title
+		                                                    </a>
+
+		                                                    <a href="#"
+		                                                       class="link-plain"
+		                                                       tal:condition="python:item_type == 'Link'"
+		                                                       tal:content="item_title_or_id"
+		                                                       tal:attributes="href item/getRemoteUrl;">
+		                                                      External Link
+		                                                    </a>
+		                                             	</h2>
+
+
+		                                               	<p class="tileBody">
+		                                                    	<span tal:omit-tag="" tal:condition="not:item_description">
+		                                                      &nbsp;
+		                                                    	</span>
+		                                                    	<span class="description"
+		                                                          tal:condition="item_description"
+		                                                          tal:content="python:view.trimDescription(item_description, 250)">
+		                                                      description
+		                                                    	</span>
+		                                               	</p>
+
+		                                               	<div class="visualClear"><!-- --></div>
+	                                          	</div>
+	                                          </tal:content>
+	                                    </div>
+
+	                              </tal:block>
+
+                              </tal:block>
+
+
+
+
+
+				</div>
                   </div>
 
                   <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />

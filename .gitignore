@@ -4,3 +4,4 @@
 *.egg-info
 
 *.codekit
+*not_in_use/

@@ -26,6 +26,8 @@
   <element value="v2_home_view" />
   <element value="v2_webshop_view" />
   <element value="v2_about_view" />
+  <element value="v2_archive_view" />
+  <element value="v2_archivevideos_view" />
   <element value="v2_album_view" />
  </property>
  <alias from="(Default)" to="(dynamic view)"/>

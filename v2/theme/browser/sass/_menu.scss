@@ -1,5 +1,5 @@
 ul.main-menu {
-	margin: 0 0 0 10px;
+	margin: 0 0 0 0px;
 	padding: 0;
 	list-style-type: none;
 	height: 29px;
@@ -76,6 +76,8 @@ ul.main-menu {
 		> a {
 			text-transform: uppercase;
 			float: left;
+			//font-size: $font-size-l;
+
 			&.selected {
 				background: black;
 			}
@@ -105,32 +107,32 @@ ul.main-menu {
 		}
 		&.about {
 			a:hover, a.selected {
-				color: $green-menu;
+				color: $color-about;
 			}
 		}
 		&.events {
 			a:hover, a.selected {
-				color: $yellow;
+				color: $color-event;
 			}
 		}
 		&.webshop {
 			a:hover, a.selected {
-				color: $orange;
+				color: $color-webshop;
 			}
 		}
 		&.archive {
 			a:hover, a.selected {
-				color: $blue;
+				color: $color-archive;
 			}
 		}
 		&.publishing {
 			a:hover, a.selected {
-				color: $orange;
+				color: $color-publishing;
 			}
 		}
 		&.lab {
 			a:hover, a.selected {
-				color: $green;
+				color: $color-lab;
 			}
 		}
 	}

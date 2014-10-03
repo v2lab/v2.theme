@@ -11,11 +11,12 @@ input {
 		//
 		display: block;
 		float: left;
-		width: 205px;
+		width: 197px;
 		height: 29px;
 		line-height: 29px;
 		text-transform: uppercase;
 		padding: 0 10px;
+		//font-size: $font-size-l;
 	}
 	&.searchButton {
 		// reset forms.css
@@ -35,5 +36,71 @@ input {
 		display: block;
 		text-indent: -9999px;
 		float: left;
+	}
+}
+
+.template-v2_archive_view {
+	.searchform {
+		display: inline-block;
+		float: left;
+	}
+	input {
+		&#searchGadget {
+			// reset forms.css
+			border: none;
+			padding: 0;
+			margin: 0;
+
+			//
+			display: block;
+			float: left;
+			width: 300px;
+			height: 29px;
+			line-height: 29px;
+			text-transform: uppercase;
+			padding: 0 10px;
+			//font-size: $font-size-l;
+		}
+		&.searchButton {
+			// reset forms.css
+			margin-bottom: 0 !important;
+			color: $black;
+			font-size: $font-size-m;
+			background: none;
+			cursor: pointer;
+			padding: 0;
+			text-transform: none;
+			border: none;
+
+			//
+			background: url(../++resource++v2.theme.images/v2-search-icon.png) no-repeat center center;
+			width: 29px;
+			height: 29px;
+			display: block;
+			text-indent: -9999px;
+			float: left;
+		}
+	}
+	.searchbyYear {
+		float: left;
+		padding: 0 10px;
+		margin-left: 18px;
+		height: 29px;
+		line-height: 29px;
+		position: relative;
+		.yearSelectItems {
+			position: absolute;
+			top: 29px;
+			width: 300px;
+			line-height: 1.5em;
+			display: none;
+		}
+		&:hover .yearSelectItems {
+			display: block;
+		}
+		.yearItem {
+			float: left;
+			padding: 5px 10px 0 0;
+		}
 	}
 }

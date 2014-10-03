@@ -187,6 +187,23 @@
                                                                 </span>
                                                               </tal:event>
                                                               <tal:newsitem condition="python: item_type == 'News Item'">
+                                                                <tal:name tal:condition="item_creator"
+                                                                          tal:define="author python:mtool.getMemberInfo(item_creator)">
+                                                                  <span i18n:translate="label_by_author">
+                                                                    by
+                                                                    <a href="#"
+                                                                       tal:attributes="href string:${portal_url}/author/${item_creator}"
+                                                                       tal:content="python:author and author['fullname'] or item_creator"
+                                                                       tal:omit-tag="not:author"
+                                                                       i18n:name="author">
+                                                                      Bob Dobalina
+                                                                    </a>
+                                                                  </span>
+                                                                </tal:name>
+                                                                &mdash;
+                                                                <span tal:replace="python:toLocalizedTime(item_modified,long_format=1)">
+                                                                  August 16, 2001 at 23:35:59
+                                                                </span>
                                                               </tal:newsitem>
                                                             </div>
 

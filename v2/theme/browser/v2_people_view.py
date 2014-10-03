@@ -49,3 +49,15 @@ class V2PeopleView(BrowserView):
                     detail['webshop_url'] = information.webshop_url
                 return detail
         return None
+
+    def getCategoryByURL(self, url):
+        """Find the parent name in the url path.
+
+        This displays in which category an item is placed."""
+
+        url_low = url.lower()
+        menu_items = ['/event', '/publishing', '/lab','/about','/webshop','/archive']
+        for item in menu_items:
+            if item in url_low:
+                return item[1:]
+

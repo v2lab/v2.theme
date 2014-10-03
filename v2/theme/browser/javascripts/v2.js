@@ -10,6 +10,21 @@ var v2 = function() {
             $ = jQuery;
 
             addCornersToSelectedMenuItems();
+
+
+            // Initializing Masonry
+            var container = document.querySelector('.masonry-holder');
+            var msnry;
+            if(container){
+            	imagesLoaded( container, function() {
+				msnry = new Masonry( container, {
+					itemSelector: '.masonry-item',
+					"gutter": 30
+				});
+	            });
+            }
+
+
         }
     };
 } ();

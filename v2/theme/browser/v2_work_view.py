@@ -1,3 +1,4 @@
+import feedparser
 
 from Products.CMFCore.utils import getToolByName
 from collective.flowplayer.interfaces import IAudio
@@ -6,8 +7,11 @@ from v2.theme.browser.v2_people_view import V2PeopleView
 
 
 
-class V2TopicView(V2PeopleView):
-    """Complex Topic view.
+v2_vimeo_rss_url = "http://vimeo.com/channels/349409/videos/rss"
+feed = feedparser.parse( v2_vimeo_rss_url )
+
+class V2WorkView(V2PeopleView):
+    """Complex About view.
     """
 
     def toLocalizedTime(self, time, long_format=None, time_only = None):
@@ -56,3 +60,11 @@ class V2TopicView(V2PeopleView):
         for item in menu_items:
             if item in url:
                 return item
+
+    def getVideo(self, content):
+        # entries = []
+        # entries.extend( feed[ "items" ] )
+        # sorted_entries = sorted(entries, key=lambda entry: entry["date_parsed"])
+        # sorted_entries.reverse() # for most recent entries first
+        # return sorted_entries[0].links[0]["href"].split('/349409/')[1]
+        return feed.entries[0].links[0]["href"].split('/349409/')[1]

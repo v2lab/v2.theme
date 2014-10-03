@@ -12,39 +12,40 @@
             <metal:main-macro define-macro="main"
                         tal:define="kssClassesView context/@@kss_field_decorator_view;
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                                    templateId template/getId">
+                                    templateId template/getId;
+		                        url python: here.virtual_url_path();
+		                        categoryTitle python: 'category-'+view.getCategoryByURL(url);
+                                    ">
 
-                  <div class="frame frame-white margin-bottom">
-                      <div class="bit-1">
-                        <div tal:replace="structure provider:plone.abovecontenttitle" />
-                        <span class="category WEBSHOP">
-                        <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
-                          Title or id
-                        </h1>
-                        </span>
+                  <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
+	                  <div class="bit-1">
+			            <div tal:replace="structure provider:plone.abovecontenttitle" />
+			            <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
+			              Title or id
+			            </h1>
 
-                        <div tal:replace="structure provider:plone.belowcontenttitle" />
+			            <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-                        <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
-                          Description
-                        </p>
+			            <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
+			              Description
+			            </p>
 
-                        <div tal:replace="structure provider:plone.abovecontentbody" />
+			            <div tal:replace="structure provider:plone.abovecontentbody" />
 
-                        <div metal:define-macro="text-field-view"
-                             id="parent-fieldname-text" class="stx"
-                             tal:define="kss_class python:getKssClasses('text',
-                                         templateId=templateId, macro='text-field-view');
-                                         text here/getText|nothing"
-                             tal:condition="text"
-                             tal:attributes="class python:here.Format() in ('text/structured',
-                                             'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
-                              <div metal:define-slot="inside" tal:replace="structure text">The body</div>
-                        </div>
-                      </div>
-                  </div>
+			            <div metal:define-macro="text-field-view"
+			                 id="parent-fieldname-text" class="stx"
+			                 tal:define="kss_class python:getKssClasses('text',
+			                             templateId=templateId, macro='text-field-view');
+			                             text here/getText|nothing"
+			                 tal:condition="text"
+			                 tal:attributes="class python:here.Format() in ('text/structured',
+			                                 'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
+			                  <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+			            </div>
+	                  </div>
 
-                  <div id="V2WebshopView" class="frame">
+
+                  <div class="frame">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
@@ -58,7 +59,7 @@
                                     <tal:listing condition="folderContents">
 
                                           <tal:block tal:define="global i python:0;" tal:repeat="item folderContents">
-                                                <div
+                                                <div class="bit-3"
                                                      tal:define="item_url item/getURL|item/absolute_url;
                                                                  normalizeString nocall:context/@@plone/normalizeString;
                                                                  item_id item/getId|item/id;
@@ -82,10 +83,10 @@
                                                                         <tal:item tal:define="folderItemObject folderItem/getObject;
                                                                                   folderItemURL folderItem/getURL;
                                                                                   folderItemIsVideo python:view.isVideo(folderItemObject)">
-                                                                              <div class="tileItem visualIEFloatFix vevent V2WebshopItem vevent frame frame-white"
+                                                                              <div class="tileItem visualIEFloatFix vevent vevent bit-3"
                                                                                      tal:define="
                                                                                                 global i python: i+1"
-                                                                                     tal:attributes="class python: i%3==1 and 'tileItem visualIEFloatFix vevent V2WebshopItem vevent frame frame-white clear-margin-left ' or default;">
+                                                                                     tal:attributes="class python: i%3==1 and 'tileItem visualIEFloatFix vevent V2WebshopItem vevent bit-3 ' or default;">
 
 
 
@@ -156,30 +157,28 @@
                                                       </tal:folder><!-- // folder repeater -->
 
                                                       <tal:item condition="python:item.portal_type != 'Topic' and item.portal_type != 'Folder'">
-                                                              <div class="tileItem visualIEFloatFix vevent V2WebshopItem vevent frame frame-white"
+                                                              <div class="tileItem visualIEFloatFix vevent V2WebshopItem vevent bit-3"
                                                                      tal:define="
                                                                                 global i python: i+1"
-                                                                     tal:attributes="class python: i%3==1 and 'tileItem visualIEFloatFix vevent V2WebshopItem vevent frame frame-white clear-margin-left ' or default;">
+                                                                     tal:attributes="class python: i%3==1 and 'tileItem visualIEFloatFix vevent V2WebshopItem vevent bit-3 ' or default;">
 
 
 
                                                                     <tal:others tal:condition="not:item_is_video">
-                                                                          <a href="#" tal:attributes="href item_url"
-                                                                             tal:condition="python:item.portal_type != 'Image'">
-                                                                                <img src="" alt="" tal:condition="exists:item_object/image_thumb"
-                                                                                     tal:replace="structure python:item_object.tag(scale='thumb', css_class='tileImage')" />
-                                                                                <img src="" alt=""
-                                                                                     tal:replace="structure python:view.tag(item_object, css_class='tileImage')" /><br />
-                                                                          </a>
+                                                                    	<div class="thumb">
+                                                                            <a href="#" tal:attributes="href item_url"
+                                                                               tal:condition="python:item.portal_type != 'Image'">
+                                                                                  <div class="image"  alt=""
+                                                                                    tal:attributes="style python: 'background-image: url(' + item_url + '/leadImage_mini)'" ></div>
+                                                                                  <!-- <img src="" alt=""
+                                                                                       tal:replace="structure python:view.tag(folderItemObject, css_class='')" /> -->
 
-                                                                          <a href="#" tal:attributes="href string:${item_url}/view"
-                                                                             tal:condition="python:item.portal_type == 'Image'">
+                                                                                  <br />
+                                                                            </a>
 
-                                                                                <img src="" alt="" tal:condition="exists:item_object/image_preview"
-                                                                                     tal:replace="structure python:item_object.tag(scale='mini', css_class='imageBlock')" />
-                                                                                <img src="" alt=""
-                                                                                     tal:replace="structure python:view.tag(item_object, css_class='imageBlock')" /><br />
-                                                                          </a>
+
+                                                                           </div>
+
                                                                           <h2 class="">
                                                                                 <a href="#"
                                                                                    class="summary url" tal:attributes="href item_url"
@@ -245,7 +244,7 @@
                   <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
 
                   <div tal:replace="structure provider:plone.belowcontentbody" />
-
+            </div>
             </metal:main-macro>
       </div>
 

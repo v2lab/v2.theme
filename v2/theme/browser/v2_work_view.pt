@@ -11,11 +11,10 @@
       <div metal:fill-slot="main">
             <metal:main-macro define-macro="main"
                         tal:define="kssClassesView context/@@kss_field_decorator_view;
-                        		here_url context/@@plone_context_state/object_url;
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                                     templateId template/getId">
 
-                  <div class="frame frame-white margin-bottom" id="V2NewsitemView">
+                  <div class="frame frame-white margin-bottom" id="V2WorkView">
                     <div class="row">
                     	<div class="column-10">
                     		<div class="bit-1">
@@ -32,20 +31,6 @@
 		                        </p>
 
 		                        <div tal:replace="structure provider:plone.abovecontentbody" />
-
-						        <div class="newsImageContainer"
-						             tal:condition="here/image_mini|nothing">
-						            <a href="#"
-						               tal:attributes="href string:$here_url/image/image_view_fullscreen"
-						               id="parent-fieldname-image">
-						               <img tal:replace="structure python: here.tag(scale='preview', css_class='newsImage')" src="" alt="" />
-						            </a>
-						            <p class="discreet">
-						              <metal:field use-macro="python:here.widget('imageCaption', mode='view')">
-						              Image Caption
-						              </metal:field>
-						            </p>
-						        </div>
 
 		                        <div metal:define-macro="text-field-view"
 		                             id="parent-fieldname-text" class="stx"

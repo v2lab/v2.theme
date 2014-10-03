@@ -5,9 +5,12 @@ $image-dir: "../++resource++v2.theme.images/";
 // Algemene grid, wordt overschreven door responsive grid.
 // Cijfers van @media (min-width: 909px)
 //
-$column-width: 68px;
-$column-margin: 18px;
-$columns: 12;
+$column-width: 43px;
+$column-margin: 20px;
+$columns: 18;
+
+$bit-padding: 30px;
+
 
 //== Colors
 //
@@ -17,15 +20,23 @@ $gray: #666;
 $dark-gray: #333;
 $light-gray: rgb(230, 230, 230);
 
-$yellow: rgb(255, 255, 54);
-$green: rgb(41, 255, 141);
-$green-menu: rgb(89, 255, 0);
-$blue: rgb(130, 255, 255);
-$orange: rgb(255, 175, 138);
-$red: rgb(255, 0, 69);
+$yellow: #FFFF36;
+$green: #29FF8E;
+$green-menu: #80FF01;
+$blue: #81FFFF;
+$orange: #FFBF9D;
+$red: #FF1B24;
 
 $color-primary: $black;
 $color-primary-lighter: $black;
+
+$color-about: $green-menu;
+$color-event: $yellow;
+$color-webshop: $orange;
+$color-archive: $blue;
+$color-publishing: $red;
+$color-lab: $green;
+
 
 //== Fonts
 //
@@ -47,7 +58,7 @@ $line-height-s: 1.56;
 $font-size-m: 15px;
 $line-height-m: 1.2;
 
-$font-size-l: 15px;
+$font-size-l: 18px;
 $line-height-l: 1.56;
 
 $font-size-xl: 22px;

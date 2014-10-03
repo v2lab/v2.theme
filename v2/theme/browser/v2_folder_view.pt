@@ -15,6 +15,7 @@
 																		templateId template/getId">
 
 				<div class="frame frame-white margin-bottom">
+				<div class="bit-1">
 					<div tal:replace="structure provider:plone.abovecontenttitle" />
 
 					<h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -41,7 +42,6 @@
 					</div>
 				</div>
 
-				<div class="frame frame-white">
 
 					<metal:listingmacro define-macro="listing">
 						<tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
@@ -88,10 +88,6 @@
 												External Link
 											</a>
 										</h2>
-						<span
-						 tal:condition="item_category"
-						 tal:content="item_category"
-							>Item Category</span>
 
 
 										<tal:video tal:condition="item_is_video">
@@ -127,11 +123,11 @@
 												 tal:condition="python:item_type != 'Link'"
 												 tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
 												<img src="" alt=""
-														 tal:condition="exists:item_object/image_mini"
-														 tal:replace="structure python:item_object.tag(scale='mini', css_class='tileImage')" />
+														 tal:condition="exists:item_object/image_preview"
+														 tal:replace="structure python:item_object.tag(scale='preview', css_class='')" />
 												<img src="" alt=""
 														 tal:condition="item_has_leadimage"
-														 tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
+														 tal:replace="structure python:view.tag(item_object, css_class='')" />
 											</a>
 
 											<a href="#"
@@ -139,11 +135,11 @@
 												 tal:condition="python:item_type == 'Link'"
 												 tal:attributes="href item/getRemoteUrl">
 												<img src="" alt=""
-														 tal:condition="exists:item_object/image_mini"
-														 tal:replace="structure python:item_object.tag(scale='mini', css_class='tileImage')" />
+														 tal:condition="exists:item_object/image_preview"
+														 tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
 												<img src="" alt=""
 														 tal:condition="item_has_leadimage"
-														 tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
+														 tal:replace="structure python:view.tag(item_object, css_class='')" />
 											</a>
 											<div class="documentByLine">
 												<tal:event condition="python: item_type == 'Event'">

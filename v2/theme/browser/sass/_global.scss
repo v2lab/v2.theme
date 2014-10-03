@@ -139,6 +139,9 @@ p {
 .margin-bottom-half {
 	margin-bottom: $column-margin / 2 !important;
 }
+.margin-left {
+	margin-left: $column-margin !important;
+}
 .padding-top {
 	padding-top: $column-margin !important;
 }
@@ -184,9 +187,10 @@ p {
 .container-fixed {
 	position: fixed;
 	top: 0;
-	left: 50%;
-	margin-left: 0 - span(12)/2 !important;
+	// left: 50%;
+	// margin-left: 0 - span(12)/2 !important;
 	z-index: 10;
+	width: 100%;
 }
 .text-right {
 	text-align: right;
@@ -196,4 +200,44 @@ p {
 }
 .clear-margin-left {
 	margin-left: 0 !important;
+}
+.clear-padding {
+	padding: 0 !important;
+}
+.clear-padding-left {
+	padding-left: 0 !important;
+}
+
+.page-description, .documentDescription {
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	padding: 18px 0;
+	@extend .border-top;
+	@extend .border-bottom;
+}
+#parent-fieldname-text {
+	margin-top: 20px;
+	padding: 18px 0;
+	@extend .border-top;
+	@extend .border-bottom;
+	p {
+		margin: 0;
+		padding: 0;
+	}
+
+}
+#parent-fieldname-title {
+
+}
+
+.v2-btn {
+	color: $white;
+	background-color: $black;
+	float: left;
+	font-size: $font-size-xl;
+	padding: 3px 6px;
+	margin: 5px;
+	text-transform: uppercase;
 }

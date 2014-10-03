@@ -17,7 +17,7 @@
                   <div tal:replace="structure provider:plone.abovecontenttitle" />
                                     <div tal:replace="structure provider:plone.abovecontentbody" class="column-8"/>
 
-                  <div class="frame frame-white vevent column-6">
+                  <div class="frame frame-white vevent column-10">
                            <div class="bit-1">
 
                                     <div class="eventDtailsDateTime">
@@ -169,7 +169,7 @@
 
          </tal:main-macro>
 
-         <div id="viewlet-below-content" class="column-2" tal:content="structure provider:plone.belowcontent" />
+         <div id="viewlet-below-content" class="column-3" tal:content="structure provider:plone.belowcontent" />
 
 </div>
 
