@@ -65,7 +65,13 @@
                                                           batch folderContents;
                                                           root python:context.portal_url.getPortalObject(); site_physical_path python: '/'.join(root.getPhysicalPath());
                                                           blog_physical_path python: site_physical_path+'/lab/blog';
-                                                          results python:context.portal_catalog.searchResults({'path': blog_physical_path, 'portal_type': 'News Item',  })
+                                                          results python: context.portal_catalog.searchResults(
+                                                              path = blog_physical_path,
+                                                              portal_type = 'News Item',
+                                                              sort_limit=8
+                                                              )[:8];
+
+
                                                           ">
                                     <tal:listing condition="results">
 

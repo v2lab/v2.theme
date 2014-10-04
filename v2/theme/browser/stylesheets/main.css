@@ -498,12 +498,12 @@ p {
 }
 
 /* line 170, ../sass/_global.scss */
-.border-bottom, .page-description, .documentDescription, #parent-fieldname-text, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
+.border-bottom, .page-description, .documentDescription, .template-v2_webshop_view #parent-fieldname-text, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox {
   border-bottom: 2px solid black;
 }
 
 /* line 173, ../sass/_global.scss */
-.border-top, .page-description, .documentDescription, #parent-fieldname-text {
+.border-top, .page-description, .documentDescription, .template-v2_webshop_view #parent-fieldname-text {
   border-top: 2px solid black;
 }
 
@@ -570,17 +570,17 @@ p {
 }
 
 /* line 220, ../sass/_global.scss */
-#parent-fieldname-text {
+.template-v2_webshop_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
 }
 /* line 225, ../sass/_global.scss */
-#parent-fieldname-text p {
+.template-v2_webshop_view #parent-fieldname-text p {
   margin: 0;
   padding: 0;
 }
 
-/* line 235, ../sass/_global.scss */
+/* line 233, ../sass/_global.scss */
 .v2-btn {
   color: #ffffff;
   background-color: #000000;
@@ -719,7 +719,17 @@ input.inputLabelActive {
 }
 
 /* line 91, ../sass/_default.scss */
+.category-organization .documentFirstHeading {
+  background-color: #80FF01;
+}
+
+/* line 91, ../sass/_default.scss */
 .category-event .documentFirstHeading {
+  background-color: #FFFF36;
+}
+
+/* line 91, ../sass/_default.scss */
+.category-events .documentFirstHeading {
   background-color: #FFFF36;
 }
 
@@ -740,6 +750,11 @@ input.inputLabelActive {
 
 /* line 91, ../sass/_default.scss */
 .category-webshop .documentFirstHeading {
+  background-color: #FFBF9D;
+}
+
+/* line 91, ../sass/_default.scss */
+.category-shop .documentFirstHeading {
   background-color: #FFBF9D;
 }
 
@@ -768,7 +783,7 @@ input.inputLabelActive {
   float: left;
   border: 0;
   margin: 0;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 

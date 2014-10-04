@@ -85,7 +85,7 @@
 *
 */
 
-$categories: (about $color-about) (event $color-event) (lab $color-lab) (publishing $color-publishing) (archive $color-archive) (webshop $color-webshop);
+$categories: (about $color-about) (organization $color-about) (event $color-event) (events $color-event) (lab $color-lab) (publishing $color-publishing) (archive $color-archive) (webshop $color-webshop) (shop $color-webshop);
 
 @each $category in $categories {
 	.category-#{nth($category, 1)} .documentFirstHeading {
@@ -120,7 +120,7 @@ $categories: (about $color-about) (event $color-event) (lab $color-lab) (publish
 	float: left;
 	border: 0;
 	margin: 0;
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 .tileItem, .item {

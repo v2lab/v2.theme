@@ -185,8 +185,8 @@
                                           sort_on = 'start',
                                           end={'query': date, 'range': 'max'},
                                           portal_type = 'Event',
-                                          b_size= 5
-                                          );
+                                          sort_limit=8
+                                          )[:8];
                                           use_view_action site_properties/typesUseViewActionInListings|python:();" condition="results">
 	                  		<h2>Past events</h2>
 
@@ -204,7 +204,7 @@
 	                                                     item_object item/getObject;
 	                                                     item_is_video python:view.isVideo(item_object);
 	                                                    item_category python:view.getCategory(item_object);"
-	                                         tal:attributes="class string:past-event vevent ${item_type_class}">
+	                                         tal:attributes="class string:past-event tileItem vevent ${item_type_class}">
 
 	                                          <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video">
 	                                          	<div class="bit-2">
@@ -228,10 +228,10 @@
 	                                                          tal:attributes="href item/getRemoteUrl">
 	                                                    		<img src="" alt=""
 	                                                               tal:condition="exists:item_object/image_preview"
-	                                                               tal:replace="structure python:item_object.tag(scale='preview', css_class='')" />
+	                                                               tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
 	                                                    		<img src="" alt=""
 	                                                               tal:condition="item_has_leadimage"
-	                                                               tal:replace="structure python:view.tag(item_object, css_class='')" />
+	                                                               tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
 	                                                  	</a>
 	                                               	</div>
 									<div class="bit-2">
