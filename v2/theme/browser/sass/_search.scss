@@ -12,11 +12,12 @@ input {
 		display: block;
 		float: left;
 		width: 197px;
-		height: 29px;
-		line-height: 29px;
+		height: 35px;
+		line-height: 35px;
 		text-transform: uppercase;
 		padding: 0 10px;
-		//font-size: $font-size-l;
+		font-size: $font-size-l;
+		line-height: $line-height-l;
 	}
 	&.searchButton {
 		// reset forms.css
@@ -39,7 +40,7 @@ input {
 	}
 }
 
-.template-v2_archive_view {
+.template-v2_archive_view .category-archive {
 	.searchform {
 		display: inline-block;
 		float: left;
@@ -50,7 +51,7 @@ input {
 			border: none;
 			padding: 0;
 			margin: 0;
-
+			background-color: $color-archive;
 			//
 			display: block;
 			float: left;
@@ -88,15 +89,26 @@ input {
 		height: 29px;
 		line-height: 29px;
 		position: relative;
+		z-index: 999;
+		.yearSelectTitle {
+			text-transform: uppercase;
+
+		}
 		.yearSelectItems {
 			position: absolute;
 			top: 29px;
 			width: 300px;
 			line-height: 1.5em;
 			display: none;
+			left: 0;
+			padding: 0 10px;
 		}
-		&:hover .yearSelectItems {
-			display: block;
+		&:hover {
+			background-color: $color-archive;
+			.yearSelectItems {
+				display: block;
+				background-color: $color-archive;
+			}
 		}
 		.yearItem {
 			float: left;

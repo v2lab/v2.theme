@@ -1,5 +1,6 @@
 //== Directories
 $image-dir: "../++resource++v2.theme.images/";
+$font-dir: "../++resource++v2.theme.fonts/";
 //== Grids
 //
 // Algemene grid, wordt overschreven door responsive grid.
@@ -30,12 +31,13 @@ $red: #FF1B24;
 $color-primary: $black;
 $color-primary-lighter: $black;
 
-$color-about: $green-menu;
-$color-event: $yellow;
-$color-webshop: $orange;
-$color-archive: $blue;
-$color-publishing: $red;
-$color-lab: $green;
+$color-home: #2BFF3A;
+$color-about: #32FF9C;
+$color-event: #FFFF2D;
+$color-webshop: #B373FF;
+$color-archive: #00FFFF;
+$color-publishing: #FF434E;
+$color-lab: #5FBEFF;
 
 
 //== Fonts
@@ -44,9 +46,22 @@ $color-lab: $green;
 // font-weight: 300 is voor normale tekst
 // font-weight: 700 is voor bold tekst
 //
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../++resource++v2.theme.fonts/BebasNeue-webfont.eot');
+    src: url('../++resource++v2.theme.fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../++resource++v2.theme.fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../++resource++v2.theme.fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../++resource++v2.theme.fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-$font-family-sans: Arial, Helvetica, sans-serif;
-$font-family-serif: Arial, Helvetica, sans-serif;
+}
+
+$font-family-sans: Helvetica, Arial, sans-serif;
+$font-family-serif: Helvetica, Arial, sans-serif;
+// $font-family-header:  "bebas_neueregular", "HelveticaNeue-CondensedBold", "Helvetica Narrow","Arial Narrow", Helvetica, Arial, sans-serif;
+$font-family-header: "HelveticaNeue-CondensedBold", "Helvetica Narrow","Arial Narrow", Helvetica, Arial, sans-serif;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;

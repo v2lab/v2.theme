@@ -4,13 +4,16 @@
 body {
 	font: {
 		family: $font-family-sans;
-		weight: $font-weight-light;
+		// weight: $font-weight-light;
+		weight: $font-weight-normal;
 		size: $font-size-m;
 	};
 	line-height: $line-height-m;
 	color: $font-color;
 	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
 	background-size: cover;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
 }
 a {
 	color: $font-color;
@@ -23,7 +26,8 @@ a {
 h1 {
 	color: $font-color;
 	font: {
-		family: $font-family-sans;
+		// family: $font-family-sans;
+		family: $font-family-header;
 		weight: $font-weight-normal;
 		size: $font-size-l;
 	}
@@ -32,17 +36,19 @@ h1 {
 h2 {
 	color: $font-color;
 	font: {
-		family: $font-family-sans;
+		// family: $font-family-sans;
+		family: $font-family-header;
 		weight: $font-weight-bold;
 		size: $font-size-xl;
 	}
 	line-height: $line-height-xl-computed;
 	text-transform: uppercase;
-	margin: 10px 0 15px 0;
+	margin: 10px 0 10px 0;
 }
 h3 {
 	font: {
-		family: $font-family-sans;
+		// family: $font-family-sans;
+		family: $font-family-header;
 		weight: $font-weight-bold;
 		size: $font-size-l;
 	}
@@ -53,7 +59,8 @@ h3 {
 }
 h6 {
 	font: {
-		family: $font-family-sans;
+		// family: $font-family-sans;
+		family: $font-family-header;
 		weight: $font-weight-light;
 	}
 }
@@ -151,6 +158,9 @@ p {
 .padding-bottom-half {
 	padding-bottom: $column-margin / 2 !important;
 }
+.page-padding-top {
+	padding-top: 15px !important;
+}
 .img-responsive {
 	display: block;
 	max-width: 100%;
@@ -217,22 +227,24 @@ p {
 	@extend .border-top;
 	@extend .border-bottom;
 }
-.template-v2_webshop_view #parent-fieldname-text {
-	margin-top: 20px;
-	padding: 18px 0;
-	@extend .border-top;
-	@extend .border-bottom;
-	p {
-		margin: 0;
-		padding: 0;
+.template-v2_webshop_view, .template-v2_home_view {
+	#parent-fieldname-text {
+		margin-top: 20px;
+		padding: 18px 0;
+		@extend .border-top;
+		@extend .border-bottom;
+		p {
+			margin: 0;
+			padding: 0;
+		}
 	}
-
 }
 
 
-.v2-btn {
+.v2-btn, .template-v2_people_view #parent-fieldname-text a {
 	color: $white;
 	background-color: $black;
+	font-family: $font-family-header;
 	float: left;
 	font-size: $font-size-xl;
 	padding: 3px 6px;

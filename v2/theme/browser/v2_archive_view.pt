@@ -70,12 +70,12 @@
 									<div class="yearItem" tal:define="item_url item/getURL|item/absolute_url;
 									item_title_or_id item/pretty_title_or_id;
 									item_type item/portal_type;
-									use_view_action site_properties/typesUseViewActionInListings|python:();"  tal:condition="python: item.pretty_title_or_id().isdigit()"
+									use_view_action site_properties/typesUseViewActionInListings|python:();"  tal:condition="python: item.id.isdigit()"
 									>
 							<a href="#"
 
 				                                         tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
-				                                         tal:content="item_title_or_id">
+				                                         tal:content="item/id">
 				                                         Item Title
 				                                    </a>
 			                                  	</div>
@@ -97,7 +97,7 @@
 
                   </div>
 
-                  <div class="">
+                  <div class="content-list">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;

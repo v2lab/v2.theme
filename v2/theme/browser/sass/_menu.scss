@@ -2,14 +2,16 @@ ul.main-menu {
 	margin: 0 0 0 0px;
 	padding: 0;
 	list-style-type: none;
-	height: 29px;
+	height: 35px;
+	font-size: $font-size-l;
+
 	ul {
 		margin: 0;
-		padding: 5px 0;
+		padding: 10px 0;
 		list-style-type: none;
 		display: none;
 		position: absolute;
-		margin-top: 29px;
+		margin-top: 35px;
 		background: black;
 		li {
 			display: block;
@@ -17,23 +19,25 @@ ul.main-menu {
 
 			a {
 				color: white;
+				line-height: 1.4em;
+				padding-left: 16px;
 			}
 		}
 	}
 	li {
-		position: relative;
+		// position: relative;
 		list-style-type: none;
 		display: inline-block;
 		span {
 			position: absolute;
-			line-height: 29px;
+			line-height: 35px;
 			left: 0;
 			top: 0;
 		}
 		a {
 			display: block;
-			line-height: 29px;
-			padding: 0 10px;
+			line-height: 35px;
+			padding: 0 14px;
 			&:hover {
 				text-decoration: none;
 			}
@@ -41,17 +45,18 @@ ul.main-menu {
 	}
 	> li {
 		@include clearfix;
-		margin-left: -15px;
+		margin-left: -17px;
 		&:first-child {
 			margin-left: 0;
 		}
 		&:before {
 			display: block;
 			float: left;
-			width: 10px;
-			height: 29px;
+			width: 12px;
+			height: 35px;
 			content: " ";
-			background: url(../++resource++v2.theme.images/v2-menu-background-line.png) no-repeat 0 0;
+			// background: url(../++resource++v2.theme.images/v2-menu-background-line-2.png) no-repeat 0 0;
+			background: url(../++resource++v2.theme.images/v2-menu-background-set.png) no-repeat -23px 0;
 
 		}
 		&:after {
@@ -59,8 +64,8 @@ ul.main-menu {
 			visibility: visible;
 			clear: none;
 			float: left;
-			width: 10px;
-			height: 29px;
+			width: 12px;
+			height: 35px;
 			content: " ";
 		}
 		&:first-child {
@@ -76,7 +81,7 @@ ul.main-menu {
 		> a {
 			text-transform: uppercase;
 			float: left;
-			//font-size: $font-size-l;
+			font-size: $font-size-l;
 
 			&.selected {
 				background: black;
@@ -84,10 +89,12 @@ ul.main-menu {
 		}
 		&:hover {
 			&:before {
-				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+				// background: url(../++resource++v2.theme.images/v2-menu-background-2.png) no-repeat 0 0;
+				background: url(../++resource++v2.theme.images/v2-menu-background-set.png) no-repeat 0 0;
 			}
 			&:after {
-				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
+				// background: url(../++resource++v2.theme.images/v2-menu-background-2.png) no-repeat right top;
+				background: url(../++resource++v2.theme.images/v2-menu-background-set.png) no-repeat -11.5px 0;
 			}
 			> a {
 				color: white;
@@ -99,10 +106,10 @@ ul.main-menu {
 		}
 		&.selected {
 			&:before {
-				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat 0 0;
+				background: url(../++resource++v2.theme.images/v2-menu-background-2.png) no-repeat 0 0;
 			}
 			&:after {
-				background: url(../++resource++v2.theme.images/v2-menu-background.png) no-repeat right top;
+				background: url(../++resource++v2.theme.images/v2-menu-background-2.png) no-repeat right top;
 			}
 		}
 		&.about {

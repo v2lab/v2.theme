@@ -15,7 +15,7 @@
 				//
 				@extend .column-4;
 				@extend .border-bottom;
-				@extend .padding-top-double;
+				@extend .page-padding-top;
 				@extend .background-gray;
 			}
 		}
@@ -41,7 +41,7 @@
 	display: inherit;
 }
 .margin-top-content {
-	margin-top: 82px !important;
+	margin-top: 70px !important;
 }
 #portal-personaltools-wrapper {
 	display: none;
@@ -127,7 +127,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	border-top: none;
 }
 
-.template-v2_upcomingevent_view  {
+.template-v2_upcomingevent_view, .template-v2_eventlist_view  {
 	.tileItem {
 		width: 100%;
 		float: left;
@@ -208,11 +208,25 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 *
 */
 
+.EventDateInfo {
+	text-transform: uppercase;
+	font: {
+		family: $font-family-header;
+		// weight: $font-weight-light;
+		weight: $font-weight-normal;
+		// size: $font-size-m;
+	};
+}
+
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	float: left;
 	div {
 		float: left;
 	}
+
+}
+.futureEventDateUntil, .pastEventDateUntil {
+	// margin-left: 5px;
 }
 .eventDetailsDateTime {
 	margin-bottom: 10px;
@@ -232,7 +246,9 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 }
 
-
+.documentByLine {
+	margin-bottom: 10px;
+}
 .documentActions {
 	float: left;
 }
@@ -242,7 +258,24 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	margin: 0;
 }
 
+/*
+*
+* home view
+*
+*/
 
+.template-v2_home_view .tileItem img.tileImage {
+	float: none;
+	margin-bottom: 10px;
+}
+.template-v2_home_view .tileBody {
+	margin-bottom: 10px;
+	padding: 0;
+}
+.template-v2_home_view .tileFooter {
+	width: 90%;
+	@extend .border-top;
+}
 
 
 /*
@@ -322,5 +355,58 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 				height: auto;
 			}
 		}
+	}
+}
+
+
+
+
+/*
+*
+* event list
+*
+*/
+
+.template-v2_eventlist_view {
+	.page-description {
+
+		padding: 20px 0;
+		border: none;
+
+	}
+
+}
+
+
+/*
+*
+*  Actions
+*
+*/
+
+#portal-siteactions {
+	display: none;
+}
+.documentActions {
+	display: none;
+}
+
+/*
+*
+*  People view
+*
+*/
+.template-v2_people_view {
+	.tileHeadline a {
+		font-family: $font-family-serif;
+		font-size: 23px;
+		font-weight: 100;
+	}
+	.description {
+		font-size: 22px;
+	}
+	.tileItemPeople {
+		overflow: hidden;
+		height: 400px;
 	}
 }

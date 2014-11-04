@@ -1,4 +1,5 @@
 .masonry-holder .masonry-item {
-	width: (span(13) - $bit-padding * 3)/2;
-
+    width: (span(13) - $bit-padding * 4)/3;
+    margin: 0;
+    padding: 0;
 }

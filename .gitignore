@@ -5,3 +5,4 @@
 
 *.codekit
 *not_in_use/
+*.DS_Store

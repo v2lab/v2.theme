@@ -87,7 +87,11 @@
      layer=".interfaces.IThemeSpecific"
      />
 
-
+  <browser:resourceDirectory
+     name="v2.theme.fonts"
+     directory="fonts"
+     layer=".interfaces.IThemeSpecific"
+     />
 
 
   <!-- View registration  -->
@@ -208,6 +212,26 @@
      menu="plone_displayviews"
      title="V2 Upcomingevent View"
      action="@@v2_upcomingevent_view"
+     layer=".interfaces.IThemeSpecific"
+     description="2 columns with masonry script"
+     />
+
+
+  <browser:page
+     for="*"
+     name="v2_eventlist_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_eventlist_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Eventlist View"
+     action="@@v2_eventlist_view"
      layer=".interfaces.IThemeSpecific"
      description="2 columns with masonry script"
      />

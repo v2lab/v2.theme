@@ -12,10 +12,13 @@
       border: none;
       border-bottom: 2px solid black;
       text-transform: uppercase;
+      font-size: $font-size-l;
+      line-height: 2em;
+      padding: 0;
 }
 .portletItem {
       margin: 0;
-      padding: 1em;
+      padding: 1em 0;
       border: none;
       border-bottom: 2px solid black;
 }
@@ -25,7 +28,8 @@
 .portletFooter {
       background: none;
       margin: 0;
-      padding: 0.25em 1em;
+      // padding: 0.25em 1em;
+      padding: 0.25em 0;
       border: none;
       text-align: right;
 }
@@ -34,7 +38,12 @@
       display: block;
       color: black;
       font-size: $font-size-s;
+      line-height: $line-height-s;
       margin-bottom: 5px;
+      // span {
+      //       font-size: 0.7em;
+
+      // }
 }
 
 .column-2.contentSidebar {
@@ -51,7 +60,7 @@
       }
 }
 .portletStaticText {
-      padding: 1em;
+      padding: 1em 0;
 }
 
 .portletItem, .related-block {
@@ -63,15 +72,26 @@
       }
       a, a:visited {
             color: $font-color;
-            font-size: $font-size-m;
+            font-size: $font-size-l;
+            line-height:  1.2em;
             text-transform: uppercase;
       }
 }
 
-.portletEvents .portletItem:hover a {
+.portletEvents .portletItem:hover {
       background-color: $yellow;
 }
 
 .portletCollection:hover {
       background: none;
+}
+
+.portlet-static-mailinglist {
+      width: 180px;
+      .tileItemOneColumn:first-child {
+            margin: 1em 0;
+            a {
+                  margin-right: 3px;
+            }
+      }
 }
