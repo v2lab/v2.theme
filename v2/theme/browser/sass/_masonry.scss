@@ -3,3 +3,8 @@
     margin: 0;
     padding: 0;
 }
+.template-v2_lab_view .masonry-holder .masonry-item {
+    width: (span(13) - $bit-padding * 3)/2;
+    margin: 0;
+    padding: 0;
+}

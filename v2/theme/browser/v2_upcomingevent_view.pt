@@ -13,6 +13,8 @@
                         tal:define="kssClassesView context/@@kss_field_decorator_view;
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                                     date python: context.ZopeTime();
+                                    toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+		                            DateTime python:modules['DateTime'].DateTime;
                                     templateId template/getId;
                                     url python: here.virtual_url_path();
 						categoryTitle python: 'category-'+view.getCategoryByURL(url);

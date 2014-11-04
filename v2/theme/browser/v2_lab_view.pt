@@ -12,6 +12,9 @@
             <metal:main-macro define-macro="main"
                         tal:define="kssClassesView context/@@kss_field_decorator_view;
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                                    date python: context.ZopeTime();
+                                    toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+	                            DateTime python:modules['DateTime'].DateTime;
                                     templateId template/getId;
                                     url python: here.virtual_url_path();
                                     categoryTitle python: 'category-'+view.getCategoryByURL(url);
@@ -88,7 +91,9 @@
                                                                  item_has_leadimage item/hasContentLeadImage;
                                                                  item_object item/getObject;
                                                                  item_is_video python:view.isVideo(item_object);
-                                                                item_category python:view.getCategory(item_object);"
+                                                                item_category python:view.getCategory(item_object);
+                                                                item_creator item/Creator;
+                                                                "
                                                      tal:attributes="class string:masonry-item tileItem vevent ${item_type_class}">
 
 
@@ -112,12 +117,54 @@
                                                      </h2>
 
       								<div class="documentByLine">
+
                                                               <tal:newsitem condition="python: item_type == 'News Item'">
-                                                              	here comes news by line
+                                                                <tal:name tal:condition="item_creator"
+                                                                          tal:define="mtool mtool|context/portal_membership; author python:mtool.getMemberInfo(item_creator)">
+                                                                  <span i18n:translate="label_by_author">
+                                                                    <a href="#"
+                                                                       tal:attributes="href string:${portal_url}/author/${item_creator}"
+                                                                       tal:content="python:author and author['fullname'] or item_creator"
+                                                                       tal:omit-tag="not:author"
+                                                                       i18n:name="author">
+                                                                      Bob Dobalina
+                                                                    </a>
+                                                                  </span>
+                                                                </tal:name>
+                                                                &mdash;
+                                                                <span tal:replace="python:toLocalizedTime(item.modified,long_format=0)">
+                                                                  August 16, 2001 at 23:35:59
+                                                                </span>
                                                               </tal:newsitem>
                                                      </div>
 
+                                                              <a href="#"
+                                                                 tal:condition="python:item_type != 'Link'"
+                                                                 tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
 
+											<img src="" alt=""
+											   tal:condition="exists:item_object/image_preview"
+											   tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
+											<img src="" alt=""
+											   tal:condition="item_has_leadimage"
+											   tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
+
+                                                              </a>
+
+
+                                                              <a href="#"
+                                                                 class="link-plain"
+                                                                 tal:condition="python:item_type == 'Link'"
+                                                                 tal:attributes="href item/getRemoteUrl">
+
+							                        <img src="" alt=""
+							                             tal:condition="exists:item_object/image_preview"
+							                             tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
+							                        <img src="" alt=""
+							                             tal:condition="item_has_leadimage"
+							                             tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
+
+                                                              </a>
 
                                                       <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video">
                                                             <a href="#"

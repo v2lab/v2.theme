@@ -867,35 +867,39 @@ input.inputLabelActive {
 .template-v2_webshop_view .tileItem .tileShopping h3 {
   color: #666;
 }
+/* line 171, ../sass/_default.scss */
+.template-v2_webshop_view .tileItem .tileItem {
+  height: 430px;
+}
 
-/* line 174, ../sass/_default.scss */
+/* line 177, ../sass/_default.scss */
 .leadimageContainer img {
   width: 100%;
 }
 
-/* line 179, ../sass/_default.scss */
+/* line 182, ../sass/_default.scss */
 .newsImageContainer, .eventDetails {
   float: none;
   width: auto;
 }
 
-/* line 183, ../sass/_default.scss */
+/* line 186, ../sass/_default.scss */
 .newsImageContainer {
   margin-left: 20px;
 }
-/* line 186, ../sass/_default.scss */
+/* line 189, ../sass/_default.scss */
 .newsImageContainer .discreet {
   display: none;
 }
 
-/* line 190, ../sass/_default.scss */
+/* line 193, ../sass/_default.scss */
 .newsImage {
   width: 100%;
   height: auto;
   border: none;
 }
 
-/* line 196, ../sass/_default.scss */
+/* line 199, ../sass/_default.scss */
 .leadimage img {
   width: 100%;
   height: auto;
@@ -906,50 +910,50 @@ input.inputLabelActive {
 * event byline
 *
 */
-/* line 211, ../sass/_default.scss */
+/* line 214, ../sass/_default.scss */
 .EventDateInfo {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
-/* line 221, ../sass/_default.scss */
+/* line 224, ../sass/_default.scss */
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil {
   float: left;
 }
-/* line 223, ../sass/_default.scss */
+/* line 226, ../sass/_default.scss */
 .futureEventDateFrom div, .futureEventDateUntil div, .pastEventDateFrom div, .pastEventDateUntil div {
   float: left;
 }
 
-/* line 231, ../sass/_default.scss */
+/* line 234, ../sass/_default.scss */
 .eventDetailsDateTime {
   margin-bottom: 10px;
 }
 
-/* line 234, ../sass/_default.scss */
+/* line 237, ../sass/_default.scss */
 .eventDetails {
   text-transform: uppercase;
   margin: 0;
   font-size: 12px;
 }
 
-/* line 243, ../sass/_default.scss */
+/* line 246, ../sass/_default.scss */
 .event-addToCal .icon, .event-addToCal .info {
   float: left;
 }
 
-/* line 249, ../sass/_default.scss */
+/* line 252, ../sass/_default.scss */
 .documentByLine {
   margin-bottom: 10px;
 }
 
-/* line 252, ../sass/_default.scss */
+/* line 255, ../sass/_default.scss */
 .documentActions {
   float: left;
 }
 
-/* line 255, ../sass/_default.scss */
+/* line 258, ../sass/_default.scss */
 .documentDescription, .description {
   font-weight: normal;
   line-height: 1.2em;
@@ -961,19 +965,19 @@ input.inputLabelActive {
 * home view
 *
 */
-/* line 267, ../sass/_default.scss */
+/* line 270, ../sass/_default.scss */
 .template-v2_home_view .tileItem img.tileImage {
   float: none;
   margin-bottom: 10px;
 }
 
-/* line 271, ../sass/_default.scss */
+/* line 274, ../sass/_default.scss */
 .template-v2_home_view .tileBody {
   margin-bottom: 10px;
   padding: 0;
 }
 
-/* line 275, ../sass/_default.scss */
+/* line 278, ../sass/_default.scss */
 .template-v2_home_view .tileFooter {
   width: 90%;
 }
@@ -983,29 +987,40 @@ input.inputLabelActive {
 * archive
 *
 */
-/* line 288, ../sass/_default.scss */
+/* line 291, ../sass/_default.scss */
 .template-v2_archive_view .video_container {
   padding: 20px 0;
   clear: both;
 }
-/* line 292, ../sass/_default.scss */
+/* line 295, ../sass/_default.scss */
 .template-v2_archive_view .video_container iframe {
   width: 100%;
   height: 320px;
 }
 
+/*
+*
+* Lab view
+*
+*/
 /* line 310, ../sass/_default.scss */
+.template-v2_home_view .tileItem img.tileImage, .template-v2_lab_view .tileItem img.tileImage {
+  float: none;
+  margin-bottom: 10px;
+}
+
+/* line 321, ../sass/_default.scss */
 .template-v2_work_view .newsImageContainer, .template-v2_lab_view .newsImageContainer {
   margin: 20px auto;
   width: 80%;
 }
 
-/* line 318, ../sass/_default.scss */
+/* line 329, ../sass/_default.scss */
 .content-list {
   float: left;
   width: 100%;
 }
-/* line 325, ../sass/_default.scss */
+/* line 336, ../sass/_default.scss */
 .content-list .listitem {
   width: 49%;
   float: right;
@@ -1013,12 +1028,12 @@ input.inputLabelActive {
   font-size: 18px;
   margin: 5px 0 5px 0;
 }
-/* line 332, ../sass/_default.scss */
+/* line 343, ../sass/_default.scss */
 .content-list .listitem.even {
   margin-left: 0;
   float: left;
 }
-/* line 336, ../sass/_default.scss */
+/* line 347, ../sass/_default.scss */
 .content-list .listitem a {
   color: white !important;
   font-size: 1.5em;
@@ -1028,12 +1043,12 @@ input.inputLabelActive {
   float: left;
 }
 
-/* line 349, ../sass/_default.scss */
+/* line 360, ../sass/_default.scss */
 .template-v2_people_view .tileItemPeople .leadimage {
   overflow: hidden;
   height: 280px;
 }
-/* line 353, ../sass/_default.scss */
+/* line 364, ../sass/_default.scss */
 .template-v2_people_view .tileItemPeople .leadimage img {
   width: 100%;
   height: auto;
@@ -1044,7 +1059,7 @@ input.inputLabelActive {
 * event list
 *
 */
-/* line 371, ../sass/_default.scss */
+/* line 382, ../sass/_default.scss */
 .template-v2_eventlist_view .page-description {
   padding: 20px 0;
   border: none;
@@ -1055,12 +1070,12 @@ input.inputLabelActive {
 *  Actions
 *
 */
-/* line 387, ../sass/_default.scss */
+/* line 398, ../sass/_default.scss */
 #portal-siteactions {
   display: none;
 }
 
-/* line 390, ../sass/_default.scss */
+/* line 401, ../sass/_default.scss */
 .documentActions {
   display: none;
 }
@@ -1070,17 +1085,17 @@ input.inputLabelActive {
 *  People view
 *
 */
-/* line 400, ../sass/_default.scss */
+/* line 411, ../sass/_default.scss */
 .template-v2_people_view .tileHeadline a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 23px;
   font-weight: 100;
 }
-/* line 405, ../sass/_default.scss */
+/* line 416, ../sass/_default.scss */
 .template-v2_people_view .description {
   font-size: 22px;
 }
-/* line 408, ../sass/_default.scss */
+/* line 419, ../sass/_default.scss */
 .template-v2_people_view .tileItemPeople {
   overflow: hidden;
   height: 400px;
@@ -1732,6 +1747,13 @@ input.searchButton {
 /* line 1, ../sass/_masonry.scss */
 .masonry-holder .masonry-item {
   width: 226.33333px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, ../sass/_masonry.scss */
+.template-v2_lab_view .masonry-holder .masonry-item {
+  width: 354.5px;
   margin: 0;
   padding: 0;
 }

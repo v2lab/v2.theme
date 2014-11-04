@@ -168,6 +168,9 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 			color: $gray;
 		}
 	}
+	.tileItem {
+		height: 430px;
+	}
 }
 
 
@@ -299,7 +302,15 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 
 
-
+/*
+*
+* Lab view
+*
+*/
+.template-v2_home_view .tileItem img.tileImage, .template-v2_lab_view .tileItem img.tileImage {
+	float: none;
+	margin-bottom: 10px;
+}
 
 
 

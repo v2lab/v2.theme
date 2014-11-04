@@ -92,7 +92,7 @@
 					</div>
 
 				</tal:block>
-				<div class="more">More videos</div>
+				<div class="more"><a href="/archive/videos" target="_self">More videos</a></div>
                       </div> <!-- end of bit-1 -->
 
                   </div>

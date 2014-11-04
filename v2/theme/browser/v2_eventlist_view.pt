@@ -12,6 +12,7 @@
             <metal:main-macro define-macro="main"
                         tal:define="kssClassesView context/@@kss_field_decorator_view;
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+						limit_display limit_display|request/limit_display|nothing;
                                     date python: context.ZopeTime();
                                     templateId template/getId;
                                     url python: here.virtual_url_path();

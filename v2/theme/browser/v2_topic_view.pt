@@ -69,7 +69,9 @@
                                                                  item_has_leadimage item/hasContentLeadImage;
                                                                  item_object item/getObject;
                                                                  item_is_video python:view.isVideo(item_object);
-                                                                item_category python:view.getCategory(item_object);"
+                                                                item_category python:view.getCategory(item_object);
+                                                                item_creator item/Creator;
+                                                                "
                                                      tal:attributes="class string:V2TopicItem vevent ${item_type_class}">
 
                                                       <span
