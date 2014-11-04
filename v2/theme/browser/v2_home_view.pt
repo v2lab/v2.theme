@@ -91,11 +91,16 @@
                                                                   <div class="EventDateInfo" tal:condition="python: item.end < view.currenttime()">
                                                                     <div class="pastEventDateFrom">
                                                                       <div class="eventDayInfo" tal:content="item/start/day">02</div>
+                                                                      <div>&nbsp;</div>
+
                                                                       <div class="eventMonthInfo" tal:content="python:item.start.strftime('%b %Y').capitalize()">Jun</div>
                                                                     </div>
                                                                     <span tal:condition="python:item.start.strftime('%d - %m - %Y') != item.end.strftime('%d - %m - %Y')" tal:omit-tag="">
                                                                       <div class="pastEventDateUntil">
+                                                                      	<div>&nbsp;-&nbsp;</div>
                                                                         <div class="eventDayInfo" tal:content="item/end/day">02</div>
+                                                                        <div>&nbsp;</div>
+
                                                                         <div class="eventMonthInfo" tal:content="python:item.end.strftime('%b %Y').capitalize()">Jun</div>
                                                                       </div>
                                                                       <div class="visualClearLeft"><!-- --></div>
