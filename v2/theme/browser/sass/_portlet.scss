@@ -110,19 +110,19 @@
 }
 .related-block {
       clear: both;
-      .tileItem {
-            width: 50%;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            float: left;
-            &:nth-child(odd) {
-                  padding-left: 15px;
-            }
-            &:nth-child(even) {
-                  padding-right: 15px;
-            }
-      }
+      // .tileItem {
+      //       width: 50%;
+      //       -moz-box-sizing: border-box;
+      //       -webkit-box-sizing: border-box;
+      //       box-sizing: border-box;
+      //       float: left;
+      //       &:nth-child(even) {
+      //             padding-left: 15px;
+      //       }
+      //       &:nth-child(odd) {
+      //             padding-right: 15px;
+      //       }
+      // }
 }
 .portletEvents .portletItem:hover {
       background-color: $yellow;

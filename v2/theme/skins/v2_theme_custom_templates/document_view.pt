@@ -50,18 +50,18 @@
 								Body text
 							</metal:field>
 
-							<span tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
+<!-- 							<span tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
 						        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
 									show related items if they exist
 								</div>
-							</span>
+							</span> -->
 
 							<div tal:replace="structure provider:plone.belowcontentbody" />
 						</div>
 
-					<div class="bit-4">
+<!-- 					<div class="bit-4">
 	         			<div id="viewlet-below-content" class="" tal:content="structure provider:plone.belowcontent" />
-	         		</div>
+	         		</div> -->
 	</tal:main-macro>
 </metal:main>
 

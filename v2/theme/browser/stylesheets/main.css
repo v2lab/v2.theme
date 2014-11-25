@@ -228,16 +228,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .related-block {
   clear: both; }
-  .related-block .tileItem {
-    width: 50%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left; }
-    .related-block .tileItem:nth-child(odd) {
-      padding-left: 15px; }
-    .related-block .tileItem:nth-child(even) {
-      padding-right: 15px; }
 
 .portletEvents .portletItem:hover {
   background-color: #FFFF36; }
