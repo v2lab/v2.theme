@@ -14,7 +14,7 @@
 																		getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
 																		templateId template/getId">
 
-				<div class="margin-bottom">
+				<div class=" margin-bottom">
 					<div tal:replace="structure provider:plone.abovecontenttitle" />
 
 					<h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -40,7 +40,7 @@
 						<div metal:define-slot="inside" tal:replace="structure text">The body</div>
 					</div>
 
-
+					<div class="clear-parent-bit">
 					<metal:listingmacro define-macro="listing">
 						<tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
 																				limit_display limit_display|request/limit_display|nothing;
@@ -66,9 +66,9 @@
 																	 item_object item/getObject;
 																	 item_is_video python:view.isVideo(item_object);
 									 item_category python:view.getCategory(item_object);"
-											 tal:attributes="class string: vevent ${item_type_class}">
+											 tal:attributes="class string:bit-1 vevent ${item_type_class}">
 
-										<h2 class="" metal:define-macro="listitem">
+										<h2 class="folder-title" metal:define-macro="listitem">
 
 											<a href="#"
 												 class="summary url"
@@ -199,7 +199,7 @@
 													 tal:condition="not:folderishContents">
 												This collection has no items
 											</div>
-											<div class="bit-2 V2FolderView vevent"
+											<div class="bit-3 V2FolderView vevent"
 													 tal:repeat="folderItem folderishContents">
 												<tal:item tal:define="folderItemObject folderItem/getObject;
 																							folderItemURL folderItem/getURL;
@@ -294,9 +294,10 @@
 													</tal:others>
 												</tal:item>
 											</div>
-											<div class="tileItem visualIEFloatFix see-more" tal:condition="folderContents">
+											<div class="bit-1 tileItem visualIEFloatFix see-more" tal:condition="folderContents">
 												<a href=""
 													 tal:attributes="href item/getURL|item/absolute_url">See more ...</a>
+												<div class="hr"></div>
 											</div>
 										</span>
 										<div class="visualClear"><!-- --></div>
@@ -318,7 +319,7 @@
 
 						</tal:foldercontents>
 					</metal:listingmacro>
-
+					</div>
 				</div>
 
 				<metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />

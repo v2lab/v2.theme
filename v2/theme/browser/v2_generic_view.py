@@ -141,3 +141,13 @@ class V2GenericView(BrowserView):
         feed = feedparser.parse( v2_vimeo_rss_url )
 
         return feed.entries[0].links[0]["href"].split('/349409/')[1]
+
+    def getVideoTitle(self):
+        # entries = []
+        # entries.extend( feed[ "items" ] )
+        # sorted_entries = sorted(entries, key=lambda entry: entry["date_parsed"])
+        # sorted_entries.reverse() # for most recent entries first
+        # return sorted_entries[0].links[0]["href"].split('/349409/')[1]
+        feed = feedparser.parse( v2_vimeo_rss_url )
+
+        return feed.entries[0].title

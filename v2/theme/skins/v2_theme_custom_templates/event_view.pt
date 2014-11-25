@@ -7,7 +7,7 @@
       i18n:domain="plone">
 <body>
 
-<div metal:fill-slot="main" class="row">
+<div metal:fill-slot="main" class="">
          <tal:main-macro metal:define-macro="main"
             tal:define="kssClassesView context/@@kss_field_decorator_view;
                         getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
@@ -16,49 +16,7 @@
 
                   <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-                  <div class="frame frame-white vevent column-10">
-                           <div class="bit-1">
 
-                                    <div class="eventDtailsDateTime">
-                                             <span tal:define="
-                                                   future python:here.end() > DateTime();
-                                                   pec string:pastEventTable;
-                                                   fec string:futureEventTable;
-                                                   eventclass python:future and fec or pec"
-                                                   tal:omit-tag="">
-                                                      <div class="eventTable" tal:attributes="class string:${eventclass}"  summary="Event details" i18n:attributes="summary summary_event_details;">
-                                               <div tal:define="showTime python:here.start().TimeMinutes() != '00:00' and here.end().TimeMinutes() != '00:00'" tal:omit-tag="">
-                                                      <tal:differentday tal:condition="python:not here.start().Date() == here.end().Date()">
-                                                            <div class="" tal:attributes="class python:future and 'futureEventDateFrom' or 'pastEventDateFrom'">
-                                                                  <div class="eventDayInfo" tal:content="python:here.start().day()">02</div>
-                                                                  <div class="eventMonthInfo" tal:content="python:here.start().strftime('%b %Y').capitalize()">Jun</div>
-                                                            </div>
-                                                            <div class="" tal:attributes="class python:future and 'futureEventDateUntil' or 'pastEventDateUntil'">
-                                                                  <div class="eventDayInfo" tal:content="python:here.end().day()">02</div>
-                                                                  <div class="eventMonthInfo" tal:content="python:here.end().strftime('%b %Y').capitalize()">Jun</div>
-                                                            </div>
-                                                      </tal:differentday>
-
-                                                      <tal:sameday tal:condition="python:here.start().Date() == here.end().Date()"
-                                                                           tal:define="ampm python:site_properties.getProperty('localLongTimeFormat').find('%p') >= 0">
-                                                            <div class="" tal:attributes="class python:future and 'futureEventDateFrom' or 'pastEventDateFrom'">
-                                                                  <div class="eventDayInfo" tal:content="python:here.start().day()">02</div>
-                                                                  <div class="eventMonthInfo" tal:content="python:here.start().strftime('%b %Y').capitalize()">Jun</div>
-                                                            </div>
-                                                      </tal:sameday>
-                                                      <div class="event_time" tal:condition="showTime">
-                                                            <span class="event-hour" tal:content="python:here.start().strftime('%H:%M')">
-                                                              10:00
-                                                            </span> to
-                                                            <span class="event-hour" tal:content="python:here.end().strftime('%H:%M')">
-                                                              11:00
-                                                            </span>
-                                                      </div>
-                                             </div> <!-- closing showtime definition  -->
-                                                      </div>
-                                             </span>
-
-                                    </div>
 
                                     <h1 class="documentFirstHeading summary">
                                           <metal:field use-macro="python:here.widget('title', mode='view')">
@@ -77,76 +35,130 @@
                                         </metal:field>
                                     </p>
                                     <div class="pageWrapper">
-
-                                    <div class="eventDetails vcard">
-                                             <span tal:define="
-                                                   future python:here.end() > DateTime();
-                                                   pec string:pastEventTable;
-                                                   fec string:futureEventTable;
-                                                   eventclass python:future and fec or pec"
-                                                   tal:omit-tag="">
-                                                      <div class="eventTable" tal:attributes="class string:${eventclass}"  summary="Event details" i18n:attributes="summary summary_event_details;">
+                                       <div class="event-overview">
 
 
-                                                               <div class="location" tal:condition="here/location">
-                                                                     location:
-                                                                     <metal:field use-macro="python:here.widget('location', mode='view')">
-                                                                       Location
-                                                                     </metal:field>
+
+                                          <div tal:replace="structure provider:plone.abovecontentbody" class="column-8"/>
+                                          
+                                          <div class="event-meta">
+                                             <div class="eventDetailsDateTime">
+                                                      <span tal:define="
+                                                            future python:here.end() > DateTime();
+                                                            pec string:pastEventTable;
+                                                            fec string:futureEventTable;
+                                                            eventclass python:future and fec or pec"
+                                                            tal:omit-tag="">
+                                                               <div class="eventTable" tal:attributes="class string:${eventclass}"  summary="Event details" i18n:attributes="summary summary_event_details;">
+                                                        <div tal:define="showTime python:here.start().TimeMinutes() != '00:00' and here.end().TimeMinutes() != '00:00'" tal:omit-tag="">
+                                                               <tal:differentday tal:condition="python:not here.start().Date() == here.end().Date()">
+                                                                     <div class="" tal:attributes="class python:future and 'futureEventDateFrom' or 'pastEventDateFrom'">
+                                                                           <div class="eventDayInfo" tal:content="python:here.start().day()">02</div>
+                                                                           <div>&nbsp;</div>
+                                                                           <div class="eventMonthInfo" tal:content="python:here.start().strftime('%b %Y').capitalize()">Jun</div>
+                                                                     </div>
+                                                                     &nbsp;-&nbsp;
+                                                                     <div class="" tal:attributes="class python:future and 'futureEventDateUntil' or 'pastEventDateUntil'">
+                                                                           <div class="eventDayInfo" tal:content="python:here.end().day()">02</div>
+                                                                           <div>&nbsp;</div>
+                                                                           <div class="eventMonthInfo" tal:content="python:here.end().strftime('%b %Y').capitalize()">Jun</div>
+                                                                     </div>
+                                                               </tal:differentday>
+
+                                                               <tal:sameday tal:condition="python:here.start().Date() == here.end().Date()"
+                                                                                    tal:define="ampm python:site_properties.getProperty('localLongTimeFormat').find('%p') >= 0">
+                                                                     <div class="" tal:attributes="class python:future and 'futureEventDateFrom' or 'pastEventDateFrom'">
+                                                                           <div class="eventDayInfo" tal:content="python:here.start().day()">02</div>
+                                                                           <div>&nbsp;</div>
+                                                                           <div class="eventMonthInfo" tal:content="python:here.start().strftime('%b %Y').capitalize()">Jun</div>
+                                                                     </div>
+                                                               </tal:sameday>
+                                                               <div>&nbsp;</div>
+                                                               <div class="event_time" tal:condition="showTime">
+                                                                     <span class="event-hour" tal:content="python:here.start().strftime('%H:%M')">
+                                                                       10:00
+                                                                     </span> to
+                                                                     <span class="event-hour" tal:content="python:here.end().strftime('%H:%M')">
+                                                                       11:00
+                                                                     </span>
                                                                </div>
-                                                               <div class="event-visualClear"><!-- --></div>
-                                                               <div class="event-buttons" tal:condition="python: future">
-                                                                        <div class="event-addToCal">
-                                                                                 <div class="icon">
-                                                                                          <img tal:replace="structure here/icon_calendar_exp.png" src="" alt="" />
+                                                      </div> <!-- closing showtime definition  -->
+                                                               </div>
+                                                      </span>
+
+                                             </div>   
+
+                                             <div class="eventDetails vcard">
+                                                      <span tal:define="
+                                                            future python:here.end() > DateTime();
+                                                            pec string:pastEventTable;
+                                                            fec string:futureEventTable;
+                                                            eventclass python:future and fec or pec"
+                                                            tal:omit-tag="">
+                                                               <div class="eventTable" tal:attributes="class string:${eventclass}"  summary="Event details" i18n:attributes="summary summary_event_details;">
+
+
+                                                                        <div class="location" tal:condition="here/location">
+                                                                              location:
+                                                                              <metal:field use-macro="python:here.widget('location', mode='view')">
+                                                                                Location
+                                                                              </metal:field>
+                                                                        </div>
+                                                                        <div class="event-visualClear"><!-- --></div>
+                                                                        <div class="event-buttons" tal:condition="python: future">
+                                                                                 <div class="event-addToCal">
+                                                                                          <div class="icon">
+                                                                                                   <img tal:replace="structure here/icon_calendar_exp.png" src="" alt="" />
+                                                                                          </div>
+                                                                                          <div class="info">
+                                                                                                   <span class="event-button-title">Add event</span><br/>
+                                                                                                         <a href="#"
+                                                                                                            tal:attributes="href string:$here_url/vcs_view"
+                                                                                                            title="Download this event in vCal format"
+                                                                                                            i18n:attributes="title title_add_to_vcal;">
+                                                                                                   <span i18n:translate="label_add_to_vcal">vCal</span></a>,
+                                                                                                         <a href="#"
+                                                                                                            tal:attributes="href string:$here_url/ics_view"
+                                                                                                            title="Download this event in iCal format"
+                                                                                                            i18n:attributes="title title_add_to_ical;">
+                                                                                                   <span i18n:translate="label_add_to_ical">iCal</span></a>
+                                                                                          </div>
                                                                                  </div>
-                                                                                 <div class="info">
-                                                                                          <span class="event-button-title">Add event</span><br/>
-                                                                                                <a href="#"
-                                                                                                   tal:attributes="href string:$here_url/vcs_view"
-                                                                                                   title="Download this event in vCal format"
-                                                                                                   i18n:attributes="title title_add_to_vcal;">
-                                                                                          <span i18n:translate="label_add_to_vcal">vCal</span></a>,
-                                                                                                <a href="#"
-                                                                                                   tal:attributes="href string:$here_url/ics_view"
-                                                                                                   title="Download this event in iCal format"
-                                                                                                   i18n:attributes="title title_add_to_ical;">
-                                                                                          <span i18n:translate="label_add_to_ical">iCal</span></a>
+
+                                                                                 <div class="event-contact">
+                                                                                          <div class="icon">
+                                                                                                <img tal:replace="structure here/icon_contact.png" src="" alt="" />
+                                                                                          </div>
+                                                                                          <div tal:define="contact_email here/contact_email;
+                                                                                                contact_name python:context.contact_name() or None;"
+                                                                                                tal:condition="python:contact_name or contact_email" class="info">
+                                                                                                <span class="event-button-title">
+                                                                                                      <a id="parent-fieldname-contactEmail"
+                                                                                                         tal:condition="contact_email"
+                                                                                                         tal:replace="structure python: here.spamProtect(mailaddress=contact_email, mailname=contact_name, cssclass='email fn')"
+                                                                                                      />
+                                                                                                      <span class="fn"
+                                                                                                            tal:condition="not: contact_email"
+                                                                                                            tal:content="contact_name"
+                                                                                                      />
+                                                                                                </span>
+                                                                                                <br />
+                                                                                                <div tal:condition="here/contact_phone" class="tel">
+                                                                                                        <metal:field use-macro="python:here.widget('contactPhone', mode='view')">
+                                                                                                        Phone number
+                                                                                                        </metal:field>
+                                                                                                </div>
+                                                                                          </div>
                                                                                  </div>
                                                                         </div>
-
-                                                                        <div class="event-contact">
-                                                                                 <div class="icon">
-                                                                                       <img tal:replace="structure here/icon_contact.png" src="" alt="" />
-                                                                                 </div>
-                                                                                 <div tal:define="contact_email here/contact_email;
-                                                                                       contact_name python:context.contact_name() or None;"
-                                                                                       tal:condition="python:contact_name or contact_email" class="info">
-                                                                                       <span class="event-button-title">
-                                                                                             <a id="parent-fieldname-contactEmail"
-                                                                                                tal:condition="contact_email"
-                                                                                                tal:replace="structure python: here.spamProtect(mailaddress=contact_email, mailname=contact_name, cssclass='email fn')"
-                                                                                             />
-                                                                                             <span class="fn"
-                                                                                                   tal:condition="not: contact_email"
-                                                                                                   tal:content="contact_name"
-                                                                                             />
-                                                                                       </span>
-                                                                                       <br />
-                                                                                       <div tal:condition="here/contact_phone" class="tel">
-                                                                                               <metal:field use-macro="python:here.widget('contactPhone', mode='view')">
-                                                                                               Phone number
-                                                                                               </metal:field>
-                                                                                       </div>
-                                                                                 </div>
-                                                                        </div>
                                                                </div>
-                                                      </div>
-                                             </span>
+                                                      </span>
 
-                                             <div class="visualClearLeft">&nbsp;<!-- --></div>
-                                    </div>
-                                    <div tal:replace="structure provider:plone.abovecontentbody" class="column-8"/>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                 
 
                                     <metal:field use-macro="python:here.widget('text', mode='view')">
                                     Body text
@@ -163,14 +175,13 @@
                                     </p>
                                     <span class="visualClear"><!-- --></span>
 
-                           </div>
 
-                  </div>
+<!--                   <div id="viewlet-below-content" class="bit-4" tal:content="structure provider:plone.belowcontent" />
+ -->
                   <div tal:replace="structure provider:plone.belowcontentbody" />
 
          </tal:main-macro>
 
-         <div id="viewlet-below-content" class="column-3" tal:content="structure provider:plone.belowcontent" />
 
 </div>
 

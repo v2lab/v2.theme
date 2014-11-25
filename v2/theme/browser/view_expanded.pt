@@ -199,9 +199,9 @@
         <div class="visualClearLeft">&nbsp;<!-- --></div>
         </div>
 
-	<metal:field use-macro="python:here.widget('text', mode='view')">
+<!-- 	<metal:field use-macro="python:here.widget('text', mode='view')">
         Body text
-        </metal:field>
+        </metal:field> -->
 
 
         <!--div metal:define-macro="text-field-view"
@@ -223,8 +223,8 @@
 		<div class="related-block" tal:define="items python:view.getRelatedItemsByType(type); typeName python:view.getTypeName(type)"  tal:condition="python:len(items) > 0">
 			<tal:typefilter condition="python:type != 'Image'">
 				<div class="related-type-title">
-					<a href="#" tal:attributes="href python:(context.absolute_url())+'/view_expanded#top'"  class="related-button-up"><img tal:replace="structure here/button_goto_up.png" src="" alt="Go to top"/></a>
-					<a name="" tal:attributes="name typeName"></a><span tal:replace="typeName">Type</span>
+<!-- 					<a href="#" tal:attributes="href python:(context.absolute_url())+'/view_expanded#top'"  class="related-button-up"><img tal:replace="structure here/button_goto_up.png" src="" alt="Go to top"/></a>
+ -->					<a name="" tal:attributes="name typeName"></a><span tal:replace="typeName">Type</span>
 				</div>
 				
 				<span tal:repeat="item items" tal:omit-tag="">

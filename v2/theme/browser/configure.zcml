@@ -333,6 +333,24 @@
 
   <browser:page
      for="*"
+     name="v2_press_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_press_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Press View"
+     action="@@v2_press_view"
+     layer=".interfaces.IThemeSpecific"
+     description="Press view"
+     />
+
+  <browser:page
+     for="*"
      name="v2_person_view"
      template="v2_person_view.pt"
      layer=".interfaces.IThemeSpecific"
@@ -347,6 +365,7 @@
      layer=".interfaces.IThemeSpecific"
      description="View with lead images displayed and V2 tweeks for people"
      />
+
 
 
   <browser:page

@@ -136,8 +136,9 @@
 
 
 
-						<div tal:attributes="class python:'column-10 clear-margin contentArea' if sl else 'column-13 clear-margin'">
-
+						<div tal:attributes="class python:'column-13 clear-margin contentArea' if sl else 'column-13 clear-margin contentArea'">
+						<div class="frame frame-white margin-bottom" id="V2DocumentView">
+					    <div tal:attributes="class python:'bit-75' if sl else 'bit-1'">
 							<metal:block define-slot="content">
 								<div metal:define-macro="content"
 									 tal:define="show_border context/@@plone/showEditableBorder"
@@ -204,24 +205,31 @@
 							<div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" />
 							</tal:comment>
 
-							<div tal:replace="structure provider:plone.portalfooter" />
+					        <div tal:replace="structure provider:plone.belowcontentbody" />
+					        <div id="viewlet-below-content" class="" tal:content="structure provider:plone.belowcontent" />
 
 						</div>
 
-				      	<tal:notajax tal:condition="not:ajax_load">
-				            <tal:comment replace="nothing"> Start of the left column </tal:comment>
-				            <div class="column-3 contentSidebar"
-				              metal:define-slot="column_one_slot"
-				              tal:condition="sl">
-				              	<div class="visualPadding">
-					                <metal:portlets define-slot="portlets_one_slot">
-					                  <tal:block replace="structure provider:plone.leftcolumn" />
-					                </metal:portlets>
-				                		&nbsp;
-				              	</div>
-				            </div>
-				            <tal:comment replace="nothing"> End of the left column </tal:comment>
-				      	</tal:notajax>
+
+					      	<tal:notajax tal:condition="not:ajax_load">
+					            <tal:comment replace="nothing"> Start of the left column </tal:comment>
+					            <div class="bit-4 contentSidebar"
+					              metal:define-slot="column_one_slot"
+					              tal:condition="sl">
+					              	<div class="visualPadding">
+						                <metal:portlets define-slot="portlets_one_slot">
+						                  <tal:block replace="structure provider:plone.leftcolumn" />
+						                </metal:portlets>
+					                		&nbsp;
+					              	</div>
+					            </div>
+					            <tal:comment replace="nothing"> End of the left column </tal:comment>
+					      	</tal:notajax>
+						</div>
+						</div>
+
+							<div tal:replace="structure provider:plone.portalfooter" />
+
 
 
 

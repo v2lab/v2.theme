@@ -17,8 +17,7 @@
                             	categoryTitle python: 'category-'+view.getCategoryByURL(url);
                               	">
 
-                  <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
-                    <div class="bit-1">
+                  <div tal:attributes="class python: categoryTitle + '  margin-bottom'" >
                         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
                         <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -43,59 +42,60 @@
                                              'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
                               <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                         </div>
-				<form name="searchform" action="http://dev.v2.nl/search" class="searchform border-bottom">
+                        <div class="archive-content">
+                  				<form name="searchform" action="http://dev.v2.nl/search" class="searchform border-bottom">
 
-					<label class="hiddenStructure" for="searchGadget">Search Site</label>
+                  					<label class="hiddenStructure" for="searchGadget">Search Site</label>
 
-					<div class="LSBox ">
-						<input name="SearchableText" type="text" size="18" title="Search Site" accesskey="4" class="searchField inputLabel border-bottom" id="searchGadget" />
+                  					<div class="LSBox ">
+                  						<input name="SearchableText" type="text" size="18" title="Search Site" accesskey="4" class="searchField inputLabel border-bottom" id="searchGadget" />
 
-						<input class="searchButton" type="submit" value="Search" />
+                  						<input class="searchButton" type="submit" value="Search" />
 
-						<div class="searchSection">
-							<input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/V2_website/archive" />
-							<label for="searchbox_currentfolder_only" style="cursor: pointer">
-							only in current section
-							</label>
-						</div>
+                  						<div class="searchSection">
+                  							<input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/V2_website/archive" />
+                  							<label for="searchbox_currentfolder_only" style="cursor: pointer">
+                  							only in current section
+                  							</label>
+                  						</div>
 
-						<div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
-					</div>
-				</form>
-				<tal:block tal:define="root python:context.portal_url.getPortalObject(); site_physical_path python: '/'.join(root.getPhysicalPath()); events_physical_path python: site_physical_path+'/events'">
-					<div class="searchbyYear border-bottom">
-						<div class="yearSelectTitle">Year </div>
-							<div class="yearSelectItems">
-								<tal:block tal:define="results python:context.portal_catalog.searchResults({'path': events_physical_path, 'portal_type': 'Topic',  })" tal:repeat="item results">
-									<div class="yearItem" tal:define="item_url item/getURL|item/absolute_url;
-									item_title_or_id item/pretty_title_or_id;
-									item_type item/portal_type;
-									use_view_action site_properties/typesUseViewActionInListings|python:();"  tal:condition="python: item.id.isdigit()"
-									>
-							<a href="#"
+                  						<div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
+                  					</div>
+                  				</form>
+                  				<tal:block tal:define="root python:context.portal_url.getPortalObject(); site_physical_path python: '/'.join(root.getPhysicalPath()); events_physical_path python: site_physical_path+'/events'">
+                  					<div class="searchbyYear border-bottom">
+                  						<div class="yearSelectTitle">Year </div>
+                  							<div class="yearSelectItems">
+                  								<tal:block tal:define="results python:context.portal_catalog.searchResults({'path': events_physical_path, 'portal_type': 'Topic',  })" tal:repeat="item results">
+                  									<div class="yearItem" tal:define="item_url item/getURL|item/absolute_url;
+                  									item_title_or_id item/pretty_title_or_id;
+                  									item_type item/portal_type;
+                  									use_view_action site_properties/typesUseViewActionInListings|python:();"  tal:condition="python: item.id.isdigit()"
+                  									>
+                      							<a href="#"
 
-				                                         tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
-				                                         tal:content="item/id">
-				                                         Item Title
-				                                    </a>
-			                                  	</div>
+                                         tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
+                                         tal:content="item/id">
+                                         Item Title
+                                    </a>
+                                	</div>
 
-								</tal:block>
-							</div>
-					</div>
-				</tal:block>
-				<tal:block tal:define="video_id python:view.getVideo(0);">
-					<div class="video_container">
-						<h3>Latest added video</h3>
+                  								</tal:block>
+                  							</div>
+                  					</div>
+                  				</tal:block>
+                  				<tal:block tal:define="video_id python:view.getVideo(0); video_title python:view.getVideoTitle();">
+                  					<div class="video_container">
+                  						<!-- <h3>Latest added video</h3> -->
+                  						<iframe tal:attributes="src python: 'http://player.vimeo.com/video/'+video_id" src="" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  					</div>
+                            <div class="video_title" tal:content="video_title" />
 
-						<iframe tal:attributes="src python: 'http://player.vimeo.com/video/'+video_id" src="" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					</div>
 
-				</tal:block>
-				<div class="more"><a href="/archive/videos" target="_self">More videos</a></div>
-                      </div> <!-- end of bit-1 -->
+                  				</tal:block>
+                  				<div class="more"><h3><a href="/archive/videos" target="_self">More videos</a></h3></div>
+                        </div>
 
-                  </div>
 
                   <div class="content-list">
 
@@ -180,6 +180,8 @@
 
                   </div>
 
+
+                  </div>
                   <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
 
                   <div tal:replace="structure provider:plone.belowcontentbody" />

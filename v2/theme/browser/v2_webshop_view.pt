@@ -17,8 +17,7 @@
 		                        categoryTitle python: 'category-'+view.getCategoryByURL(url);
                                     ">
 
-                  <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
-	                  <div class="bit-1">
+                  <div tal:attributes="class python: categoryTitle + '  margin-bottom'" >
 			            <div tal:replace="structure provider:plone.abovecontenttitle" />
 			            <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
 			              Title or id
@@ -42,10 +41,9 @@
 			                                 'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
 			                  <div metal:define-slot="inside" tal:replace="structure text">The body</div>
 			            </div>
-	                  </div>
 
 
-                  <div class="frame">
+                  <div class="clear-parent-bit">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
@@ -118,7 +116,18 @@
                                                                                                 </a>
                                                                                           </h2>
 
-                                                                                         <div class="tileShopping"
+                                                                                         
+
+                                                                                          <p class="tileBody margin-top">
+                                                                                                <span tal:omit-tag="" tal:condition="not:folderItem/Description">
+                                                                                                  &nbsp;
+                                                                                                </span>
+                                                                                                <span class="description" tal:content="python:view.trimDescription(folderItem.Description, 100)">
+                                                                                                  description
+                                                                                                </span>
+                                                                                          </p>
+
+                                                                                          <div class="tileShopping"
                                                                                                tal:define="shopping_information python:view.getShoppingInformation(folderItemObject)"
                                                                                                tal:condition="shopping_information">
                                                                                                 <h3 tal:condition="shopping_information/price">
@@ -130,16 +139,6 @@
                                                                                                   Add to
                                                                                                 </a>
                                                                                           </div>
-
-                                                                                          <p class="tileBody margin-top">
-                                                                                                <span tal:omit-tag="" tal:condition="not:folderItem/Description">
-                                                                                                  &nbsp;
-                                                                                                </span>
-                                                                                                <span class="description" tal:content="python:view.trimDescription(folderItem.Description, 100)">
-                                                                                                  description
-                                                                                                </span>
-                                                                                          </p>
-
 
 
                                                                                     </tal:others>

@@ -17,9 +17,8 @@
 							url python: here.virtual_url_path();
 							categoryTitle python: 'category-'+view.getCategoryByURL(url);
 	                                    ">
-                  <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
-	              	<div class="bit-1">
-	  				<div tal:replace="structure provider:plone.abovecontenttitle" />
+<!-- 	              	<div class="bit-1">
+ -->	  				<div tal:replace="structure provider:plone.abovecontenttitle" />
 
 					<h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
 					  Title or id
@@ -43,8 +42,11 @@
 					                     'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
 					  	<div metal:define-slot="inside" tal:replace="structure text">The body</div>
 					</div>
-				</div>
-					<metal:listingmacro define-macro="listing">
+<!-- 				</div>
+ -->					
+					<div class="visualClearLeft"></div>
+					<div class="clear-parent-bit">
+ 						<metal:listingmacro define-macro="listing">
 						<tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
 						                            limit_display limit_display|request/limit_display|nothing;
 						                            more_url more_url|request/more_url|string:folder_contents;
@@ -145,13 +147,12 @@
 
 					  	</tal:foldercontents>
 					</metal:listingmacro>
-
+					</div>
 		        		<metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
 
 		        		<div tal:replace="structure provider:plone.belowcontentbody" />
 
 		        	<!-- </div> -->
-		      </div>
 
 	      </metal:main-macro>
     	</div>

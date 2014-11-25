@@ -6,29 +6,38 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="plone">
 <body>
+<metal:main fill-slot="main">
+  <tal:main-macro metal:define-macro="main"
+          tal:define="isAnon context/@@plone_portal_state/anonymous; 
+                      kssClassesView context/@@kss_field_decorator_view;
+                       getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                       templateId template/getId;
+                       text here/getText;
+                       sl python:plone_view.have_portlets('plone.leftcolumn', view);
+                      sr python:plone_view.have_portlets('plone.rightcolumn', view);
+           isAnon context/@@plone_portal_state/anonymous;
+           is_editable context/@@plone_context_state/is_editable;">
+      <div tal:replace="structure provider:plone.abovecontentbody" />
 
-<div metal:fill-slot="main" tal:define="isAnon context/@@plone_portal_state/anonymous;">
-	
-        <div tal:replace="structure provider:plone.abovecontenttitle" />
-				
+      <div tal:replace="structure provider:plone.abovecontenttitle" />
+  		<div class="person-overview">		
         <h1 class="documentFirstHeading"> 
             <metal:field use-macro="python:here.widget('title', mode='view')">
             Title
             </metal:field>
         </h1>		
 
-       <span tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
-       <div tal:replace="structure provider:plone.belowcontenttitle" />
-       </span>
+          <span tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
+          <div tal:replace="structure provider:plone.belowcontenttitle" />
+          </span>
 
-        <p class="documentDescription">
-            <metal:field use-macro="python:here.widget('description', mode='view')">
-            Description
-            </metal:field>
-        </p>
-	
-	<div class="pageWrapper">
-        <div tal:replace="structure provider:plone.abovecontentbody" />
+          <p class="documentDescription">
+              <metal:field use-macro="python:here.widget('description', mode='view')">
+              Description
+              </metal:field>
+          </p>
+      	</div>
+      	<div class="pageWrapper">
 	    
         <!--p tal:condition="python: not len_text and is_editable"
            i18n:translate="no_body_text"
@@ -48,21 +57,21 @@
         </div-->
            <div calss="personTextContainer" tal:replace="structure context/getText">The body</div>
 	
-	<a id="parent-fieldname-contactEmail"
-           tal:condition="python: here.ContactEmail()"
-           tal:replace="structure python: here.spamProtect(mailaddress=here.ContactEmail(), mailname=here.Title(), cssclass='email fn')"
-        />
+            <a id="parent-fieldname-contactEmail"
+                 tal:condition="python: here.ContactEmail()"
+                 tal:replace="structure python: here.spamProtect(mailaddress=here.ContactEmail(), mailname=here.Title(), cssclass='email fn')"
+              />
 	
-	<span tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">		
-        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
-            Show related items if they exist
-        </div>
-	</span>        
+<!--         	<span tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">		
+                <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+                    Show related items if they exist
+                </div>
+        	</span>    -->     
 
-        <div tal:replace="structure provider:plone.belowcontentbody" />
-	</div>
-</div>
-
+<!--         <div tal:replace="structure provider:plone.belowcontentbody" />
+        <div id="viewlet-below-content" class="" tal:content="structure provider:plone.belowcontent" /> -->
+  </tal:main-macro>
+</metal:main>
 </body>
 </html>
 

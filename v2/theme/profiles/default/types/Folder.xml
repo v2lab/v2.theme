@@ -29,6 +29,7 @@
   <element value="v2_archive_view" />
   <element value="v2_archivevideos_view" />
   <element value="v2_album_view" />
+  <element value="v2_press_view" />
  </property>
  <alias from="(Default)" to="(dynamic view)"/>
  <alias from="edit" to="atct_edit"/>

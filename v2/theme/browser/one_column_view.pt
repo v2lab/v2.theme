@@ -17,8 +17,7 @@
                                     categoryTitle python: 'category-'+view.getCategoryByURL(url);
                                     ">
 
-      <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
-        <div class="bit-1">
+      <div tal:attributes="class python: categoryTitle + ' margin-bottom'" >
           <div tal:replace="structure provider:plone.abovecontenttitle" />
 
           <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -43,7 +42,6 @@
                                'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
             <div metal:define-slot="inside" tal:replace="structure text">The body</div>
           </div>
-        </div>
 
 
           <metal:listingmacro define-macro="listing">
@@ -71,7 +69,7 @@
                                    item_object item/getObject;
                                    item_is_video python:view.isVideo(item_object);
                    item_category python:view.getCategory(item_object);"
-                       tal:attributes="class string:bit-1 vevent ${item_type_class} ">
+                       tal:attributes="class string: vevent ${item_type_class} ">
                        <div class="bit-1 clear-padding border-bottom">
 					<div class="bit-2 clear-padding">
 		                    	<h2 class="" metal:define-macro="listitem">

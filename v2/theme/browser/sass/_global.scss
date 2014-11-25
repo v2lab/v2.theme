@@ -218,6 +218,12 @@ p {
 	padding-left: 0 !important;
 }
 
+.clear-parent-bit {
+	width : -webkit-calc(100% + 30px) ;
+	width : calc(100%  + 30px) ;
+	margin-left: -15px;
+}
+
 .page-description, .documentDescription {
 	p {
 		margin: 0;
@@ -227,15 +233,39 @@ p {
 	@extend .border-top;
 	@extend .border-bottom;
 }
+
+
+
 .template-v2_webshop_view, .template-v2_home_view {
 	#parent-fieldname-text {
 		margin-top: 20px;
 		padding: 18px 0;
+		width: 60%;
+		font-size: 1.2em;
 		@extend .border-top;
 		@extend .border-bottom;
 		p {
 			margin: 0;
 			padding: 0;
+		}
+		a {
+			font-weight: bold;
+		}
+	}
+}
+.template-v2_archive_view {
+	#parent-fieldname-text {
+		margin-top: 20px;
+		padding: 18px 0;
+		font-size: 1.2em;
+		@extend .border-top;
+		@extend .border-bottom;
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			font-weight: bold;
 		}
 	}
 }
@@ -250,4 +280,17 @@ p {
 	padding: 3px 6px;
 	margin: 5px;
 	text-transform: uppercase;
+}
+
+.hr {
+	@extend .border-bottom;
+	height: 1px;
+	widows: 100%;
+}
+
+.totalWidthTable {
+	width: 100%;
+	td {
+		vertical-align: top;
+	}
 }

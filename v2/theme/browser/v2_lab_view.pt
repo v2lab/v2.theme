@@ -20,8 +20,7 @@
                                     categoryTitle python: 'category-'+view.getCategoryByURL(url);
                                     ">
 
-                  <div tal:attributes="class python: categoryTitle + ' frame frame-white margin-bottom'" >
-                    <div class="bit-1">
+                  <div tal:attributes="class python: categoryTitle + ' margin-bottom'" >
                         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
                         <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -49,13 +48,12 @@
 
 
 
-                      </div> <!-- end of bit-1 -->
 
                   </div>
-			<div class="frame" style="padding: 0 18px;">
+			<div class="" style="padding: 0">
                   	<h2>Blog</h2>
                 	</div>
-                  <div class="masonry-holder frame frame-white">
+                  <div class="masonry-holder ">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;

@@ -15,8 +15,7 @@
 
     <metal:block fill-slot="top_slot"
                  tal:define="dummy python:request.set('disable_border',1)" />
-    <metal:block fill-slot="column_one_slot" />
-    <metal:block fill-slot="column_two_slot" />
+
 </head>
 
 <body>
@@ -37,6 +36,7 @@
     <form name="searchform" 
           action="search"
           class="searchPage">
+      <div class="search-field">
         <input class="searchPage"
                name="SearchableText"
                type="text"
@@ -48,35 +48,9 @@
         <input class="searchPage searchButton"
                type="submit"
                value="Search"
-               i18n:attributes="value label_search;"/><br />
+               i18n:attributes="value label_search;"/>
+       </div>
 	
-	<div class="resultTypes"
-		tal:define="searchableTypes python:searchview.getSearchableTypes()">   
-		<ul>
-			<li tal:repeat="type searchableTypes">
-				<tal:FullSearch condition="not:exists:request/portal_type">
-				<a href="" tal:attributes="href python:searchview.createSearchURL(request, type)">
-					<span tal:content="python:searchview.getTypeName(type)" tal:condition="python:type != 'All'" tal:omit-tag="">
-						Type
-					</span>
-				</a>
-				<span tal:condition="python:type == 'All'" tal:omit-tag="">
-					<strong tal:content="python:searchview.getTypeName(type)">Type</strong>
-				</span>
-				</tal:FullSearch>
-				<tal:SelectiveSearch condition="exists:request/portal_type">
-				<a href="" tal:attributes="href python:searchview.createSearchURL(request, type)">
-					<span tal:content="python:searchview.getTypeName(type)" tal:condition="python:request.portal_type != searchview.purgeType(type)" tal:omit-tag="">
-						Type
-					</span>
-				</a>
-				<span tal:condition="python: request.portal_type == searchview.purgeType(type)" tal:omit-tag="">
-					<strong tal:content="python:searchview.getTypeName(type)">Type</strong>
-				</span>
-				</tal:SelectiveSearch>
-			</li>
-		</ul>	
-	</div>
     </form>
 
 
@@ -91,6 +65,34 @@
         tal:omit-tag="" 
         tal:content="python:len(results)">234</span> items</span>
     </h1>
+
+  <div class="resultTypes"
+    tal:define="searchableTypes python:searchview.getSearchableTypes()">   
+    <ul>
+      <li tal:repeat="type searchableTypes">
+        <tal:FullSearch condition="not:exists:request/portal_type">
+        <a href="" tal:attributes="href python:searchview.createSearchURL(request, type)">
+          <span tal:content="python:searchview.getTypeName(type)" tal:condition="python:type != 'All'" >
+            Type
+          </span>
+        </a>
+        <span tal:condition="python:type == 'All'" >
+          <strong tal:content="python:searchview.getTypeName(type)">Type</strong>
+        </span>
+        </tal:FullSearch>
+        <tal:SelectiveSearch condition="exists:request/portal_type">
+        <a href="" tal:attributes="href python:searchview.createSearchURL(request, type)">
+          <span tal:content="python:searchview.getTypeName(type)" tal:condition="python:request.portal_type != searchview.purgeType(type)" >
+            Type
+          </span>
+        </a>
+        <span tal:condition="python: request.portal_type == searchview.purgeType(type)" >
+          <strong tal:content="python:searchview.getTypeName(type)">Type</strong>
+        </span>
+        </tal:SelectiveSearch>
+      </li>
+    </ul> 
+  </div>
 
     <!--p class="discreet"
        tal:condition="syntool/isSiteSyndicationAllowed">
@@ -109,7 +111,7 @@
     <div tal:condition="results"
           tal:define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
 
-        <dl class="searchResults">
+        <dl class="searchResults masonry-holder">
         <tal:results repeat="result batch">
         <tal:entry define="result_url result/getURL;
                            result_type result/portal_type;
@@ -118,20 +120,23 @@
 			   hasLeadImage result/hasContentLeadImage;
 			   result_leadImage python:(result_type != 'Image' and result_type != 'News Item') and result_url+'/leadImage_thumb/' or result_url + '/image_thumb'">
            
-	      <div class="search_result_box">
+	      <div class="search_result_box masonry-item">
 	      <dt tal:define="item_wf_state_class string:state-${result/review_state};"
                 tal:attributes="class python:'contenttype-' + normalizeString(result.portal_type)">
+
+              <h2><a
+                 href="#" 
+                 tal:attributes="href url;
+                                 class string:$item_wf_state_class"
+                 tal:content="result/pretty_title_or_id" /></h2>
+
               <div class="result-leadimage" tal:condition="python:hasLeadImage or result_type == 'Image' or result_type == 'News Item'">
 		<a href="#" tal:attributes="href url"><img class="leadimage"  src="" tal:attributes="src result_leadImage" />
 		<img class="play-button" src=""  tal:replace="structure here/play-button-small.png" src="" alt="play video" 
 					  tal:condition="python:result_type == 'File' and searchview.isVideo(result.getObject())"/>
 	  	</a>
 	      </div>
-	      <a
-                 href="#" 
-                 tal:attributes="href url;
-                                 class string:$item_wf_state_class"
-                 tal:content="result/pretty_title_or_id" />
+
             </dt>
             
             <dd>

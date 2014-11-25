@@ -17,8 +17,7 @@
                                     categoryTitle python: 'category-'+view.getCategoryByURL(url);
                                     ">
 
-                  <div tal:attributes="class python: categoryTitle + ' frame margin-bottom'" >
-                    <div class="bit-1">
+                  <div tal:attributes="class python: categoryTitle + ' margin-bottom'" >
                         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
                         <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -43,8 +42,7 @@
                                              'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
                               <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                         </div>
-                      </div> <!-- end of bit-1 -->
-
+        <div class="clear-parent-bit">
 				<tal:block tal:define="videos python:view.getVideos();" tal:repeat="video videos">
 
 
@@ -61,7 +59,7 @@
 
 
 				</tal:block>
-
+        </div>
                   </div>
 
 

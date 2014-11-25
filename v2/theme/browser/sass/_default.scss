@@ -95,15 +95,18 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .documentFirstHeading {
 	display: inline-block;
-	font-size: $font-size-xl;
+	font-size: 25px;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 15px;
+	span {
+		font-family: $font-family-header;
+	}
 }
 
 
 .template-event_view .documentFirstHeading {
-	font-style: italic;
+	// font-style: italic;
 	margin-bottom: 0;
 }
 
@@ -144,7 +147,9 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 }
 
 .template-v2_webshop_view .tileItem {
-
+	h2 {
+		height: 45px;
+	}
 	.thumb {
 		height: 150px;
 		margin: 10px;
@@ -164,8 +169,16 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		}
 	}
 	.tileShopping {
+		position: relative;
+		padding-bottom: 10px;
+		@extend .border-bottom;
 		h3 {
 			color: $gray;
+		}
+		>a {
+			position: absolute;
+			top: 5px;
+			right: 100px;
 		}
 	}
 	.tileItem {
@@ -203,7 +216,62 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 
 
+/**
+*
+* template event
+*
+**/
 
+.template-event_view {
+	.newsImageContainer {
+		width: 45%;
+		float: left;
+	}
+	.event-overview {
+		float: left;
+		margin-bottom: 20px;
+		@extend .border-bottom;
+	}
+	.event-meta {
+		width: 45%;
+		float: left;
+		margin-left: 20px;
+		padding: 20px;
+		-webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	         box-sizing: border-box;
+	    .eventDetailsDateTime {
+		    text-transform: uppercase;
+	    	font-family: $font-family-header;
+	    	font-size: 25px;
+	    	padding-bottom: 20px;
+		    @extend .border-bottom;
+		    span {
+			    text-transform: uppercase;
+		    	font-family: $font-family-header;
+		    	font-size: 25px;		    	
+		    } 
+	    	
+	    }
+	    .eventDetails {
+	    	font-size: 1.2em;
+	    	margin-top: 20px;
+	    	text-transform: capitalize;
+	    	.event-buttons {
+				margin-top: 20px;
+				.event-addToCal {
+					.info {
+						font-size: 12px;
+					}
+				}
+				.event-contact {
+					float: left;
+					margin-left: 20px;
+				}
+	    	}
+	    }
+	}
+}
 
 /*
 *
@@ -222,11 +290,15 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 }
 
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
-	float: left;
+	// float: left;
+	clear: both;
 	div {
 		float: left;
 	}
 
+}
+.event_time {
+	clear: both;
 }
 .futureEventDateUntil, .pastEventDateUntil {
 	// margin-left: 5px;
@@ -235,9 +307,9 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	margin-bottom: 10px;
 }
 .eventDetails {
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	margin: 0;
-	font-size: $font-size-s;
+	// font-size: $font-size-s;
 }
 .event-addToCal, .event-contact {
 	//float: left;
@@ -257,8 +329,11 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 }
 .documentDescription, .description {
 	font-weight: normal;
-	line-height: 1.2em;
 	margin: 0;
+	line-height: 1.2em;
+}
+.documentDescription {
+	font-size: 1.2em;
 }
 
 /*
@@ -290,12 +365,28 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 .template-v2_archive_view {
 	.video_container {
 
-		padding: 20px 0;
+		padding: 70px 0 10px;
 		clear: both;
 		iframe {
 			width: 100%;
 			height: 320px;
 		}
+	}
+	.video_title {
+		margin-bottom: 10px;
+		font-size: 1.2em;
+		float: left;
+
+	}
+	div.more {
+		float: right;
+	}
+	.archive-content {
+		margin: 50px 80px;
+	}
+	div.more a {
+		text-transform: uppercase;
+		color: $gray !important;
 	}
 
 }
@@ -419,5 +510,82 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	.tileItemPeople {
 		overflow: hidden;
 		height: 400px;
+	}
+}
+
+/**
+*
+* Press View
+*
+**/
+.template-v2_press_view {
+	.documentDescription {
+		border-bottom: none;
+	}
+	#parent-fieldname-text {
+		@extend .border-bottom;
+		font-size: 1.2em;
+		padding-bottom: 20px;
+		table {
+			width: 100%;
+			a {
+				font-weight: bold;
+			}
+		}
+	}
+	.contenttype-topic {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	h2.folder-title {
+		margin-bottom: 0;
+		a {
+			color: $gray !important;
+		}
+	} 
+	.V2FolderView {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.relatedDate {
+		font-family: $font-family-header;
+		color: $gray;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+	.see-more {
+		font-size: 1.2em;
+		.hr {
+			margin-top: 20px;
+		}
+	}
+}
+
+/**
+*
+* Person View
+*
+**/
+.template-v2_person_view {
+	.newsImageContainer {
+		width: 40%;
+		margin-left: 0;
+		margin-right: 2%;
+		float: left;
+	}
+	.person-overview {
+		width: 58%;
+		float: left;
+		.documentDescription {
+			border-bottom: none;
+		}
+	}
+	.pageWrapper {
+		clear: both;
+		padding-top: 20px;
+		@extend .border-top;
+		@extend .border-bottom;
 	}
 }
