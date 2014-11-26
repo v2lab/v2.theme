@@ -13,7 +13,7 @@ var v2 = function() {
 
 
             // Initializing Masonry
-            var container = document.querySelector('.masonry-holder');
+            var container = document.querySelectorAll('.masonry-holder');
             var msnry;
             if(container){
             	imagesLoaded( container, function() {
