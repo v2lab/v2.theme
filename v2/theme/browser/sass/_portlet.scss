@@ -114,6 +114,8 @@
 }
 .related-block {
       clear: both;
+      @extend .border-bottom;
+      padding-bottom: 20px;
       // .tileItem {
       //       width: 50%;
       //       -moz-box-sizing: border-box;
