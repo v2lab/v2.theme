@@ -85,7 +85,8 @@
       .expanded_relatedItems {
             >span {
                   display: block;
-                  @extend .border-bottom;
+                  // @extend .border-bottom;
+                  // margin-bottom: 20px;
             }
       }
       .tileImage {
