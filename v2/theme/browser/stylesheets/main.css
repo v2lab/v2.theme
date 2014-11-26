@@ -208,6 +208,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
   height: auto; }
 
+#viewlet-below-content .expanded_relatedItems > span {
+  display: block; }
 #viewlet-below-content .tileImage {
   width: 100%;
   height: auto; }
@@ -221,7 +223,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #viewlet-below-content .tileHeadline a {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 1.5em; }
+  font-size: 1.3em; }
 #viewlet-below-content .futureEventDateFrom, #viewlet-below-content .futureEventDateUntil, #viewlet-below-content .pastEventDateFrom, #viewlet-below-content .pastEventDateUntil {
   float: left;
   clear: none; }
@@ -389,7 +391,7 @@ p {
 .light-gray {
   color: #e6e6e6; }
 
-.border-bottom, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileShopping, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
+.border-bottom, #viewlet-below-content .expanded_relatedItems > span, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileShopping, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
 .border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper {
@@ -444,6 +446,9 @@ p {
   padding-bottom: 20px; }
   .pageWrapper .newsImageContainer {
     float: right; }
+
+.tileBody {
+  clear: both; }
 
 .template-v2_home_view #parent-fieldname-text {
   margin-top: 20px;
