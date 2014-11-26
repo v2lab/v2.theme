@@ -235,8 +235,8 @@ p {
 }
 
 .pageWrapper {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	@extend .border-bottom;
 	.newsImageContainer {
 		float: right;
@@ -287,6 +287,10 @@ p {
 	padding: 3px 6px;
 	margin: 5px;
 	text-transform: uppercase;
+	&:hover {
+		color: $white;
+		text-decoration: underline;
+	}
 }
 
 .hr {

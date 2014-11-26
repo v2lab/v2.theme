@@ -446,19 +446,6 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	}
 }
 
-.template-v2_people_view {
-	.tileItemPeople {
-		.leadimage{
-			overflow: hidden;
-			height: 280px;
-
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
-}
 
 
 
@@ -501,17 +488,38 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 .template-v2_people_view {
 	.tileHeadline a {
 		font-family: $font-family-serif;
-		font-size: 23px;
+		font-size: 18px;
 		font-weight: 100;
 	}
 	.description {
-		font-size: 22px;
+		font-size: 15px;
 	}
 	.tileItemPeople {
 		overflow: hidden;
-		height: 400px;
+		height: 390px;
 	}
 }
+.template-v2_people_view {
+	.tileItemPeople {
+		h2 {
+			margin-bottom: 5px;
+		}
+		.leadimage{
+			overflow: hidden;
+			max-height: 280px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.tileBody {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
 
 /**
 *
