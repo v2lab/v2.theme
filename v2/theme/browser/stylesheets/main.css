@@ -1469,3 +1469,8 @@ input.searchButton {
   width: 354.5px;
   margin: 0;
   padding: 0; }
+
+.related-block .masonry-holder .masonry-item {
+  width: 260px;
+  margin: 0;
+  padding: 0; }
