@@ -9,7 +9,9 @@
     padding: 0;
 }
 .related-block .masonry-holder .masonry-item {
-    width: (span(13) * 0.75 - $bit-padding * 3) /2;
+    // width: (span(13) * 0.75 - $bit-padding * 3) /2;
+	width: -webkit-calc(50% - 15px) ;
+	width : calc(50% - 15px) ; 
     margin: 0;
     padding: 0;
 }
