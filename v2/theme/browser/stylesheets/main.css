@@ -389,10 +389,10 @@ p {
 .light-gray {
   color: #e6e6e6; }
 
-.border-bottom, .page-description, .documentDescription, .template-v2_webshop_view #parent-fieldname-text, .template-v2_home_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileShopping, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
+.border-bottom, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileShopping, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
-.border-top, .page-description, .documentDescription, .template-v2_webshop_view #parent-fieldname-text, .template-v2_home_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper {
+.border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper {
   border-top: 2px solid black; }
 
 .white-box {
@@ -437,28 +437,30 @@ p {
 .page-description, .documentDescription {
   padding: 18px 0; }
   .page-description p, .documentDescription p {
-    margin: 0;
-    padding: 0; }
+    margin: 0; }
 
-.template-v2_webshop_view #parent-fieldname-text, .template-v2_home_view #parent-fieldname-text {
+.pageWrapper {
+  margin-top: 20px; }
+
+.template-v2_home_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
   width: 60%;
   font-size: 1.2em; }
-  .template-v2_webshop_view #parent-fieldname-text p, .template-v2_home_view #parent-fieldname-text p {
+  .template-v2_home_view #parent-fieldname-text p {
     margin: 0;
     padding: 0; }
-  .template-v2_webshop_view #parent-fieldname-text a, .template-v2_home_view #parent-fieldname-text a {
+  .template-v2_home_view #parent-fieldname-text a {
     font-weight: bold; }
 
-.template-v2_archive_view #parent-fieldname-text {
+.template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
   font-size: 1.2em; }
-  .template-v2_archive_view #parent-fieldname-text p {
+  .template-v2_webshop_view #parent-fieldname-text p, .template-v2_archive_view #parent-fieldname-text p {
     margin: 0;
     padding: 0; }
-  .template-v2_archive_view #parent-fieldname-text a {
+  .template-v2_webshop_view #parent-fieldname-text a, .template-v2_archive_view #parent-fieldname-text a {
     font-weight: bold; }
 
 .v2-btn, .template-v2_people_view #parent-fieldname-text a {
@@ -730,7 +732,7 @@ input {
   font-weight: 400; }
 
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil {
-  clear: both; }
+  clear: none; }
   .futureEventDateFrom div, .futureEventDateUntil div, .pastEventDateFrom div, .pastEventDateUntil div {
     float: left; }
 
@@ -846,7 +848,7 @@ input {
 */
 .template-v2_eventlist_view .page-description {
   padding: 20px 0;
-  border: none; }
+  border-top: none; }
 
 /*
 *

@@ -227,16 +227,19 @@ p {
 .page-description, .documentDescription {
 	p {
 		margin: 0;
-		padding: 0;
+		// padding: 0;
 	}
 	padding: 18px 0;
 	@extend .border-top;
 	@extend .border-bottom;
 }
 
+.pageWrapper {
+	margin-top: 20px;
+	@extend .border-bottom;
+}
 
-
-.template-v2_webshop_view, .template-v2_home_view {
+.template-v2_home_view {
 	#parent-fieldname-text {
 		margin-top: 20px;
 		padding: 18px 0;
@@ -253,7 +256,7 @@ p {
 		}
 	}
 }
-.template-v2_archive_view {
+.template-v2_webshop_view, .template-v2_archive_view {
 	#parent-fieldname-text {
 		margin-top: 20px;
 		padding: 18px 0;

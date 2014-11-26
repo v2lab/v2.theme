@@ -291,7 +291,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .futureEventDateFrom, .futureEventDateUntil, .pastEventDateFrom, .pastEventDateUntil  {
 	// float: left;
-	clear: both;
+	clear: none;
 	div {
 		float: left;
 	}
@@ -471,9 +471,9 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .template-v2_eventlist_view {
 	.page-description {
-
+		@extend .border-bottom;
 		padding: 20px 0;
-		border: none;
+		border-top: none;
 
 	}
 
