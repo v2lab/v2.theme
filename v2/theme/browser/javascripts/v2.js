@@ -17,10 +17,14 @@ var v2 = function() {
             var msnry;
             if(container){
             	imagesLoaded( container, function() {
-				msnry = new Masonry( container, {
-					itemSelector: '.masonry-item',
-					"gutter": 30
-				});
+                    $(".masonry-holder").masonry({
+                        itemSelector: '.masonry-item',
+                        "gutter": 30
+                    });
+				// msnry = new Masonry( container, {
+				// 	itemSelector: '.masonry-item',
+				// 	"gutter": 30
+				// });
 	            });
             }
 
