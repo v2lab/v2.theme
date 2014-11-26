@@ -441,6 +441,8 @@ p {
 
 .pageWrapper {
   margin-top: 20px; }
+  .pageWrapper .newsImageContainer {
+    float: right; }
 
 .template-v2_home_view #parent-fieldname-text {
   margin-top: 20px;

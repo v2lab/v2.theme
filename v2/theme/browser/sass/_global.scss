@@ -237,6 +237,9 @@ p {
 .pageWrapper {
 	margin-top: 20px;
 	@extend .border-bottom;
+	.newsImageContainer {
+		float: right;
+	}
 }
 
 .template-v2_home_view {
