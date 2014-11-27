@@ -647,7 +647,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 .template-v2_image_view {
 	.image-container {
 		text-align: center;
-		margin-top: 20px;
+		padding-top: 20px;
 		@extend .border-top;
 	}
 	.image_navigation {

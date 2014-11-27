@@ -252,17 +252,59 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         margin: 0px 24px 0px 0px; }
         .related-block .gallery-overflow .related-gallery-stream .related-gallery-item img {
           vertical-align: middle; }
-  .related-block .related-gallery-wrapper a.gallery-move-right {
-    float: right;
-    margin-right: -23px;
-    margin-top: -115px;
-    cursor: pointer; }
-  .related-block .related-gallery-wrapper a.gallery-move-left {
-    float: left;
-    margin-left: -23px;
-    margin-top: -115px;
-    cursor: pointer;
-    display: none; }
+  .related-block .related-gallery-wrapper {
+    position: relative; }
+    .related-block .related-gallery-wrapper a.gallery-move-right {
+      -moz-transition-property: opacity;
+      -o-transition-property: opacity;
+      -webkit-transition-property: opacity;
+      transition-property: opacity;
+      -moz-transition-duration: 1s;
+      -o-transition-duration: 1s;
+      -webkit-transition-duration: 1s;
+      transition-duration: 1s;
+      position: absolute;
+      z-index: 999;
+      top: 50%;
+      opacity: 0;
+      cursor: pointer;
+      background-color: black;
+      width: 26px;
+      height: 26px;
+      margin-top: -13px;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      background: transparent url("../++resource++v2.theme.images/next_prev.gif") no-repeat left top;
+      text-indent: -9999px;
+      opacity: 1;
+      right: -20px;
+      background-position: right top; }
+    .related-block .related-gallery-wrapper a.gallery-move-left {
+      -moz-transition-property: opacity;
+      -o-transition-property: opacity;
+      -webkit-transition-property: opacity;
+      transition-property: opacity;
+      -moz-transition-duration: 1s;
+      -o-transition-duration: 1s;
+      -webkit-transition-duration: 1s;
+      transition-duration: 1s;
+      position: absolute;
+      z-index: 999;
+      top: 50%;
+      opacity: 0;
+      cursor: pointer;
+      background-color: black;
+      width: 26px;
+      height: 26px;
+      margin-top: -13px;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      background: transparent url("../++resource++v2.theme.images/next_prev.gif") no-repeat left top;
+      text-indent: -9999px;
+      opacity: 1;
+      left: -20px; }
 
 .portletEvents .portletItem:hover {
   background-color: #FFFF36; }
@@ -1019,7 +1061,7 @@ input {
 **/
 .template-v2_image_view .image-container {
   text-align: center;
-  margin-top: 20px; }
+  padding-top: 20px; }
 .template-v2_image_view .image_navigation {
   position: relative; }
   .template-v2_image_view .image_navigation a.image-next-button {
