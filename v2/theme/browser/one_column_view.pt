@@ -69,9 +69,9 @@
                                    item_object item/getObject;
                                    item_is_video python:view.isVideo(item_object);
                    item_category python:view.getCategory(item_object);"
-                       tal:attributes="class string: vevent ${item_type_class} ">
-                       <div class="bit-1 clear-padding border-bottom">
-					<div class="bit-2 clear-padding">
+                       tal:attributes="class string:listItem border-bottom vevent ${item_type_class} ">
+                       <div class="clear-parent-bit">
+					<div class="bit-2 ">
 		                    	<h2 class="" metal:define-macro="listitem">
 
 			                      <a href="#"
@@ -150,7 +150,7 @@
 
 		                    	</tal:content>
 			            </div>
-			            <div class="bit-2 clear-padding leadimage">
+			            <div class="bit-2 leadimage">
 			            	<a href="#"
 				               tal:condition="python:item_type != 'Link'"
 				               tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
@@ -177,6 +177,7 @@
 					<div class="visualClear"><!-- --></div>
 
 			       </div>
+				<div class="visualClear"><!-- --></div>
                   </div><!-- // title item -->
 
 

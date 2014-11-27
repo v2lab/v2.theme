@@ -608,5 +608,19 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	}
 }
 
+/**
+*
+* One Column View
+*
+**/
+.template-one_column_view {
+	.listItem {
+		// padding: 20px 0;
+		.leadimage img {
+			max-width: 100%;
+			
+		}
+	}
+}
 
 

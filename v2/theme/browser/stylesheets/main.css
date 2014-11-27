@@ -979,6 +979,14 @@ input {
   clear: both;
   padding-top: 20px; }
 
+/**
+*
+* One Column View
+*
+**/
+.template-one_column_view .listItem .leadimage img {
+  max-width: 100%; }
+
 ul.main-menu {
   margin: 0 0 0 0px;
   padding: 0;
