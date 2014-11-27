@@ -15,6 +15,8 @@
                                     templateId template/getId;
                                     url python: here.virtual_url_path();
                                     categoryTitle python: 'category-'+view.getCategoryByURL(url);
+                                    toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+	                            	DateTime python:modules['DateTime'].DateTime;
                                     ">
 
       <div tal:attributes="class python: categoryTitle + ' margin-bottom'" >
@@ -68,7 +70,8 @@
                                    item_has_leadimage item/hasContentLeadImage;
                                    item_object item/getObject;
                                    item_is_video python:view.isVideo(item_object);
-                   item_category python:view.getCategory(item_object);"
+                   item_category python:view.getCategory(item_object);
+                   item_creator item/Creator;"
                        tal:attributes="class string:listItem border-bottom vevent ${item_type_class} ">
                        <div class="clear-parent-bit">
 					<div class="bit-2 ">
@@ -129,8 +132,28 @@
 				                      </span>
 				                    </tal:event>
 				                    <tal:newsitem condition="python: item_type == 'News Item'">
-				    				here comes the by line
-				                    </tal:newsitem>
+      								<div class="documentByLine">
+
+                                              <tal:newsitem condition="python: item_type == 'News Item'">
+                                                <tal:name tal:condition="item_creator"
+                                                          tal:define="mtool mtool|context/portal_membership; author python:mtool.getMemberInfo(item_creator)">
+                                                  <span i18n:translate="label_by_author">
+                                                    <a href="#"
+                                                       tal:attributes="href string:${portal_url}/author/${item_creator}"
+                                                       tal:content="python:author and author['fullname'] or item_creator"
+                                                       tal:omit-tag="not:author"
+                                                       i18n:name="author">
+                                                      Bob Dobalina
+                                                    </a>
+                                                  </span>
+                                                </tal:name>
+                                                &mdash;
+                                                <span tal:replace="python:toLocalizedTime(item.modified,long_format=0)">
+                                                  August 16, 2001 at 23:35:59
+                                                </span>
+                                              </tal:newsitem>
+                                     </div>				                    
+                                 	</tal:newsitem>
 				                  </div>
 
 				                  <p class="tileBody">
