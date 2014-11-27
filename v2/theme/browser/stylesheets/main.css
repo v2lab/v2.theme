@@ -1004,6 +1004,14 @@ input {
 .template-one_column_view .listItem .leadimage img {
   max-width: 100%; }
 
+/**
+*
+* Album View
+*
+**/
+.template-v2_album_view .tileItem {
+  margin-top: 20px; }
+
 ul.main-menu {
   margin: 0 0 0 0px;
   padding: 0;

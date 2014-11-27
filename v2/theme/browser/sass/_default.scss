@@ -629,5 +629,15 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		}
 	}
 }
+/**
+*
+* Album View
+*
+**/
+.template-v2_album_view {
+	.tileItem {
+		margin-top: 20px;
+	}
+}
 
 
