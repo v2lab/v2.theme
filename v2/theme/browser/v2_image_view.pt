@@ -28,12 +28,14 @@
        		<div tal:replace="structure provider:plone.belowcontenttitle" />
        	</span>
 
-        <p class="documentDescription">
+<!--         <p class="documentDescription">
             <metal:field use-macro="python:here.widget('description', mode='view')">
             Description
             </metal:field>
-        </p>
-
+        </p> -->
+          <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
+            Description
+          </p>
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
 	<div class="image-container">
