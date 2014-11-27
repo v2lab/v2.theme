@@ -147,6 +147,10 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 }
 
 .template-v2_webshop_view .tileItem {
+	.tileItem-inner {
+		@extend .border-bottom;
+		height: 380px;		
+	}
 	h2 {
 		height: 45px;
 	}
@@ -168,10 +172,12 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 			background-repeat: no-repeat;
 		}
 	}
+	.tileBody {
+		height: 70px;
+	}
 	.tileShopping {
 		position: relative;
 		padding-bottom: 10px;
-		@extend .border-bottom;
 		h3 {
 			color: $gray;
 		}

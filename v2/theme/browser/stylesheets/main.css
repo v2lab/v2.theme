@@ -234,13 +234,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .related-block .gallery-overflow {
     overflow: hidden;
     position: relative;
-    margin: 0px 12px;
-    height: 206px; }
+    margin: 0px 12px; }
     .related-block .gallery-overflow .related-gallery-stream {
       position: relative;
       list-style: none;
       overflow: none;
       margin-top: 12px;
+      margin-bottom: 12px;
       margin-left: 0px !important;
       margin-right: 0px !important;
       white-space: nowrap;
@@ -248,6 +248,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       .related-block .gallery-overflow .related-gallery-stream .related-gallery-item {
         display: inline;
         margin: 0px 24px 0px 0px; }
+        .related-block .gallery-overflow .related-gallery-stream .related-gallery-item img {
+          vertical-align: middle; }
   .related-block .related-gallery-wrapper a.gallery-move-right {
     float: right;
     margin-right: -23px;
@@ -420,7 +422,7 @@ p {
 .light-gray {
   color: #e6e6e6; }
 
-.border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileShopping, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
+.border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
 .border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper {
@@ -668,6 +670,8 @@ input {
   float: left;
   background-color: #e6e6e6; }
 
+.template-v2_webshop_view .tileItem .tileItem-inner {
+  height: 380px; }
 .template-v2_webshop_view .tileItem h2 {
   height: 45px; }
 .template-v2_webshop_view .tileItem .thumb {
@@ -685,6 +689,8 @@ input {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat; }
+.template-v2_webshop_view .tileItem .tileBody {
+  height: 70px; }
 .template-v2_webshop_view .tileItem .tileShopping {
   position: relative;
   padding-bottom: 10px; }

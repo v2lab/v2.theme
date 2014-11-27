@@ -120,12 +120,13 @@
             overflow: hidden;
             position: relative;
             margin: 0px 12px;
-            height: 206px;
+            // height: 206px;
             .related-gallery-stream {
                   position: relative;
                   list-style: none;
                   overflow: none;
                   margin-top: 12px;
+                  margin-bottom: 12px;
                   margin-left: 0px !important;
                   margin-right: 0px !important;
                   white-space: nowrap;
@@ -133,6 +134,9 @@
                   .related-gallery-item {
                         display: inline;
                         margin: 0px 24px 0px 0px;
+                        img {
+                              vertical-align: middle;
+                        }
                   }
             }
       }

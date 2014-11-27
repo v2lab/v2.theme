@@ -85,7 +85,7 @@
                                                                                      tal:define="
                                                                                                 global i python: i+1"
                                                                                      tal:attributes="class python: i%3==1 and 'tileItem visualIEFloatFix vevent V2WebshopItem vevent bit-3 ' or default;">
-
+                                                                                  <div class="tileItem-inner">
 
 
                                                                                     <tal:others tal:condition="not:folderItemIsVideo">
@@ -142,6 +142,7 @@
 
 
                                                                                     </tal:others>
+                                                                                  </div>
                                                                               </div>
                                                                         </tal:item>
                                                                   </div>
@@ -160,6 +161,7 @@
                                                                      tal:define="
                                                                                 global i python: i+1"
                                                                      tal:attributes="class python: i%3==1 and 'tileItem visualIEFloatFix vevent V2WebshopItem vevent bit-3 ' or default;">
+                                                                    <div class="tileItem-inner">
 
 
 
@@ -215,6 +217,7 @@
                                                                           </div>
 
                                                                     </tal:others>
+                                                                  </div>
                                                               </div>
                                                         </tal:item>
 
@@ -240,7 +243,7 @@
 
                   </div>
 
-                  <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+                  <!-- <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" /> -->
 
                   <div tal:replace="structure provider:plone.belowcontentbody" />
             </div>
