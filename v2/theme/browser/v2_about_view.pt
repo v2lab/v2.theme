@@ -42,7 +42,7 @@
                               <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                         </div>
 
-                  <div id="V2AboutView" class="content-list">
+                  <div id="V2AboutView" class="clear-parent-bit content-list">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
@@ -69,7 +69,7 @@
                                                                  item_object item/getObject;
                                                                  item_is_video python:view.isVideo(item_object);
                                                                 item_category python:view.getCategory(item_object);"
-                                                     tal:attributes="class string:V2AboutItem vevent">
+                                                     tal:attributes="class string:V2AboutItem bit-2 vevent">
 
                                                       <tal:block condition="repeat/item/odd">
                                                       <h2 class="listitem" >

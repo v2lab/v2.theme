@@ -858,10 +858,12 @@ input {
   width: 80%; }
 
 .content-list {
-  float: left;
-  width: 100%; }
+  float: left; }
+  .content-list .bit-2 {
+    padding-top: 0;
+    padding-bottom: 0; }
   .content-list .listitem {
-    width: 49%;
+    width: 100%;
     float: right;
     background-color: black;
     font-size: 18px;

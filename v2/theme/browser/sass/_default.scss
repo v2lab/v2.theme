@@ -425,17 +425,21 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .content-list {
 	float: left;
-	width: 100%;
+	// width: 100%;
 	@extend .margin-top;
 
-
+	.bit-2 {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 
 	.listitem {
-		width: 49%;
+		width: 100%;
 		float: right;
 		background-color: black;
 		font-size: $font-size-l;
 		margin: 5px 0 5px 0;
+
 
 		&.even {
 			margin-left: 0;

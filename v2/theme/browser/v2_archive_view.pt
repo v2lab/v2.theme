@@ -97,7 +97,7 @@
                         </div>
 
 
-                  <div class="content-list">
+                  <div class="clear-parent-bit content-list">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
@@ -124,7 +124,7 @@
                                                                  item_object item/getObject;
                                                                  item_is_video python:view.isVideo(item_object);
                                                                 item_category python:view.getCategory(item_object);"
-                                                     tal:attributes="class string:V2ArchiveItem vevent">
+                                                     tal:attributes="class string:V2ArchiveItem bit-2 vevent">
 
                                                       <tal:block condition="repeat/item/odd">
                                                       <h2 class="listitem" >
