@@ -1089,7 +1089,8 @@ input {
     text-indent: -9999px;
     opacity: 1;
     right: 0px;
-    background-position: right top; }
+    background-position: right top;
+    margin-top: 0; }
   .template-v2_image_view .image_navigation a.image-prev-button {
     -moz-transition-property: opacity;
     -o-transition-property: opacity;
@@ -1114,7 +1115,8 @@ input {
     background: transparent url("../++resource++v2.theme.images/next_prev.gif") no-repeat left top;
     text-indent: -9999px;
     opacity: 1;
-    left: 0px; }
+    left: 0px;
+    margin-top: 0; }
 
 ul.main-menu {
   margin: 0 0 0 0px;
