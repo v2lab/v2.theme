@@ -8,6 +8,11 @@
     margin: 0;
     padding: 0;
 }
+.template-v2_album_view .masonry-holder .masonry-item {
+    width: (span(13) - $bit-padding * 5)/4;
+    margin: 0;
+    padding: 0;
+}
 .related-block .masonry-holder .masonry-item {
     // width: (span(13) * 0.75 - $bit-padding * 3) /2;
 	width: -webkit-calc(50% - 15px) ;

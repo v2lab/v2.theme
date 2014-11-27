@@ -208,8 +208,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
   height: auto; }
 
-#viewlet-below-content .expanded_relatedItems > span {
-  display: block; }
+#viewlet-below-content .expanded_relatedItems {
+  margin-top: 20px; }
+  #viewlet-below-content .expanded_relatedItems > span {
+    display: block; }
 #viewlet-below-content .tileImage {
   width: 100%;
   height: auto; }
@@ -1526,6 +1528,11 @@ input.searchButton {
 
 .template-v2_lab_view .masonry-holder .masonry-item {
   width: 354.5px;
+  margin: 0;
+  padding: 0; }
+
+.template-v2_album_view .masonry-holder .masonry-item {
+  width: 162.25px;
   margin: 0;
   padding: 0; }
 
