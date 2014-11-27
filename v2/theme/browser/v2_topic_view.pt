@@ -70,7 +70,7 @@
                                                                 item_category python:view.getCategory(item_object);
                                                                 item_creator item/Creator;
                                                                 "
-                                                     tal:attributes="class string:V2TopicItem masonry-item vevent ${item_type_class}">
+                                                     tal:attributes="class string:V2TopicItem tileItem masonry-item vevent ${item_type_class}">
 
                                                       <span
                                                        tal:condition="item_category"
@@ -135,10 +135,10 @@
 
                                                                <img src="" alt=""
                                                                    tal:condition="exists:item_object/image_medium"
-                                                                   tal:replace="structure python:item_object.tag(scale='medium', css_class='')" />
+                                                                   tal:replace="structure python:item_object.tag(scale='medium', css_class='tileImage')" />
                                                               <img src="" alt=""
                                                                    tal:condition="item_has_leadimage"
-                                                                   tal:replace="structure python:view.tag(item_object, css_class='')" />
+                                                                   tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
 
                                                             </a>
 
@@ -149,10 +149,10 @@
                                                                tal:attributes="href item/getRemoteUrl">
                                                               <img src="" alt=""
                                                                    tal:condition="exists:item_object/image_preview"
-                                                                   tal:replace="structure python:item_object.tag(scale='preview', css_class='')" />
+                                                                   tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
                                                               <img src="" alt=""
                                                                    tal:condition="item_has_leadimage"
-                                                                   tal:replace="structure python:view.tag(item_object, css_class='')" />
+                                                                   tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
                                                             </a>
                                                             <div class="documentByLine">
                                                               <tal:event condition="python: item_type == 'Event'">
