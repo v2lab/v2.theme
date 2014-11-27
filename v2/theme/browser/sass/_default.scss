@@ -55,6 +55,9 @@
 .right-sidebar {
 	width: 226px;
 	position: fixed;
+	&:hover {
+		z-index: 1;
+	}
 }
 .logo-holder {
 	position: fixed;

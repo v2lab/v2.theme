@@ -286,10 +286,21 @@ body {
   font-size: 15px;
   line-height: 1.2;
   color: #000000;
-  background: #e6e6e6 url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
+  background-color: #e6e6e6 !important;
   background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+svg#v2-logo {
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+  min-width: 1000px;
+  max-width: 1500px;
+  z-index: 0; }
 
 a {
   color: #000000;
@@ -372,6 +383,9 @@ p {
   background: #000000; }
   .social-icon:hover {
     background: #000000; }
+
+.front {
+  z-index: 1; }
 
 .float-right {
   float: right !important; }
@@ -571,6 +585,8 @@ input {
 .right-sidebar {
   width: 226px;
   position: fixed; }
+  .right-sidebar:hover {
+    z-index: 1; }
 
 .logo-holder {
   position: fixed;

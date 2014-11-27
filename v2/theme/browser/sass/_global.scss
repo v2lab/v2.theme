@@ -10,10 +10,22 @@ body {
 	};
 	line-height: $line-height-m;
 	color: $font-color;
-	background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
+	background-color: #e6e6e6 !important;
+	//background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
 	background-size: cover;
 	 -webkit-font-smoothing: antialiased;
 	 -moz-osx-font-smoothing: grayscale;
+}
+svg#v2-logo {
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: visible;
+    min-width: 1000px;
+    max-width: 1500px;
+    z-index: 0;
 }
 a {
 	color: $font-color;
@@ -127,7 +139,9 @@ p {
 
 //== Helper classes
 //
-
+.front {
+	z-index: 1;
+}
 .float-right {
 	float: right !important;
 }
