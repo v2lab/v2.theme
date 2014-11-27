@@ -121,6 +121,20 @@
             position: relative;
             margin: 0px 12px;
             height: 206px;
+            .related-gallery-stream {
+                  position: relative;
+                  list-style: none;
+                  overflow: none;
+                  margin-top: 12px;
+                  margin-left: 0px !important;
+                  margin-right: 0px !important;
+                  white-space: nowrap;
+                  left: 0;
+                  .related-gallery-item {
+                        display: inline;
+                        margin: 0px 24px 0px 0px;
+                  }
+            }
       }
       // .tileItem {
       //       width: 50%;

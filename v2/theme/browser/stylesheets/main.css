@@ -236,6 +236,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: relative;
     margin: 0px 12px;
     height: 206px; }
+    .related-block .gallery-overflow .related-gallery-stream {
+      position: relative;
+      list-style: none;
+      overflow: none;
+      margin-top: 12px;
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+      white-space: nowrap;
+      left: 0; }
+      .related-block .gallery-overflow .related-gallery-stream .related-gallery-item {
+        display: inline;
+        margin: 0px 24px 0px 0px; }
 
 .portletEvents .portletItem:hover {
   background-color: #FFFF36; }
