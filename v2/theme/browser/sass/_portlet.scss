@@ -148,11 +148,13 @@
                   opacity: 1;
                   right: -20px;
                   background-position: right top;
+                  margin-top: 0px;
             }
             a.gallery-move-left {
                   @include slidesBtn;
                   opacity: 1;
                   left: -20px;                  
+                  margin-top: 0px;
             }
       }
       // .related-gallery-wrapper a.gallery-move-right {
