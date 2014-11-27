@@ -248,17 +248,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       .related-block .gallery-overflow .related-gallery-stream .related-gallery-item {
         display: inline;
         margin: 0px 24px 0px 0px; }
-    .related-block .gallery-overflow .related-gallery-wrapper a.gallery-move-right {
-      float: right;
-      margin-right: -23px;
-      margin-top: -115px;
-      cursor: pointer; }
-    .related-block .gallery-overflow .related-gallery-wrapper a.gallery-move-left {
-      float: left;
-      margin-left: -23px;
-      margin-top: -115px;
-      cursor: pointer;
-      display: none; }
+  .related-block .related-gallery-wrapper a.gallery-move-right {
+    float: right;
+    margin-right: -23px;
+    margin-top: -115px;
+    cursor: pointer; }
+  .related-block .related-gallery-wrapper a.gallery-move-left {
+    float: left;
+    margin-left: -23px;
+    margin-top: -115px;
+    cursor: pointer;
+    display: none; }
 
 .portletEvents .portletItem:hover {
   background-color: #FFFF36; }

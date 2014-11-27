@@ -135,19 +135,19 @@
                         margin: 0px 24px 0px 0px;
                   }
             }
-            .related-gallery-wrapper a.gallery-move-right {
-                  float: right;
-                  margin-right: -23px;
-                  margin-top: -115px;
-                  cursor: pointer;
-            }
-            .related-gallery-wrapper a.gallery-move-left {
-                  float: left;
-                  margin-left: -23px;
-                  margin-top: -115px;
-                  cursor: pointer;
-                  display: none;
-            }
+      }
+      .related-gallery-wrapper a.gallery-move-right {
+            float: right;
+            margin-right: -23px;
+            margin-top: -115px;
+            cursor: pointer;
+      }
+      .related-gallery-wrapper a.gallery-move-left {
+            float: left;
+            margin-left: -23px;
+            margin-top: -115px;
+            cursor: pointer;
+            display: none;
       }
       // .tileItem {
       //       width: 50%;
