@@ -14,8 +14,7 @@
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                                     templateId template/getId">
 
-                  <div class="frame frame-white margin-bottom">
-                      <div class="bit-1">
+                  <div class="margin-bottom">
                         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
                         <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
@@ -40,10 +39,9 @@
                                              'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
                               <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                         </div>
-                      </div>
                   </div>
 
-                  <div id="V2TopicView" class="frame frame-white">
+                  <div id="V2TopicView" class="masonry-holder">
 
                         <metal:listingmacro define-macro="listing">
                               <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
@@ -72,7 +70,7 @@
                                                                 item_category python:view.getCategory(item_object);
                                                                 item_creator item/Creator;
                                                                 "
-                                                     tal:attributes="class string:V2TopicItem vevent ${item_type_class}">
+                                                     tal:attributes="class string:V2TopicItem masonry-item vevent ${item_type_class}">
 
                                                       <span
                                                        tal:condition="item_category"
@@ -338,19 +336,7 @@
                                                 </div><!-- // title item -->
 
                                           </tal:block>
-                                          <script>
-                                            jQuery(document).ready(function(){
-                                                var container = document.querySelector('#V2TopicView');
-                                                var msnry;
-                                                imagesLoaded( container, function() {
-                                                    msnry = new Masonry( container, {
-                                                    itemSelector: '.V2TopicItem',
-                                                    "gutter": 15
-                                                  });
-                                                });
-                                          });
 
-                                          </script>
                                           <!-- Navigation -->
                                           <div metal:use-macro="here/batch_macros/macros/navigation" />
 
