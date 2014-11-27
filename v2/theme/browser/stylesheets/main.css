@@ -1542,6 +1542,7 @@ input.searchButton {
 .template-v2_album_view .masonry-holder .masonry-item {
   width: 162.25px;
   margin: 0;
+  margin-top: 20px;
   padding: 0; }
 
 .related-block .masonry-holder .masonry-item {

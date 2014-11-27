@@ -11,6 +11,7 @@
 .template-v2_album_view .masonry-holder .masonry-item {
     width: (span(13) - $bit-padding * 5)/4;
     margin: 0;
+    margin-top: 20px;
     padding: 0;
 }
 .related-block .masonry-holder .masonry-item {
