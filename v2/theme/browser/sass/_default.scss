@@ -650,22 +650,25 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		margin-top: 20px;
 	}
 	.image_navigation {
+		position: relative;
 		a.image-next-button {
 			@include slidesBtn;
+			opacity: 1;
 			right: 0px;
 			background-position: right top;
 		}
 		a.image-prev-button {
 			@include slidesBtn;
+			opacity: 1;
 			left: 0px;
 		}
 	}
-	.image_navigation:hover a.image-next-button, .image_navigation:hover a.image-prev-button {
-		background: transparent url(right_arrow_big.png) no-repeat scroll right top !important;
-	}
-	.image_navigation:hover a.image-prev-button {
-		background: transparent url(left_arrow_big.png) no-repeat scroll left top !important;
-}
+	// .image_navigation:hover a.image-next-button, .image_navigation:hover a.image-prev-button {
+	// 	background: transparent url(right_arrow_big.png) no-repeat scroll right top !important;
+	// }
+	// .image_navigation:hover a.image-prev-button {
+	// 	background: transparent url(left_arrow_big.png) no-repeat scroll left top !important;
+	// }
 }
 
 
