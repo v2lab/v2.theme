@@ -485,20 +485,16 @@ p {
   margin-top: 20px;
   padding: 18px 0;
   width: 60%;
-  font-size: 1.2em; }
-  .template-v2_home_view #parent-fieldname-text p {
-    margin: 0;
-    padding: 0; }
+  font-size: 1.3em;
+  font-weight: 100; }
   .template-v2_home_view #parent-fieldname-text a {
     font-weight: bold; }
 
 .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
-  font-size: 1.2em; }
-  .template-v2_webshop_view #parent-fieldname-text p, .template-v2_archive_view #parent-fieldname-text p {
-    margin: 0;
-    padding: 0; }
+  font-size: 1.3em;
+  font-weight: 100; }
   .template-v2_webshop_view #parent-fieldname-text a, .template-v2_archive_view #parent-fieldname-text a {
     font-weight: bold; }
 
@@ -803,7 +799,10 @@ input {
   line-height: 1.2em; }
 
 .documentDescription {
-  font-size: 1.2em; }
+  font-size: 1.3em;
+  font-weight: 100; }
+  .documentDescription a {
+    font-weight: bold; }
 
 /*
 *

@@ -248,18 +248,21 @@ p {
 }
 
 
+#parent-fieldname-text {
 
+}
 .template-v2_home_view {
 	#parent-fieldname-text {
 		margin-top: 20px;
 		padding: 18px 0;
 		width: 60%;
-		font-size: 1.2em;
+		font-size: 1.3em;
+		font-weight: 100;
 		@extend .border-top;
 		@extend .border-bottom;
 		p {
-			margin: 0;
-			padding: 0;
+			// margin: 0;
+			// padding: 0;
 		}
 		a {
 			font-weight: bold;
@@ -270,12 +273,13 @@ p {
 	#parent-fieldname-text {
 		margin-top: 20px;
 		padding: 18px 0;
-		font-size: 1.2em;
+		font-size: 1.3em;
+		font-weight: 100;
 		@extend .border-top;
 		@extend .border-bottom;
 		p {
-			margin: 0;
-			padding: 0;
+			// margin: 0;
+			// padding: 0;
 		}
 		a {
 			font-weight: bold;
