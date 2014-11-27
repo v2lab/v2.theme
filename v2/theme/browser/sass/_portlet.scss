@@ -116,6 +116,12 @@
       clear: both;
       @extend .border-bottom;
       margin-bottom: 20px;
+      .gallery-overflow {
+            overflow: hidden;
+            position: relative;
+            margin: 0px 12px;
+            height: 206px;
+      }
       // .tileItem {
       //       width: 50%;
       //       -moz-box-sizing: border-box;

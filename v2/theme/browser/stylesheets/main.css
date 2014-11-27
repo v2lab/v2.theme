@@ -231,6 +231,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .related-block {
   clear: both;
   margin-bottom: 20px; }
+  .related-block .gallery-overflow {
+    overflow: hidden;
+    position: relative;
+    margin: 0px 12px;
+    height: 206px; }
 
 .portletEvents .portletItem:hover {
   background-color: #FFFF36; }
@@ -1475,3 +1480,5 @@ input.searchButton {
   width: calc(50% - 15px);
   margin: 0;
   padding: 0; }
+  .related-block .masonry-holder .masonry-item.Folder {
+    width: 100%; }
