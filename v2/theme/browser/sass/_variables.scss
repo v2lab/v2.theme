@@ -167,3 +167,21 @@ $line-height-xl-computed: floor(($font-size-xl * $line-height-xl));
 		}
 	}
 }
+@mixin slidesBtn() {
+          @include transition-property(opacity);
+          @include transition-duration(1s);
+          position: absolute;
+          z-index: 999;
+          top: 50%;
+          opacity: 0;
+          cursor: pointer;
+          background-color: black;
+          width: 26px;
+          height: 26px;
+          margin-top: -13px;
+          color: white;
+          text-align: center;
+          font-size: 12px;
+          background: transparent url($image-dir + 'next_prev.gif' )  no-repeat left top;
+          text-indent: -9999px;
+}

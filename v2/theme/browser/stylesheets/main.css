@@ -1012,6 +1012,68 @@ input {
 .template-v2_album_view .tileItem {
   margin-top: 20px; }
 
+/**
+*
+* Image View
+*
+**/
+.template-v2_image_view .image-container {
+  text-align: center;
+  margin-top: 20px; }
+.template-v2_image_view .image_navigation a.image-next-button {
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  opacity: 0;
+  cursor: pointer;
+  background-color: black;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  background: transparent url("../++resource++v2.theme.images/next_prev.gif") no-repeat left top;
+  text-indent: -9999px;
+  right: 0px;
+  background-position: right top; }
+.template-v2_image_view .image_navigation a.image-prev-button {
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  opacity: 0;
+  cursor: pointer;
+  background-color: black;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  background: transparent url("../++resource++v2.theme.images/next_prev.gif") no-repeat left top;
+  text-indent: -9999px;
+  left: 0px; }
+.template-v2_image_view .image_navigation:hover a.image-next-button, .template-v2_image_view .image_navigation:hover a.image-prev-button {
+  background: transparent url(right_arrow_big.png) no-repeat scroll right top !important; }
+.template-v2_image_view .image_navigation:hover a.image-prev-button {
+  background: transparent url(left_arrow_big.png) no-repeat scroll left top !important; }
+
 ul.main-menu {
   margin: 0 0 0 0px;
   padding: 0;
