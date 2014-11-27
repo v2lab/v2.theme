@@ -59,7 +59,7 @@ JsFixes.runFixes = function ()
 JsFixes.runSpecialFixes = function ()
 {
 	//Add new fixes to this list to activate them and ONLY RUN WHEN THE FULL PAGE IS LOADED
-	JsFixes.fixSquareThumbnails();
+	//JsFixes.fixSquareThumbnails();
 };
 
 //run all the fixes when the DOM is completely loaded and the special ones when everything is loaded;
