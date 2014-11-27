@@ -11,7 +11,9 @@
 <div metal:fill-slot="main">
     <tal:main-macro metal:define-macro="main"
                     tal:define="kssClassesView context/@@kss_field_decorator_view;
-                                getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;">
+                                getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                                isAnon context/@@plone_portal_state/anonymous;
+                                ">
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
