@@ -648,6 +648,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	.image-container {
 		text-align: center;
 		margin-top: 20px;
+		@extend .border-top;
 	}
 	.image_navigation {
 		position: relative;
