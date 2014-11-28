@@ -14,6 +14,7 @@
                                     getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                                     templateId template/getId;
                                     mtool context/portal_membership;
+                                    toLocalizedTime nocall:plone_view/toLocalizedTime;
                                     ">
 
                   <div class="margin-bottom">
