@@ -749,12 +749,26 @@ input {
 .template-v2_webshop_view .tileItem .tileShopping {
   position: relative;
   padding-bottom: 10px; }
-  .template-v2_webshop_view .tileItem .tileShopping h3 {
+  .template-v2_webshop_view .tileItem .tileShopping .price {
+    float: left;
+    font-weight: bold;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    font-size: 18px;
     color: #666; }
   .template-v2_webshop_view .tileItem .tileShopping > a {
     position: absolute;
-    top: 5px;
-    right: 100px; }
+    right: 100px;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase; }
+    .template-v2_webshop_view .tileItem .tileShopping > a:after {
+      background: url(../++resource++v2.theme.images/winkel.png) no-repeat center center;
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: -22px;
+      top: 2px; }
 .template-v2_webshop_view .tileItem .tileItem {
   height: 430px; }
 
@@ -1125,6 +1139,39 @@ input {
     text-indent: -9999px;
     opacity: 1;
     left: 0px; }
+
+/**
+*
+* Webshop Item View
+*
+**/
+.template-v2_webshopitem_view .pageWrapper .rightcolumn {
+  float: right;
+  width: 200px;
+  margin-left: 20px; }
+  .template-v2_webshopitem_view .pageWrapper .rightcolumn .newsImageContainer {
+    margin-left: 0; }
+  .template-v2_webshopitem_view .pageWrapper .rightcolumn .tileShopping .price {
+    float: left;
+    font-weight: bold;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    font-size: 18px; }
+  .template-v2_webshopitem_view .pageWrapper .rightcolumn .tileShopping a {
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    float: left;
+    position: relative; }
+    .template-v2_webshopitem_view .pageWrapper .rightcolumn .tileShopping a:after {
+      background: url(../++resource++v2.theme.images/winkel.png) no-repeat center center;
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: -22px;
+      top: 2px; }
 
 ul.main-menu {
   margin: 0 0 0 0px;

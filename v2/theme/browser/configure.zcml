@@ -175,6 +175,24 @@
      description="3 columns with masonry script"
      />
 
+  <browser:page
+     for="*"
+     name="v2_webshopitem_view"
+     class=".v2_generic_view.V2GenericView"
+     template="v2_webshopitem_view.pt"
+     layer=".interfaces.IThemeSpecific"
+     permission="zope2.View"
+     />
+
+
+  <browser:menuItem
+     for="*"
+     menu="plone_displayviews"
+     title="V2 Webshop Item View"
+     action="@@v2_webshopitem_view"
+     layer=".interfaces.IThemeSpecific"
+     description="webshop item view"
+     />
 
   <browser:page
      for="*"

@@ -58,4 +58,9 @@
     cacheable="False" compression="safe" cookable="False"
     enabled="True" expression=""  inline="False"/>
 
+ <javascript
+    id="++resource++v2.theme.javascripts/snap.svg-min.js"
+    cacheable="False" compression="safe" cookable="False"
+    enabled="True" expression=""  inline="False"/>
+    
 </object>

@@ -130,9 +130,9 @@
                                                                                           <div class="tileShopping"
                                                                                                tal:define="shopping_information python:view.getShoppingInformation(folderItemObject)"
                                                                                                tal:condition="shopping_information">
-                                                                                                <h3 tal:condition="shopping_information/price">
+                                                                                                <span class="price" tal:condition="shopping_information/price">
                                                                                                   &euro;<span tal:replace="shopping_information/price" />
-                                                                                                </h3>
+                                                                                                </span>
                                                                                                 <a href="#"
                                                                                                    tal:condition="shopping_information/webshop_url"
                                                                                                    tal:attributes="href shopping_information/webshop_url">
@@ -211,9 +211,9 @@
                                                                                    tal:attributes="href shopping_information/webshop_url">
                                                                                   Add to
                                                                                 </a>
-                                                                                <h3 tal:condition="shopping_information/price">
+                                                                                <span class="price" tal:condition="shopping_information/price">
                                                                                   &euro; <span tal:replace="shopping_information/price" />
-                                                                                </h3>
+                                                                                </span>
                                                                           </div>
 
                                                                     </tal:others>
