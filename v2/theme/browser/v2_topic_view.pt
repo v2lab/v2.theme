@@ -134,8 +134,8 @@
 
 
                                                                <img src="" alt=""
-                                                                   tal:condition="exists:item_object/image_medium"
-                                                                   tal:replace="structure python:item_object.tag(scale='medium', css_class='tileImage')" />
+                                                                   tal:condition="exists:item_object/image_preview"
+                                                                   tal:replace="structure python:item_object.tag(scale='preview', css_class='tileImage')" />
                                                               <img src="" alt=""
                                                                    tal:condition="item_has_leadimage"
                                                                    tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
@@ -278,8 +278,8 @@
                                                                               <tal:others tal:condition="not:folderItemIsVideo">
                                                                                     <a href="#" tal:attributes="href folderItemURL"
                                                                                        tal:condition="python:folderItem.portal_type != 'Image'">
-                                                                                          <img src="" alt="" tal:condition="exists:folderItemObject/image_thumb"
-                                                                                               tal:replace="structure python:folderItemObject.tag(scale='thumb', css_class='tileImage')" />
+                                                                                          <img src="" alt="" tal:condition="exists:folderItemObject/image_preview"
+                                                                                               tal:replace="structure python:folderItemObject.tag(scale='preview', css_class='tileImage')" />
                                                                                           <img src="" alt=""
                                                                                                tal:replace="structure python:view.tag(folderItemObject, css_class='tileImage')" /><br />
                                                                                     </a>
@@ -288,7 +288,7 @@
                                                                                        tal:condition="python:folderItem.portal_type == 'Image'">
 
                                                                                           <img src="" alt="" tal:condition="exists:folderItemObject/image_preview"
-                                                                                               tal:replace="structure python:folderItemObject.tag(scale='mini', css_class='imageBlock')" />
+                                                                                               tal:replace="structure python:folderItemObject.tag(scale='preview', css_class='imageBlock')" />
                                                                                           <img src="" alt=""
                                                                                                tal:replace="structure python:view.tag(folderItemObject, css_class='imageBlock')" /><br />
                                                                                     </a>
