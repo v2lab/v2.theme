@@ -15,6 +15,7 @@
                                     templateId template/getId;
                                     mtool context/portal_membership;
                                     toLocalizedTime nocall:plone_view/toLocalizedTime;
+
                                     ">
 
                   <div class="margin-bottom">
@@ -204,9 +205,12 @@
                                                                   </span>
                                                                 </tal:name>
                                                                 &mdash;
-                                                                <span tal:replace="python:toLocalizedTime(item_modified,long_format=1)">
+                                                                <span tal:replace="python:toLocalizedTime(item.modified,long_format=0)">
                                                                   August 16, 2001 at 23:35:59
                                                                 </span>
+                                                                <!-- <span tal:replace="python:toLocalizedTime(item_modified,long_format=1)">
+                                                                  August 16, 2001 at 23:35:59
+                                                                </span> -->
                                                               </tal:newsitem>
                                                             </div>
 
