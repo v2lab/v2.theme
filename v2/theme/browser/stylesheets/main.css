@@ -528,13 +528,9 @@ p {
   margin-left: -15px; }
 
 .page-description, .documentDescription {
-  font-size: 1.3em;
-  font-weight: 100;
   padding: 18px 0; }
   .page-description p, .documentDescription p {
     margin: 0; }
-  .page-description a, .documentDescription a {
-    font-weight: bold; }
 
 .pageWrapper {
   padding-top: 20px;
@@ -943,6 +939,17 @@ input {
       text-transform: uppercase;
       padding: 8px 15px;
       float: left; }
+
+/**
+*
+* Upcoming event
+*
+**/
+.template-v2_upcomingevent_view .page-description, .template-v2_upcomingevent_view .documentDescription {
+  font-size: 1.3em;
+  font-weight: 100; }
+  .template-v2_upcomingevent_view .page-description a, .template-v2_upcomingevent_view .documentDescription a {
+    font-weight: bold; }
 
 /*
 *

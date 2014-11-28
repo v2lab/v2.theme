@@ -243,15 +243,11 @@ p {
 		margin: 0;
 		// padding: 0;
 	}
-	font-size: 1.3em;
-	font-weight: 100;
 	padding: 18px 0;
 	@extend .border-top;
 	@extend .border-bottom;
-	a {
-		font-weight: bold;
-	}
 }
+
 
 .pageWrapper {
 	padding-top: 20px;
