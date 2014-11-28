@@ -8,78 +8,76 @@
 
 <body>
 
-      <div metal:fill-slot="main">
-            <metal:main-macro define-macro="main"
-                        tal:define="kssClassesView context/@@kss_field_decorator_view;
-                        		here_url context/@@plone_context_state/object_url;
-                                    getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                                    templateId template/getId">
+<metal:main fill-slot="main">
+    <metal:main-macro define-macro="main"
+                tal:define="kssClassesView context/@@kss_field_decorator_view;
+                		here_url context/@@plone_context_state/object_url;
+                            getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                            templateId template/getId">
 
-                  <div class="frame frame-white margin-bottom" id="V2NewsitemView">
-                    <div class="row">
-                    	<div class="column-10">
-                    		<div class="bit-1">
-		                        <div tal:replace="structure provider:plone.abovecontenttitle" />
+<!--                   <div class="margin-bottom" id="V2NewsitemView">
+-->
+            <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-		                        <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
-		                          Title or id
-		                        </h1>
+            <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
+              Title or id
+            </h1>
 
-		                        <div tal:replace="structure provider:plone.belowcontenttitle" />
+            <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-		                        <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
-		                          Description
-		                        </p>
+            <p class="documentDescription border-top border-bottom">
+				<metal:field use-macro="python:here.widget('description', mode='view')">
+					Description
+				</metal:field>
+			</p>
+			<div class="pageWrapper">
+            	<div tal:replace="structure provider:plone.abovecontentbody" />
 
-		                        <div tal:replace="structure provider:plone.abovecontentbody" />
+				<div class="newsImageContainer"
+		             tal:condition="here/image_preview|nothing">
+		            <a href="#"
+		               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+		               id="parent-fieldname-image">
+		               <img tal:replace="structure python: here.tag(scale='preview', css_class='newsImage')" src="" alt="" />
+		            </a>
+		            <p class="discreet">
+		              <metal:field use-macro="python:here.widget('imageCaption', mode='view')">
+		              Image Caption
+		              </metal:field>
+		            </p>
+		        </div>
 
-						        <div class="newsImageContainer"
-						             tal:condition="here/image_mini|nothing">
-						            <a href="#"
-						               tal:attributes="href string:$here_url/image/image_view_fullscreen"
-						               id="parent-fieldname-image">
-						               <img tal:replace="structure python: here.tag(scale='preview', css_class='newsImage')" src="" alt="" />
-						            </a>
-						            <p class="discreet">
-						              <metal:field use-macro="python:here.widget('imageCaption', mode='view')">
-						              Image Caption
-						              </metal:field>
-						            </p>
-						        </div>
-
-		                        <div metal:define-macro="text-field-view"
-		                             id="parent-fieldname-text" class="stx"
-		                             tal:define="kss_class python:getKssClasses('text',
-		                                         templateId=templateId, macro='text-field-view');
-		                                         text here/getText|nothing"
-		                             tal:condition="text"
-		                             tal:attributes="class python:here.Format() in ('text/structured',
-		                                             'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
-		                              <div metal:define-slot="inside" tal:replace="structure text">The body</div>
-		                        </div>
-		                  </div>
-	                  </div>
-
-				<div class="column-3">
-	         			<div id="viewlet-below-content" class="bit-1 clear-padding-left" tal:content="structure provider:plone.belowcontent" />
-	         		</div>
-
-                      </div> <!-- end of bit-1 -->
+                <div metal:define-macro="text-field-view"
+                     id="parent-fieldname-text" class="stx"
+                     tal:define="kss_class python:getKssClasses('text',
+                                 templateId=templateId, macro='text-field-view');
+                                 text here/getText|nothing"
+                     tal:condition="text"
+                     tal:attributes="class python:here.Format() in ('text/structured',
+                                     'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
+                      <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+                </div>
 
 
-
-                  </div>
-
-
-
-                  <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+				<!-- <div class="column-3">
+         			<div id="viewlet-below-content" class="bit-1 clear-padding-left" tal:content="structure provider:plone.belowcontent" />
+         		</div> -->
 
 
-                  <div tal:replace="structure provider:plone.belowcontentbody" />
+          	<div tal:replace="structure provider:plone.belowcontentbody" />
 
-            </metal:main-macro>
 
-      </div>
+          </div>
+
+
+
+<!--                   <metal:subtopics use-macro="here/atct_topic_view/macros/folderlisting_macro" />
+-->
+
+
+    </metal:main-macro>
+
+</metal:main>
 
 </body>
 </html>
