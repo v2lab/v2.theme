@@ -23,7 +23,9 @@
                   ajax_load request/ajax_load | nothing;
 				  content_url context/absolute_url;
 	  			  content_title context/Title;
-				  content_description context/Description"
+				  content_description context/Description;
+				  social_view context/@@socialmediaview;
+				  social_image social_view/image"
 
 	  tal:attributes="lang lang;
                       xml:lang lang"
@@ -45,14 +47,14 @@
 	<meta property="twitter:url" tal:attributes="content content_url"/>
 	<meta property="twitter:title" tal:attributes="content content_title" />
 	<meta property="twitter:description" tal:attributes="content content_description" />
-	<meta property="twitter:image:src" content="http://v2.nl/logo.png" />
+	<meta property="twitter:image:src" tal:attributes="content social_image" />
 
 	<meta property="og:url" tal:attributes="content content_url" />
 	<meta property="og:site_name" content="V2_Institute for the Unstable Media" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" tal:attributes="content content_title" />
 	<meta property="og:description" tal:attributes="content content_description" />
-	<meta property="og:image" content="http://v2.nl/logo.png" />
+	<meta property="og:image" tal:attributes="content social_image" />
 
 	<meta name="geo.region" content="NL-ZH" />
 	<meta name="geo.placename" content="Rotterdam" />

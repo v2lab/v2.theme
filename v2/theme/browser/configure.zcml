@@ -481,6 +481,12 @@
      allowed_interface=".interfaces.ISearchView"
      />
 
+  <browser:page
+     for="*"
+     name="socialmediaview"
+     class=".v2_social_tags.SocialTagsView"
+     permission="zope.Public"
+     />
 
   <!-- Buyable Content registration  -->
 
@@ -497,4 +503,3 @@
 
 
 </configure>
-
