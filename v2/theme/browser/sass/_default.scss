@@ -64,6 +64,27 @@
 	text-align: right;
 }
 
+.v2-logo {
+	height: 35px;
+	float: left;
+	width: 130px;
+	padding-left: 15px;
+	a {
+		display: inline-block;
+
+		&:hover {
+			svg path {
+				fill: $color-home;
+			}
+		}
+	
+		img, svg {
+			margin-top: 5px;
+			width: 110px;
+			height: 100%;
+		}
+	}
+}
 /*
 *
 * category tag
@@ -364,6 +385,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		font-weight: bold;
 	}
 }
+
 
 /*
 *

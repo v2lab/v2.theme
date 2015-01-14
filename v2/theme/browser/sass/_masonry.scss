@@ -16,15 +16,30 @@
 }
 .related-block .masonry-holder .masonry-item {
     // width: (span(13) * 0.75 - $bit-padding * 3) /2;
-	width: -webkit-calc(50% - 15px) ;
-	width : calc(50% - 15px) ; 
+	// width: -webkit-calc(50% - 15px) ;
+	// width : calc(50% - 15px) ; 
+    width: -webkit-calc(33% - 20px) ;
+    width : calc(33% - 20px) ;   
     margin: 0;
     padding: 0;
+    .tileBody {
+        margin-top: 12px;
+    }
+    .tileItem > a {
+        display: inline-block;
+        margin-top: 12px;
+    }
     &.Folder {
     	width: 100%;
     }
     &.Person {
         width: -webkit-calc(33% - 20px) ;
         width : calc(33% - 20px) ;         
+    }
+    &.Event {
+        .EventDateInfo {
+            margin-top: 12px;
+            color: $gray;
+        }
     }
 }

@@ -117,8 +117,10 @@
                            result_type result/portal_type;
                            item_icon python:plone_view.getIcon(result);
                            url python:'%s?searchterm=%s'%(test(result_type in use_view_action, result_url+'/view', result_url+'/'), searchterm);
+                           item_has_leadimage result/hasContentLeadImage;
+                           item_object result/getObject;
 			   hasLeadImage result/hasContentLeadImage;
-			   result_leadImage python:(result_type != 'Image' and result_type != 'News Item') and result_url+'/leadImage_thumb/' or result_url + '/image_thumb'">
+			   result_leadImage python:(result_type != 'Image' and result_type != 'News Item') and result_url+'/leadImage_preview/' or result_url + '/image_preview'">
            
 	      <div class="search_result_box masonry-item">
 	      <dt tal:define="item_wf_state_class string:state-${result/review_state};"
@@ -134,6 +136,13 @@
 		<a href="#" tal:attributes="href url"><img class="leadimage"  src="" tal:attributes="src result_leadImage" />
 		<img class="play-button" src=""  tal:replace="structure here/play-button-small.png" src="" alt="play video" 
 					  tal:condition="python:result_type == 'File' and searchview.isVideo(result.getObject())"/>
+
+                     <img tal:condition="exists:item_has_leadimage"
+                          tal:define="scale item_object/@@images; img python:scale.scale('leadImage', width=280, height=280, direction='down')"
+                          tal:replace="structure python: img.tag() if img else None" />
+
+
+
 	  	</a>
 	      </div>
 

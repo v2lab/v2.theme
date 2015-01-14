@@ -156,9 +156,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border: none;
   border-bottom: 2px solid black;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 2em;
-  padding: 0; }
+  padding: 0;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+  .portletHeader.relatedHeader, .managedPortlet .portletHeader.relatedHeader {
+    font-size: 17px; }
 
 .portletItem {
   margin: 0;
@@ -201,7 +205,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-decoration: none; }
 .portletItem a, .portletItem a:visited {
   color: #000000;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.2em;
   text-transform: uppercase; }
 .portletItem img {
@@ -314,12 +318,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .portletCollection:hover {
   background: none; }
 
-.portlet-static-mailinglist {
-  width: 180px; }
-  .portlet-static-mailinglist .tileItemOneColumn:first-child {
-    margin: 1em 0; }
-    .portlet-static-mailinglist .tileItemOneColumn:first-child a {
-      margin-right: 3px; }
+.portlet-static-mailinglist .tileItemOneColumn:first-child a {
+  margin-right: 3px; }
+.portlet-static-mailinglist .social-icons img {
+  width: 28px;
+  margin-right: 5px; }
 
 .portletRelatedItems .relatedTitle {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif; }
@@ -359,7 +362,7 @@ h1 {
   color: #000000;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 24px; }
 
 h2 {
@@ -374,7 +377,7 @@ h2 {
 h3 {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.56; }
   h3 a {
     text-decoration: none; }
@@ -544,9 +547,7 @@ p {
 .template-v2_home_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
-  width: 60%;
-  font-size: 1.3em;
-  font-weight: 100; }
+  font-size: 1.2em; }
   .template-v2_home_view #parent-fieldname-text a {
     font-weight: bold; }
 
@@ -637,6 +638,20 @@ input {
 .logo-holder {
   position: fixed;
   text-align: right; }
+
+.v2-logo {
+  height: 35px;
+  float: left;
+  width: 130px;
+  padding-left: 15px; }
+  .v2-logo a {
+    display: inline-block; }
+    .v2-logo a:hover svg path {
+      fill: #2BFF3A; }
+    .v2-logo a img, .v2-logo a svg {
+      margin-top: 5px;
+      width: 110px;
+      height: 100%; }
 
 /*
 *
@@ -753,13 +768,13 @@ input {
     float: left;
     font-weight: bold;
     font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     color: #666; }
   .template-v2_webshop_view .tileItem .tileShopping > a {
     position: absolute;
     right: 100px;
     font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     text-transform: uppercase; }
     .template-v2_webshop_view .tileItem .tileShopping > a:after {
       background: url(../++resource++v2.theme.images/winkel.png) no-repeat center center;
@@ -943,7 +958,7 @@ input {
     width: 100%;
     float: right;
     background-color: black;
-    font-size: 18px;
+    font-size: 17px;
     margin: 5px 0 5px 0; }
     .content-list .listitem.even {
       margin-left: 0;
@@ -1160,13 +1175,13 @@ input {
     float: left;
     font-weight: bold;
     font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
-    font-size: 18px; }
+    font-size: 17px; }
   .template-v2_webshopitem_view .pageWrapper .rightcolumn .tileShopping a {
     text-transform: uppercase;
     margin-left: 20px;
     font-weight: bold;
     font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     float: left;
     position: relative; }
     .template-v2_webshopitem_view .pageWrapper .rightcolumn .tileShopping a:after {
@@ -1196,7 +1211,9 @@ ul.main-menu {
   padding: 0;
   list-style-type: none;
   height: 35px;
-  font-size: 18px; }
+  font-size: 17px;
+  float: left;
+  width: 654px; }
   ul.main-menu ul {
     margin: 0;
     padding: 10px 0;
@@ -1258,7 +1275,7 @@ ul.main-menu {
     ul.main-menu > li > a {
       text-transform: uppercase;
       float: left;
-      font-size: 18px; }
+      font-size: 17px; }
       ul.main-menu > li > a.selected {
         background: black; }
     ul.main-menu > li:hover:before {
@@ -1301,7 +1318,7 @@ input#searchGadget {
   line-height: 35px;
   text-transform: uppercase;
   padding: 0 10px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.56; }
 input.searchButton {
   margin-bottom: 0 !important;
@@ -1725,12 +1742,20 @@ input.searchButton {
   padding: 0; }
 
 .related-block .masonry-holder .masonry-item {
-  width: -webkit-calc(50% - 15px);
-  width: calc(50% - 15px);
+  width: -webkit-calc(33% - 20px);
+  width: calc(33% - 20px);
   margin: 0;
   padding: 0; }
+  .related-block .masonry-holder .masonry-item .tileBody {
+    margin-top: 12px; }
+  .related-block .masonry-holder .masonry-item .tileItem > a {
+    display: inline-block;
+    margin-top: 12px; }
   .related-block .masonry-holder .masonry-item.Folder {
     width: 100%; }
   .related-block .masonry-holder .masonry-item.Person {
     width: -webkit-calc(33% - 20px);
     width: calc(33% - 20px); }
+  .related-block .masonry-holder .masonry-item.Event .EventDateInfo {
+    margin-top: 12px;
+    color: #666; }
