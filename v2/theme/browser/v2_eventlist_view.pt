@@ -70,7 +70,7 @@
 	                                         tal:attributes="class string:tileItem vevent ${item_type_class}">
 
 	                                          <tal:content tal:condition="python:item_type != 'Topic' and item_type != 'Folder' and not item_is_video and item_type == 'Event'">
-	                                          	<div class="bit-2">
+	                                          	<div class="bit-2-5 leadImage">
 	                                                  	<a href="#"
 	                                                          tal:condition="python:item_type != 'Link'"
 	                                                          tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url">
@@ -97,7 +97,7 @@
 	                                                               tal:replace="structure python:view.tag(item_object, css_class='tileImage')" />
 	                                                  	</a>
 	                                               	</div>
-									<div class="bit-2">
+									<div class="bit-3-5">
 										<div class="documentByLine">
 											<tal:event condition="python: item_type == 'Event'">
 												<span tal:condition="python: item_type == 'Event'"

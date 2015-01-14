@@ -549,7 +549,15 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		border-top: none;
 
 	}
-
+	.tileItem >.leadImage {
+		text-align: center;
+		.tileImage {
+			max-height: 200px;
+			width: auto;
+			margin: auto;
+			float: none;
+		}
+	}
 }
 
 

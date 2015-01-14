@@ -1001,6 +1001,13 @@ input {
 .template-v2_eventlist_view .page-description {
   padding: 20px 0;
   border-top: none; }
+.template-v2_eventlist_view .tileItem > .leadImage {
+  text-align: center; }
+  .template-v2_eventlist_view .tileItem > .leadImage .tileImage {
+    max-height: 200px;
+    width: auto;
+    margin: auto;
+    float: none; }
 
 /*
 *
