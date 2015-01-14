@@ -168,6 +168,7 @@
 
 
                                                                     <tal:others tal:condition="not:item_is_video">
+                                                                      <div class="tileInfo">
                                                                     	<div class="thumb">
                                                                             <a href="#" tal:attributes="href item_url"
                                                                                tal:condition="python:item.portal_type != 'Image'">
@@ -217,6 +218,7 @@
                                                                                   &euro; <span tal:replace="shopping_information/price" />
                                                                                 </span>
                                                                           </div>
+                                                                        </div>
 
                                                                     </tal:others>
                                                                   </div>
