@@ -205,6 +205,7 @@
                                                                                   description
                                                                                 </span>
                                                                           </p>
+                                                                          </div>
 
                                                                           <div class="tileShopping"
                                                                                tal:define="shopping_information python:view.getShoppingInformation(item_object)"
@@ -218,7 +219,7 @@
                                                                                   &euro; <span tal:replace="shopping_information/price" />
                                                                                 </span>
                                                                           </div>
-                                                                        </div>
+
 
                                                                     </tal:others>
                                                                   </div>
