@@ -39,7 +39,7 @@ ul.main-menu {
 		a {
 			display: block;
 			line-height: 35px;
-			padding: 0 14px;
+			padding: 0 12px;
 			&:hover {
 				text-decoration: none;
 			}
@@ -72,7 +72,8 @@ ul.main-menu {
 		}
 		&:first-child {
 			&:before {
-				width: 0;
+				// width: 0;
+				background: none;
 			}
 		}
 		&:last-child {

@@ -79,7 +79,7 @@
 		}
 	
 		img, svg {
-			margin-top: 5px;
+			margin-top: 9px;
 			width: 110px;
 			height: 100%;
 		}
@@ -379,8 +379,8 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	line-height: 1.2em;
 }
 .documentDescription {
-	font-size: 1.3em;
-	font-weight: 100;
+	font-size: 1.2em;
+	// font-weight: 100;
 	a {
 		font-weight: bold;
 	}
@@ -518,10 +518,19 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .template-v2_upcomingevent_view {
 	.page-description, .documentDescription {
-		font-size: 1.3em;
-		font-weight: 100;
+		font-size: 1.2em;
+		// font-weight: 100;
 		a {
 			font-weight: bold;
+		}
+	}
+	.tileItem >.leadImage {
+		text-align: center;
+		.tileImage {
+			max-height: 200px;
+			width: auto;
+			margin: auto;
+			float: none;
 		}
 	}
 }
