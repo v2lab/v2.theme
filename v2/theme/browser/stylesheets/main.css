@@ -560,8 +560,7 @@ p {
 .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
-  font-size: 1.3em;
-  font-weight: 100; }
+  font-size: 1.2em; }
   .template-v2_webshop_view #parent-fieldname-text a, .template-v2_archive_view #parent-fieldname-text a {
     font-weight: bold; }
 
@@ -748,8 +747,8 @@ input {
 
 .template-v2_webshop_view .tileItem .tileItem-inner {
   height: 380px; }
-.template-v2_webshop_view .tileItem h2 {
-  height: 45px; }
+.template-v2_webshop_view .tileItem .tileInfo {
+  height: 350px; }
 .template-v2_webshop_view .tileItem .thumb {
   height: 150px;
   margin: 10px;

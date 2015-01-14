@@ -175,8 +175,11 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		@extend .border-bottom;
 		height: 380px;		
 	}
+	.tileInfo {
+		height: 350px;
+	}
 	h2 {
-		height: 45px;
+		// height: 45px;
 	}
 	.thumb {
 		height: 150px;

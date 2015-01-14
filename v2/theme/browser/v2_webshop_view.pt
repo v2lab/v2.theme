@@ -89,16 +89,17 @@
 
 
                                                                                     <tal:others tal:condition="not:folderItemIsVideo">
-                                                                                        <div class="thumb">
-                                                                                          <a href="#" tal:attributes="href folderItemURL"
-                                                                                             tal:condition="python:folderItem.portal_type != 'Image'">
-                                                                                                <div class="image"  alt=""
-                                                                                                  tal:attributes="style python: 'background-image: url(' + folderItemURL + '/leadImage_mini)'" ></div>
-                                                                                                <!-- <img src="" alt=""
-                                                                                                     tal:replace="structure python:view.tag(folderItemObject, css_class='')" /> -->
+                                                                                        <div class="tileInfo">
+                                                                                          <div class="thumb">
+                                                                                            <a href="#" tal:attributes="href folderItemURL"
+                                                                                               tal:condition="python:folderItem.portal_type != 'Image'">
+                                                                                                  <div class="image"  alt=""
+                                                                                                    tal:attributes="style python: 'background-image: url(' + folderItemURL + '/leadImage_mini)'" ></div>
+                                                                                                  <!-- <img src="" alt=""
+                                                                                                       tal:replace="structure python:view.tag(folderItemObject, css_class='')" /> -->
 
-                                                                                                <br />
-                                                                                          </a>
+                                                                                                  <br />
+                                                                                            </a>
 
 
                                                                                          </div>
@@ -126,6 +127,7 @@
                                                                                                   description
                                                                                                 </span>
                                                                                           </p>
+                                                                                        </div>
 
                                                                                           <div class="tileShopping"
                                                                                                tal:define="shopping_information python:view.getShoppingInformation(folderItemObject)"
