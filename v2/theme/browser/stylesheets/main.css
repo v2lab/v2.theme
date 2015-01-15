@@ -494,7 +494,7 @@ p {
 .border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
-.border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_topic_view .tileFooter {
+.border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .listingBar, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_topic_view .tileFooter {
   border-top: 2px solid black; }
 
 .white-box {
@@ -585,6 +585,12 @@ p {
   width: 100%; }
   .totalWidthTable td {
     vertical-align: top; }
+
+.listingBar {
+  background: none;
+  border: none;
+  border-color: #000000;
+  padding-top: 10px; }
 
 input {
   font-family: Helvetica, Arial, sans-serif;
@@ -1221,7 +1227,7 @@ input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  bottom: 0; }
+  bottom: -50px; }
 
 ul.main-menu {
   margin: 0 0 0 0px;

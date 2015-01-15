@@ -808,7 +808,8 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		-webkit-box-sizing: border-box;
 	    -moz-box-sizing: border-box;
         box-sizing: border-box;
-		bottom: 0;
+		bottom: -50px;
+
 	}
 	.tileFooter {
 		@extend .border-top;

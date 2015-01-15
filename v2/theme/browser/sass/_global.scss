@@ -330,3 +330,11 @@ p {
 		vertical-align: top;
 	}
 }
+
+.listingBar {
+	background: none;
+	border: none;
+	border-color: $black;
+	@extend .border-top;
+	padding-top: 10px;
+}
