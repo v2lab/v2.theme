@@ -333,7 +333,9 @@ p {
 
 .listingBar {
 	background: none;
-	border: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
 	border-color: $black;
 	@extend .border-top;
 	padding-top: 10px;

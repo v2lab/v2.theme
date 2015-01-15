@@ -588,7 +588,9 @@ p {
 
 .listingBar {
   background: none;
-  border: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   border-color: #000000;
   padding-top: 10px; }
 
@@ -1110,8 +1112,13 @@ input {
 * One Column View
 *
 **/
+.template-one_column_view .listItem .leadimage {
+  text-align: center; }
 .template-one_column_view .listItem .leadimage img {
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  margin: auto; }
 
 /**
 *
