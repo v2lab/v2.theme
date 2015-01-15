@@ -340,3 +340,14 @@ p {
 	@extend .border-top;
 	padding-top: 10px;
 }
+
+.tileItem {
+	cursor: pointer;
+	@include transition(opacity, 0.2s, ease-in-out);
+	&:hover {
+		opacity: 0.5;
+		.tileImage {
+			// opacity: 0.5;
+		}
+	}
+}
