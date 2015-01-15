@@ -801,6 +801,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 *
 **/
 .template-v2_topic_view {
+
 	.listingBar {
 		position: absolute;
 		width: 100%;
@@ -808,5 +809,8 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 	    -moz-box-sizing: border-box;
         box-sizing: border-box;
 		bottom: 0;
+	}
+	.tileFooter {
+		@extend .border-top;
 	}
 }

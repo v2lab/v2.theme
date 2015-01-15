@@ -491,10 +491,10 @@ p {
 .light-gray {
   color: #e6e6e6; }
 
-.border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
+.border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
-.border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container {
+.border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_topic_view .tileFooter {
   border-top: 2px solid black; }
 
 .white-box {
@@ -557,11 +557,11 @@ p {
   .template-v2_home_view #parent-fieldname-text a {
     font-weight: bold; }
 
-.template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text {
+.template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text {
   margin-top: 20px;
   padding: 18px 0;
   font-size: 1.2em; }
-  .template-v2_webshop_view #parent-fieldname-text a, .template-v2_archive_view #parent-fieldname-text a {
+  .template-v2_webshop_view #parent-fieldname-text a, .template-v2_archive_view #parent-fieldname-text a, .template-v2_topic_view #parent-fieldname-text a {
     font-weight: bold; }
 
 .v2-btn, .template-v2_people_view #parent-fieldname-text a {
