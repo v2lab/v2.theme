@@ -200,12 +200,16 @@
       padding-right: 10px;
       text-align: right;
       float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       line-height: 1.1;
 }
 .portletEvents .EventInfo{
       width: 70%;
       float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
 }
 .portletEvents .portletItem:hover {
@@ -231,6 +235,9 @@
 }
 
 .portletRelatedItems {
+      .portletItem {
+            border: none;
+      }
       .relatedTitle {
             font-family: $font-family-header;
 
@@ -241,6 +248,16 @@
       }
       .relatedImage {
             margin-bottom: 20px;
+      }
+      .portletFooter {
+            @extend .border-top;
+            text-align: center;
+            text-transform: uppercase; 
+            padding-top: 20px;
+            a {
+                  font-family: $font-family-header;
+                  color: $gray;
+            }
       }
 }
 #portlet-prefs {

@@ -322,12 +322,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 10px;
   text-align: right;
   float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 1.1; }
 
 .portletEvents .EventInfo {
   width: 70%;
   float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .portletEvents .portletItem:hover {
@@ -342,12 +346,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 28px;
   margin-right: 5px; }
 
+.portletRelatedItems .portletItem {
+  border: none; }
 .portletRelatedItems .relatedTitle {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif; }
 .portletRelatedItems .relatedHeader {
   margin-bottom: 20px; }
 .portletRelatedItems .relatedImage {
   margin-bottom: 20px; }
+.portletRelatedItems .portletFooter {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 20px; }
+  .portletRelatedItems .portletFooter a {
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    color: #666; }
 
 #portlet-prefs .portletItem img {
   width: auto; }
@@ -511,7 +524,7 @@ p {
 .border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
-.border-top, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .listingBar, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_topic_view .tileFooter {
+.border-top, .portletRelatedItems .portletFooter, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .listingBar, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_topic_view .tileFooter {
   border-top: 2px solid black; }
 
 .white-box {
