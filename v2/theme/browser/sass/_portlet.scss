@@ -237,9 +237,14 @@
       }
       .relatedHeader {
             margin-bottom: 20px;
-            
+
       }
       .relatedImage {
             margin-bottom: 20px;
+      }
+}
+#portlet-prefs {
+      .portletItem img {
+            width: auto;
       }
 }

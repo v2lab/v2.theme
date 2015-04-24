@@ -706,13 +706,13 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 **/
 .template-v2_person_view {
 	.newsImageContainer {
-		width: 40%;
+		width: calc(33% - 20px);
 		margin-left: 0;
-		margin-right: 2%;
+		margin-right: 30px;
 		float: left;
 	}
 	.person-overview {
-		width: 58%;
+		width: 65%;
 		float: left;
 		.documentDescription {
 			border-bottom: none;

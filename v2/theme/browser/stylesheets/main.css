@@ -349,6 +349,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .portletRelatedItems .relatedImage {
   margin-bottom: 20px; }
 
+#portlet-prefs .portletItem img {
+  width: auto; }
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1143,12 +1146,12 @@ input {
 *
 **/
 .template-v2_person_view .newsImageContainer {
-  width: 40%;
+  width: calc(33% - 20px);
   margin-left: 0;
-  margin-right: 2%;
+  margin-right: 30px;
   float: left; }
 .template-v2_person_view .person-overview {
-  width: 58%;
+  width: 65%;
   float: left; }
   .template-v2_person_view .person-overview .documentDescription {
     border-bottom: none; }
