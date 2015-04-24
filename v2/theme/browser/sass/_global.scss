@@ -54,7 +54,7 @@ h2 {
 		size: $font-size-xl;
 	}
 	line-height: $line-height-xl-computed;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	margin: 10px 0 10px 0;
 }
 h3 {

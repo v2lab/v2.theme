@@ -11,7 +11,7 @@
       background: none;
       border: none;
       border-bottom: 2px solid black;
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-size: $font-size-xl;
       line-height: 2em;
       padding: 0;
@@ -82,9 +82,9 @@
       }
       a, a:visited {
             color: $font-color;
-            font-size: $font-size-l;
+            // font-size: $font-size-l;
             line-height:  1.2em;
-            text-transform: uppercase;
+            // text-transform: uppercase;
       }
       img {
             width: 100%;
@@ -193,6 +193,20 @@
       //             padding-right: 15px;
       //       }
       // }
+}
+.portletEvents .EventDateInfo{
+      font-size: $font-size-l;
+      width: 30%;
+      padding-right: 10px;
+      text-align: right;
+      float: left;
+      box-sizing: border-box;
+      line-height: 1.1;
+}
+.portletEvents .EventInfo{
+      width: 70%;
+      float: left;
+      box-sizing: border-box;
 }
 .portletEvents .portletItem:hover {
       background-color: $yellow;

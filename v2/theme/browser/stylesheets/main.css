@@ -161,7 +161,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: none;
   border: none;
   border-bottom: 2px solid black;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 22px;
   line-height: 2em;
   padding: 0;
@@ -211,9 +211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-decoration: none; }
 .portletItem a, .portletItem a:visited {
   color: #000000;
-  font-size: 17px;
-  line-height: 1.2em;
-  text-transform: uppercase; }
+  line-height: 1.2em; }
 .portletItem img {
   width: 100%;
   height: auto; }
@@ -318,6 +316,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       left: -20px;
       margin-top: 0px; }
 
+.portletEvents .EventDateInfo {
+  font-size: 17px;
+  width: 30%;
+  padding-right: 10px;
+  text-align: right;
+  float: left;
+  box-sizing: border-box;
+  line-height: 1.1; }
+
+.portletEvents .EventInfo {
+  width: 70%;
+  float: left;
+  box-sizing: border-box; }
+
 .portletEvents .portletItem:hover {
   background-color: #FFFF36; }
 
@@ -377,7 +389,7 @@ h2 {
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 10px 0 10px 0; }
 
 h3 {
@@ -876,7 +888,7 @@ input {
 * event byline
 *
 */
-.EventDateInfo {
+.EventDateInfo, .EventDateInfo > span {
   text-transform: uppercase;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-weight: 400; }
@@ -921,7 +933,7 @@ input {
 */
 .template-v2_home_view .tileItem img.tileImage {
   float: none;
-  margin-bottom: 10px; }
+  margin-bottom: 0px; }
 
 .template-v2_home_view .tileBody {
   margin-bottom: 10px;
@@ -929,6 +941,31 @@ input {
 
 .template-v2_home_view .tileFooter {
   width: 90%; }
+
+.template-v2_home_view .leadimage-holder {
+  position: relative;
+  margin-bottom: 10px; }
+  .template-v2_home_view .leadimage-holder .documentByLine {
+    color: #000000;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px; }
+    .template-v2_home_view .leadimage-holder .documentByLine .EventDateInfo {
+      padding: 7px 4px 4px;
+      background: white;
+      height: 30px;
+      box-sizing: border-box; }
+      .template-v2_home_view .leadimage-holder .documentByLine .EventDateInfo:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 30px 0 0 15px;
+        border-color: transparent transparent transparent white;
+        position: absolute;
+        right: -15px;
+        top: 0; }
 
 /*
 *

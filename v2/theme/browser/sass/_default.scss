@@ -328,7 +328,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 *
 */
 
-.EventDateInfo {
+.EventDateInfo, .EventDateInfo >span {
 	text-transform: uppercase;
 	font: {
 		family: $font-family-header;
@@ -398,7 +398,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .template-v2_home_view .tileItem img.tileImage {
 	float: none;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 .template-v2_home_view .tileBody {
 	margin-bottom: 10px;
@@ -407,6 +407,37 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 .template-v2_home_view .tileFooter {
 	width: 90%;
 	@extend .border-top;
+}
+.template-v2_home_view .leadimage-holder {
+	position: relative;
+	margin-bottom: 10px;
+	.documentByLine {
+		color: $black;
+		font-size: $font-size-l;
+		position: absolute;
+		bottom: 0px;
+		margin-bottom: 0px;
+		.EventDateInfo {
+			padding: 7px 4px 4px;
+			background: white;
+			height: 30px;
+			box-sizing: border-box;
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 30px 0 0 15px;
+				border-color: transparent transparent transparent white;
+				position: absolute;
+				right: -15px;
+				top: 0;
+			}			
+		}
+
+		
+
+	}
 }
 
 
