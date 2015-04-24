@@ -1846,7 +1846,7 @@ input.searchButton {
   margin: 0;
   padding: 0; }
 
-.template-v2_lab_view .masonry-holder .masonry-item {
+.template-v2_lab_view .masonry-holder .masonry-item.wide {
   width: 354.5px;
   margin: 0;
   padding: 0; }

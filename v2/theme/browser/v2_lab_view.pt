@@ -92,7 +92,7 @@
                                                                 item_category python:view.getCategory(item_object);
                                                                 item_creator item/Creator;
                                                                 "
-                                                     tal:attributes="class string:masonry-item tileItem vevent ${item_type_class}">
+                                                     tal:attributes="class string:masonry-item tileItem wide vevent ${item_type_class}">
 
 
                                                       <h2 class="" metal:define-macro="listitem">
