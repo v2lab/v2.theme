@@ -247,7 +247,6 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 }
 .newsImageContainer  {
 	margin-left: $column-margin;
-	max-width: 50%;
 
 	.discreet {
 		display: none;
@@ -853,3 +852,14 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 		@extend .border-top;
 	}
 }
+/**
+*
+* Document View
+*
+**/
+.template-document_view {
+	.newsImageContainer {
+		max-width: 50%;
+	}
+}
+

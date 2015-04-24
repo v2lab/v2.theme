@@ -835,8 +835,7 @@ input {
   width: auto; }
 
 .newsImageContainer {
-  margin-left: 20px;
-  max-width: 50%; }
+  margin-left: 20px; }
   .newsImageContainer .discreet {
     display: none; }
 
@@ -1288,6 +1287,14 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   bottom: -50px; }
+
+/**
+*
+* Document View
+*
+**/
+.template-document_view .newsImageContainer {
+  max-width: 50%; }
 
 ul.main-menu {
   margin: 0 0 0 0px;
