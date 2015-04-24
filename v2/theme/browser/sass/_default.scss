@@ -247,6 +247,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 }
 .newsImageContainer  {
 	margin-left: $column-margin;
+	max-width: 50%;
 
 	.discreet {
 		display: none;

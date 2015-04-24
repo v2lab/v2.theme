@@ -835,7 +835,8 @@ input {
   width: auto; }
 
 .newsImageContainer {
-  margin-left: 20px; }
+  margin-left: 20px;
+  max-width: 50%; }
   .newsImageContainer .discreet {
     display: none; }
 
