@@ -18,8 +18,10 @@
            isAnon context/@@plone_portal_state/anonymous;
            is_editable context/@@plone_context_state/is_editable;">
 
+            <div tal:replace="structure provider:plone.abovecontentbody" />
 
             <div tal:replace="structure provider:plone.abovecontenttitle" />
+      <div class="webshopitem-overview">   
 
             <h1 class="documentFirstHeading">
               <metal:field use-macro="python:here.widget('title', mode='view')">
@@ -35,11 +37,9 @@
               <metal:field use-macro="python:here.widget('description', mode='view')">
                 Description
               </metal:field>
-            </p>
 
-            <div class="pageWrapper">
-              <div class="rightcolumn">
-                <div tal:replace="structure provider:plone.abovecontentbody" />
+            </p>
+              <!-- <div class="rightcolumn"> -->
                 <div class="tileShopping"
                   tal:define="shopping_information python:view.getShoppingInformation(context)"
                   tal:condition="shopping_information">
@@ -52,7 +52,11 @@
                     Add to
                   </a>
                 </div>
-              </div>
+              <!-- </div> -->
+          </div>
+
+            <div class="pageWrapper">
+
               <p tal:condition="python: not text and is_editable"
                  i18n:translate="no_body_text"
                  class="discreet">

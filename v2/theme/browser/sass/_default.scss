@@ -794,7 +794,22 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 *
 **/
 .template-v2_webshopitem_view {
+	.newsImageContainer {
+		width: calc(33% - 20px);
+		margin-left: 0;
+		margin-right: 30px;
+		float: left;
+	}
+	.webshopitem-overview {
+		width: 65%;
+		float: left;
+		.documentDescription {
+			border-bottom: none;
+		}
+	}
 	.pageWrapper {
+		clear: both;
+		@extend .border-top;
 		.rightcolumn {
 			float: right;
 			width: 200px;
