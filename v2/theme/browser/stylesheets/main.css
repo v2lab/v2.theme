@@ -344,6 +344,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .portletRelatedItems .relatedTitle {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif; }
+.portletRelatedItems .relatedHeader {
+  margin-bottom: 20px; }
 .portletRelatedItems .relatedImage {
   margin-bottom: 20px; }
 
