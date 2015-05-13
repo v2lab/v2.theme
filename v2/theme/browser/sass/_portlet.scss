@@ -240,14 +240,24 @@
       }
       .relatedTitle {
             font-family: $font-family-header;
-
+            text-transform: uppercase;
+            font-size: 1.5em;
+            line-height: 25px;
       }
       .relatedHeader {
-            margin-bottom: 20px;
-
+            margin-bottom: 10px;
+            border: none;
+            span {
+                  color: $gray;
+                  font-family: $font-family-header;
+                  text-transform: uppercase;
+                  font-size: 18px;      
+            }
+                 
       }
       .relatedImage {
             margin-bottom: 20px;
+            margin-top: 12px;
       }
       .portletFooter {
             @extend .border-top;

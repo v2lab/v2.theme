@@ -349,11 +349,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .portletRelatedItems .portletItem {
   border: none; }
 .portletRelatedItems .relatedTitle {
-  font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif; }
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 25px; }
 .portletRelatedItems .relatedHeader {
-  margin-bottom: 20px; }
+  margin-bottom: 10px;
+  border: none; }
+  .portletRelatedItems .relatedHeader span {
+    color: #666;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px; }
 .portletRelatedItems .relatedImage {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: 12px; }
 .portletRelatedItems .portletFooter {
   text-align: center;
   text-transform: uppercase;
