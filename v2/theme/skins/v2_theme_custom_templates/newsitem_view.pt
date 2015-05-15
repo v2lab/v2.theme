@@ -17,6 +17,8 @@
 
 <!--                   <div class="margin-bottom" id="V2NewsitemView">
 -->
+            <div tal:replace="structure provider:plone.abovecontentbody" />
+
             <div tal:replace="structure provider:plone.abovecontenttitle" />
 
         <div class="newsImageContainer"
@@ -31,7 +33,8 @@
               Image Caption
               </metal:field>
             </p>
-        </div>            
+        </div>      
+
       <div class="news-overview">   
             <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
               Title or id
@@ -59,9 +62,6 @@
 				</metal:field>
 			</p> -->
 			<div class="pageWrapper">
-            	<div tal:replace="structure provider:plone.abovecontentbody" />
-
-
 
                 <div metal:define-macro="text-field-view"
                      id="parent-fieldname-text" class="stx"
