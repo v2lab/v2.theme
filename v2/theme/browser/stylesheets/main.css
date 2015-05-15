@@ -532,10 +532,10 @@ p {
 .light-gray {
   color: #e6e6e6; }
 
-.border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
+.border-bottom, .related-block, .page-description, .documentDescription, .pageWrapper, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .hr, #visual-portal-wrapper #portal-top #portal-header #portal-searchbox, .template-v2_webshop_view .tileItem .tileItem-inner, .template-event_view .event-overview, .template-event_view .event-meta .eventDetailsDateTime, .template-v2_eventlist_view .page-description, .template-v2_press_view #parent-fieldname-text, .template-v2_person_view .pageWrapper, .template-newsitem_view .pageWrapper, .template-search .search-field, .template-search .search_result_box {
   border-bottom: 2px solid black; }
 
-.border-top, .portletRelatedItems .portletFooter, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .listingBar, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_webshopitem_view .pageWrapper, .template-v2_topic_view .tileFooter {
+.border-top, .portletRelatedItems .portletFooter, .page-description, .documentDescription, .template-v2_home_view #parent-fieldname-text, .template-v2_webshop_view #parent-fieldname-text, .template-v2_archive_view #parent-fieldname-text, .template-v2_topic_view #parent-fieldname-text, .listingBar, .template-v2_home_view .tileFooter, .template-v2_person_view .pageWrapper, .template-v2_image_view .image-container, .template-v2_webshopitem_view .pageWrapper, .template-v2_topic_view .tileFooter, .template-newsitem_view .pageWrapper {
   border-top: 2px solid black; }
 
 .white-box {
@@ -1331,6 +1331,25 @@ input {
 **/
 .template-document_view .newsImageContainer {
   max-width: 50%; }
+
+/**
+*
+* NewsItem View
+*
+**/
+.template-newsitem_view .newsImageContainer {
+  width: calc(33% - 20px);
+  margin-left: 0;
+  margin-right: 30px;
+  float: left; }
+.template-newsitem_view .news-overview {
+  width: 65%;
+  float: left; }
+  .template-newsitem_view .news-overview .documentDescription {
+    border-bottom: none; }
+.template-newsitem_view .pageWrapper {
+  clear: both;
+  padding-top: 20px; }
 
 ul.main-menu {
   margin: 0 0 0 0px;

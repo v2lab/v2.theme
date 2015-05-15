@@ -18,7 +18,21 @@
 <!--                   <div class="margin-bottom" id="V2NewsitemView">
 -->
             <div tal:replace="structure provider:plone.abovecontenttitle" />
+      <div class="news-overview">   
+            <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
+              Title or id
+            </h1>
 
+            <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+
+          <p class="documentDescription">
+              <metal:field use-macro="python:here.widget('description', mode='view')">
+              Description
+              </metal:field>
+          </p>
+        </div>
+<!-- 
             <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
               Title or id
             </h1>
@@ -29,7 +43,7 @@
 				<metal:field use-macro="python:here.widget('description', mode='view')">
 					Description
 				</metal:field>
-			</p>
+			</p> -->
 			<div class="pageWrapper">
             	<div tal:replace="structure provider:plone.abovecontentbody" />
 
