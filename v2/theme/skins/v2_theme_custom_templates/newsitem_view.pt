@@ -18,6 +18,20 @@
 <!--                   <div class="margin-bottom" id="V2NewsitemView">
 -->
             <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <div class="newsImageContainer"
+             tal:condition="here/image_preview|nothing">
+            <a href="#"
+               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+               id="parent-fieldname-image">
+               <img tal:replace="structure python: here.tag(scale='preview', css_class='newsImage')" src="" alt="" />
+            </a>
+            <p class="discreet">
+              <metal:field use-macro="python:here.widget('imageCaption', mode='view')">
+              Image Caption
+              </metal:field>
+            </p>
+        </div>            
       <div class="news-overview">   
             <h1 metal:use-macro="here/kss_generic_macros/macros/generic_title_view">
               Title or id
@@ -47,19 +61,7 @@
 			<div class="pageWrapper">
             	<div tal:replace="structure provider:plone.abovecontentbody" />
 
-				<div class="newsImageContainer"
-		             tal:condition="here/image_preview|nothing">
-		            <a href="#"
-		               tal:attributes="href string:$here_url/image/image_view_fullscreen"
-		               id="parent-fieldname-image">
-		               <img tal:replace="structure python: here.tag(scale='preview', css_class='newsImage')" src="" alt="" />
-		            </a>
-		            <p class="discreet">
-		              <metal:field use-macro="python:here.widget('imageCaption', mode='view')">
-		              Image Caption
-		              </metal:field>
-		            </p>
-		        </div>
+
 
                 <div metal:define-macro="text-field-view"
                      id="parent-fieldname-text" class="stx"
