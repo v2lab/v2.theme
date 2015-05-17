@@ -1170,6 +1170,7 @@ input {
 *
 **/
 .template-v2_person_view .newsImageContainer {
+  width: -webkit-calc(33% - 20px);
   width: calc(33% - 20px);
   margin-left: 0;
   margin-right: 30px;
@@ -1272,6 +1273,7 @@ input {
 *
 **/
 .template-v2_webshopitem_view .newsImageContainer {
+  width: -webkit-calc(33% - 20px);
   width: calc(33% - 20px);
   margin-left: 0;
   margin-right: 30px;
@@ -1338,6 +1340,7 @@ input {
 *
 **/
 .template-newsitem_view .newsImageContainer {
+  width: -webkit-calc(33% - 20px);
   width: calc(33% - 20px);
   margin-left: 0;
   margin-right: 30px;
