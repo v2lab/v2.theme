@@ -62,6 +62,10 @@
 .logo-holder {
 	position: fixed;
 	text-align: right;
+	width: 43px;
+	img {
+		max-height: 80vh;
+	}
 }
 
 .v2-logo {
@@ -330,6 +334,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 
 .EventDateInfo, .EventDateInfo >span {
 	text-transform: uppercase;
+	display: inline-block;
 	font: {
 		family: $font-family-header;
 		// weight: $font-weight-light;

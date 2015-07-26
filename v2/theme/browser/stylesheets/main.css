@@ -701,7 +701,10 @@ input {
 
 .logo-holder {
   position: fixed;
-  text-align: right; }
+  text-align: right;
+  width: 43px; }
+  .logo-holder img {
+    max-height: 80vh; }
 
 .v2-logo {
   height: 35px;
@@ -919,6 +922,7 @@ input {
 */
 .EventDateInfo, .EventDateInfo > span {
   text-transform: uppercase;
+  display: inline-block;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
   font-weight: 400; }
 
