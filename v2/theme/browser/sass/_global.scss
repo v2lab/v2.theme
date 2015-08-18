@@ -16,6 +16,9 @@ body {
 	 -webkit-font-smoothing: antialiased;
 	 -moz-osx-font-smoothing: grayscale;
 }
+#LSResult {
+	top: 24px !important;
+}
 svg#v2-logo {
     pointer-events: none;
     position: fixed;

@@ -66,7 +66,7 @@
                   					<div class="searchbyYear border-bottom">
                   						<div class="yearSelectTitle">Year </div>
                   							<div class="yearSelectItems">
-                  								<tal:block tal:define="results python:context.portal_catalog.searchResults({'path': events_physical_path, 'portal_type': 'Topic',  })" tal:repeat="item results">
+                  								<tal:block tal:define="results python:context.portal_catalog.searchResults({'path': events_physical_path, 'portal_type': 'Topic', 'sort_on': 'sortable_title', 'sort_order': 'ascending' })" tal:repeat="item results">
                   									<div class="yearItem" tal:define="item_url item/getURL|item/absolute_url;
                   									item_title_or_id item/pretty_title_or_id;
                   									item_type item/portal_type;
