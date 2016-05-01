@@ -35,7 +35,27 @@
           opacity: 1;
         }
       }
-
+  #slide-nav {
+    position: absolute;
+    bottom: 5px;
+    z-index: 99999999;
+    text-align: center;
+    width: 100%;
+    a {
+        width: 13px;
+        height: 13px;
+        background: #e5e5e5;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        text-indent: -80px;
+        overflow: hidden;
+        margin: 3px;
+      &.activeSlide {
+        background: $yellow;
+      }
+    }
+  } 
 }
 
 

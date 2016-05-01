@@ -32,10 +32,17 @@ svg#v2-logo {
 }
 a {
 	color: $font-color;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+		color: $font-color;
+	}
+
+}
+#portal-top a {
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
-		color: $font-color;
 	}
 }
 h1 {
@@ -343,7 +350,21 @@ p {
 	@extend .border-top;
 	padding-top: 10px;
 }
-
+.loadmore {
+	text-align: center;
+	padding-top: 20px;
+	clear: both;
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $font-family-header;
+		color: $gray;
+		font-size: $font-size-xl;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
 .tileItem {
 	cursor: pointer;
 	@include transition(all, 0.2s, ease-in-out);

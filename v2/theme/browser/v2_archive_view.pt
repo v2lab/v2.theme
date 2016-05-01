@@ -85,15 +85,15 @@
                   					</div>
                   				</tal:block>
                   				<tal:block tal:define="video_id python:view.getVideo(0); video_title python:view.getVideoTitle();">
-                  					<div class="video_container">
+                  					<!-- <div class="video_container"> -->
                   						<!-- <h3>Latest added video</h3> -->
-                  						<iframe tal:attributes="src python: 'http://player.vimeo.com/video/'+video_id" src="" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                  					</div>
-                            <div class="video_title" tal:content="video_title" />
+                  						<!-- <iframe tal:attributes="src python: 'http://player.vimeo.com/video/'+video_id" src="" width="600" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+                  					<!-- </div> -->
+                            <!-- <div class="video_title" tal:content="video_title" /> -->
 
 
                   				</tal:block>
-                  				<div class="more"><h3><a href="/archive/videos" target="_self">More videos</a></h3></div>
+                  				<!-- <div class="more"><h3><a href="/archive/videos" target="_self">More videos</a></h3></div> -->
                         </div>
 
 

@@ -403,10 +403,15 @@ svg#v2-logo {
 
 a {
   color: #000000;
-  text-decoration: none; }
+  text-decoration: underline; }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #000000; }
+
+#portal-top a {
+  text-decoration: none; }
+  #portal-top a:hover {
+    text-decoration: underline; }
 
 h1 {
   color: #000000;
@@ -638,6 +643,19 @@ p {
   border-color: #000000;
   padding-top: 10px; }
 
+.loadmore {
+  text-align: center;
+  padding-top: 20px;
+  clear: both; }
+  .loadmore a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 22px; }
+    .loadmore a:hover {
+      text-decoration: underline; }
+
 .tileItem {
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
@@ -845,7 +863,10 @@ input {
     right: 100px;
     font-family: "HelveticaNeue-CondensedBold", "Helvetica Narrow", "Arial Narrow", Helvetica, Arial, sans-serif;
     font-size: 17px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: none; }
+    .template-v2_webshop_view .tileItem .tileShopping > a:hover {
+      text-decoration: underline; }
     .template-v2_webshop_view .tileItem .tileShopping > a:after {
       background: url(../++resource++v2.theme.images/winkel.png) no-repeat center center;
       content: "";
@@ -1018,8 +1039,6 @@ input {
   margin-bottom: 10px;
   font-size: 1.2em;
   float: left; }
-.template-v2_archive_view div.more {
-  float: right; }
 .template-v2_archive_view .archive-content {
   margin: 50px 80px; }
 .template-v2_archive_view div.more a {
@@ -1279,17 +1298,42 @@ input {
 * Webshop Item View
 *
 **/
+.template-v2_webshopitem_view .table {
+  display: table;
+  width: 100%;
+  margin-bottom: 30px;
+  height: 100%; }
 .template-v2_webshopitem_view .newsImageContainer {
   width: -webkit-calc(33% - 20px);
   width: calc(33% - 20px);
   margin-left: 0;
   margin-right: 30px;
-  float: left; }
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 30px;
+  height: 100%; }
 .template-v2_webshopitem_view .webshopitem-overview {
   width: 65%;
-  float: left; }
+  display: table-cell;
+  height: 100%;
+  vertical-align: top; }
+  .template-v2_webshopitem_view .webshopitem-overview .inner {
+    height: 100%;
+    position: relative; }
+    .template-v2_webshopitem_view .webshopitem-overview .inner .tileShopping {
+      position: absolute;
+      bottom: 0; }
+      .template-v2_webshopitem_view .webshopitem-overview .inner .tileShopping a {
+        background-color: #D4D4D4;
+        padding: 5px 10px;
+        text-decoration: none;
+        text-transform: uppercase; }
+        .template-v2_webshopitem_view .webshopitem-overview .inner .tileShopping a:hover {
+          background-color: #3D3D3D;
+          color: #ffffff; }
   .template-v2_webshopitem_view .webshopitem-overview .documentDescription {
-    border-bottom: none; }
+    border-bottom: none;
+    margin-bottom: 30px; }
 .template-v2_webshopitem_view .pageWrapper {
   clear: both; }
   .template-v2_webshopitem_view .pageWrapper .rightcolumn {
@@ -1879,6 +1923,24 @@ input.searchButton {
     left: 0px; }
   #slideshow-wrapper:hover #next, #slideshow-wrapper:hover #prev {
     opacity: 1; }
+  #slideshow-wrapper #slide-nav {
+    position: absolute;
+    bottom: 5px;
+    z-index: 99999999;
+    text-align: center;
+    width: 100%; }
+    #slideshow-wrapper #slide-nav a {
+      width: 13px;
+      height: 13px;
+      background: #e5e5e5;
+      border-radius: 50%;
+      cursor: pointer;
+      display: inline-block;
+      text-indent: -80px;
+      overflow: hidden;
+      margin: 3px; }
+      #slideshow-wrapper #slide-nav a.activeSlide {
+        background: #FFFF36; }
 
 .masonry-holder .masonry-item {
   width: 226.33333px;
