@@ -167,26 +167,7 @@ template with a tal:define="batch_base_url YOUR_BASE_URL" tales expression.
 
 
 
-<script>
-  jQuery(document).ready(function($){
 
-    function infscroll(){
-      $(".loadmore-btn").bind("click",function(e){
-          e.preventDefault();
-          $.ajax({url: $(e.target).attr("href"), success: function(result){
-              // console.log($(result).find("#inf-scroll").children());
-              $("#inf-scroll").append($(result).find("#inf-scroll").children());
-              $(e.target).parent().parent().remove();
-              infscroll();
-          }});
-      });
-
-    }
-
-    infscroll();
-
-  });
-</script>
 
 </div>
 
