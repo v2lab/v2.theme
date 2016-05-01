@@ -232,7 +232,7 @@
                                           </tal:block>
 
                                           <!-- Navigation -->
-                                          <div metal:use-macro="here/batch_macros_ajax/macros/navigation" />
+                                          <div metal:use-macro="here/batch_macros/macros/navigation_ajax" />
 
                                     </tal:listing>
                                     <metal:empty metal:define-slot="no_items_in_listing">
