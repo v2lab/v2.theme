@@ -149,7 +149,7 @@
                                           </tal:block>
 
                                           <!-- Navigation -->
-                                          <div metal:use-macro="here/batch_macros/macros/navigation_ajax" />
+                                          <div metal:use-macro="here/batch_macros/macros/navigation" />
 
                                     </tal:listing>
                                     <metal:empty metal:define-slot="no_items_in_listing">
