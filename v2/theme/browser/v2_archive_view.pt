@@ -43,7 +43,7 @@
                               <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                         </div>
                         <div class="archive-content">
-                  				<form name="searchform" action="http://dev.v2.nl/search" class="searchform border-bottom">
+                  				<form name="searchform" action="/search" class="searchform border-bottom">
 
                   					<label class="hiddenStructure" for="searchGadget">Search Site</label>
 
