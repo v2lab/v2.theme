@@ -106,6 +106,12 @@
 	  tal:attributes="class body_class;
                         dir python: isRTL and 'rtl' or 'ltr'">
 <div id="visual-portal-wrapper">
+
+	<div class="fixed-buttons">
+		<a href="http://v2.nl/v2_35-years" target="_self"><div class="thirtyfiveyears"><span class="text">35<br>years<br>v2_</span></div></a>
+		<a href="http://v2.nl/donate" target="_self"><div class="donate"><span class="text">Donate</span></div></a>		
+	</div>
+
 	<div class="container-fixed">
 		<div class="container">
 			<div id="portal-top" class="row" i18n:domain="plone">
