@@ -58,28 +58,34 @@ $color-lab: #5FBEFF;
 
 }
 
-$font-family-sans: Helvetica, Arial, sans-serif;
-$font-family-serif: Helvetica, Arial, sans-serif;
+$font-family-sans: "Input Serif Reg", Helvetica, Arial, sans-serif;
+$font-family-serif: "Input Serif Reg", Helvetica, Arial, sans-serif;
 // $font-family-header:  "bebas_neueregular", "HelveticaNeue-CondensedBold", "Helvetica Narrow","Arial Narrow", Helvetica, Arial, sans-serif;
-$font-family-header: "HelveticaNeue-CondensedBold", "Helvetica Narrow","Arial Narrow", Helvetica, Arial, sans-serif;
+$font-family-header: "Input Mono Cond Bd", "HelveticaNeue-CondensedBold", "Helvetica Narrow","Arial Narrow", Helvetica, Arial, sans-serif;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-color: $black;
 
-$font-size-s: 12px;
+// $font-size-s: 12px;
+$font-size-s: 11px;
 $line-height-s: 1.56;
 
-$font-size-m: 15px;
-$line-height-m: 1.2;
+// $font-size-m: 15px;
+$font-size-m: 13px;
+// $line-height-m: 1.2;
+$line-height-m: 1.4;
 
-$font-size-l: 17px;
+// $font-size-l: 17px;
+$font-size-l: 15px;
 $line-height-l: 1.56;
 
-$font-size-xl: 22px;
+// $font-size-xl: 22px;
+$font-size-xl: 20px;
 $line-height-xl: 1.1;
 
-$font-size-xxl: 60px;
+// $font-size-xxl: 60px;
+$font-size-xxl: 58px;
 $line-height-xxl: 1.56;
 
 $line-height-s-computed: floor(($font-size-s * $line-height-s));

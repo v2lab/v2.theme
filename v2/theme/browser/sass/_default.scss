@@ -168,6 +168,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 @each $category in $categories {
 	.category-#{nth($category, 1)} .documentFirstHeading {
 		background-color: #{nth($category, 2)};
+		padding-top: 2px;
 	}
 }
 
@@ -438,7 +439,7 @@ $categories: (about $color-about) (organization $color-about) (event $color-even
 .documentDescription, .description {
 	font-weight: normal;
 	margin: 0;
-	line-height: 1.2em;
+	line-height: $line-height-m;
 }
 .documentDescription {
 	font-size: 1.2em;
