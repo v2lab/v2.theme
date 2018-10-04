@@ -13,6 +13,7 @@ body {
 	color: $font-color;
 	background-color: #e6e6e6 !important;
 	//background: $light-gray url(../++resource++v2.theme.images/background-black.png) no-repeat center center fixed;
+	background: $light-gray url(../++resource++v2.theme.images/webachtergrond.jpg) no-repeat center center fixed;
 	background-size: cover;
 	 -webkit-font-smoothing: antialiased;
 	 -moz-osx-font-smoothing: grayscale;
@@ -226,6 +227,8 @@ p {
 	// margin-left: 0 - span(12)/2 !important;
 	z-index: 10;
 	width: 100%;
+	background: rgba(255,255,255,0.8);
+  padding-bottom: 8px;
 }
 .text-right {
 	text-align: right;

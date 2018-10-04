@@ -47,7 +47,8 @@ ul.main-menu {
 	}
 	> li {
 		@include clearfix;
-		margin-left: -17px;
+		// margin-left: -17px;
+		margin-left: -21px;
 		&:first-child {
 			margin-left: 0;
 		}

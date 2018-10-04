@@ -1,7 +1,8 @@
-<div class="column-13 page-padding-top background-gray" tal:define="portal context/@@plone_portal_state/portal;">
+<!-- <div class="column-13 page-padding-top background-gray" tal:define="portal context/@@plone_portal_state/portal;"> -->
+<div class="column-13 page-padding-top" tal:define="portal context/@@plone_portal_state/portal;">
 	<div class="v2-logo">
 		<a href="/" class="plain">
-			<svg width="454.898px" height="117.299px" viewBox="0 0 454.898 117.299">
+			<!-- <svg width="454.898px" height="117.299px" viewBox="0 0 454.898 117.299">
 			<g>
 				<path d="M211.219,80.782c-2.11,0-0.474-2.814,1.901-3.454c7.932-2.163,16.477-4.472,19.841-5.245
 					c54.005-12.377,75.561-20.093,88.743-27.516c12.932-7.283,34.197-29.62-15.747-40.25c-14.984-3.181-38.75-5.17-64.346-3.957
@@ -21,10 +22,11 @@
 					c2.785,9.35,17.072,51.699,22.753,69.277c1.89,5.815,1.921,8.13,7.309,8.13h21.082c5.393,0,8.033-2.314,16.514-8.13
 					c25.571-17.578,87.568-60.058,101.143-69.277C176.108,17.802,177.888,16.034,178.731,13.33"/>
 			</g>
-			</svg>
+			</svg> -->
 			<!-- <img src="++resource++v2.theme.images/v2-logo.svg" /> -->
+			<img src="++resource++v2.theme.images/v2-logo.png" />
 		</a>
-		
+
 	</div>
 	<ul class="main-menu border-bottom">
 

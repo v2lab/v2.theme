@@ -109,7 +109,7 @@
 
 	<div class="fixed-buttons">
 		<a href="http://v2.nl/v2_35-years" target="_self"><div class="thirtyfiveyears"><span class="text">35<br>years<br>v2_</span></div></a>
-		<a href="http://v2.nl/donate" target="_self"><div class="donate"><span class="text">Donate</span></div></a>		
+		<a href="http://v2.nl/donate" target="_self"><div class="donate"><span class="text">Donate</span></div></a>
 	</div>
 
 	<div class="container-fixed">
@@ -127,7 +127,11 @@
 		<div class="row">
 			<div class="column-1 front">
 				<div class="logo-holder">
-					<a href="/" title="V2_ Institute For The Unstable Media"><img src="++resource++v2.theme.images/sidebar.svg" /></a>
+					<a href="/" title="V2_ Institute For The Unstable Media">
+						<!-- <img src="++resource++v2.theme.images/sidebar.svg" /> -->
+						<img src="++resource++v2.theme.images/V2LogoUnstable_Vertical_61x800transparant_1.gif" />
+
+					</a>
 				</div>
 				&nbsp;
 			</div>

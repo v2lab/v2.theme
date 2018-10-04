@@ -16,7 +16,7 @@
 				@extend .column-4;
 				@extend .border-bottom;
 				@extend .page-padding-top;
-				@extend .background-gray;
+				// @extend .background-gray;
 			}
 		}
 	}
@@ -83,8 +83,9 @@
 		}
 	
 		img, svg {
-			margin-top: 9px;
-			width: 110px;
+			// margin-top: 9px;
+			// width: 110px;
+			width: 65px;
 			height: 100%;
 		}
 	}
