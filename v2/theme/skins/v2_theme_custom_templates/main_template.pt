@@ -50,7 +50,7 @@
 	<meta property="twitter:image:src" tal:attributes="content social_image" />
 
 	<meta property="og:url" tal:attributes="content content_url" />
-	<meta property="og:site_name" content="V2_Institute for the Unstable Media" />
+	<meta property="og:site_name" content="V2_Lab for the Unstable Media" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" tal:attributes="content content_title" />
 	<meta property="og:description" tal:attributes="content content_description" />
