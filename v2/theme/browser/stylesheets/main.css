@@ -1581,7 +1581,9 @@ ul.main-menu {
       color: #00FFFF; }
     ul.main-menu > li.publishing a:hover, ul.main-menu > li.publishing a.selected {
       color: #FF434E; }
-    ul.main-menu > li.lab a:hover, ul.main-menu > li.lab a.selected {
+    ul.main-menu > li.lab a:hover, ul.main-menu > li.lab a.selected,
+    ul.main-menu > li.art a:hover, ul.main-menu > li.art a.selected,
+    ul.main-menu > li.blog a:hover, ul.main-menu > li.blog a.selected {
       color: #5FBEFF; }
 
 .searchSection {
