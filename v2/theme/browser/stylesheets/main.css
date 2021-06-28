@@ -770,6 +770,7 @@ input {
       height: 100%; }
 
 .fixed-buttons {
+  display: none;
   position: fixed;
   z-index: 999999;
   left: 30px;
