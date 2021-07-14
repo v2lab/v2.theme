@@ -759,7 +759,7 @@ input {
 .v2-logo {
   height: 35px;
   float: left;
-  width: 130px;
+  width: 80px;
   padding-left: 15px; }
   .v2-logo a {
     display: inline-block; }
@@ -1494,7 +1494,7 @@ ul.main-menu {
   height: 35px;
   font-size: 15px;
   float: left;
-  width: 654px; }
+  width: 704px; }
   ul.main-menu ul {
     margin: 0;
     padding: 10px 0;

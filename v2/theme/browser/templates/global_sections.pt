@@ -30,9 +30,9 @@
 	</div>
 	<ul class="main-menu border-bottom">
 
-<!-- 		<li class="home">
+ 		<li class="home">
 				<a href="/" class="plain">Home </a>
-		</li> -->
+		</li> 
 		<tal:block repeat="tab view/portal_tabs">
 			<span tal:define="item python:portal[tab['id']]" tal:omit-tag="">
 			<span tal:define="isAnon portal/portal_membership/isAnonymousUser"
