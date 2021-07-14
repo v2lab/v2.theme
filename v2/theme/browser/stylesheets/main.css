@@ -762,7 +762,8 @@ input {
   width: 80px;
   padding-left: 15px; }
   .v2-logo a {
-    display: block; }
+    display: inline-block; 
+    height: 42px; }
     .v2-logo a:hover svg path {
       fill: #2BFF3A; }
     .v2-logo a img, .v2-logo a svg {
